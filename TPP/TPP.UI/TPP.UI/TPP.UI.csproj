@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{742373C3-FE80-4240-9175-EF7CFAB76F97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPP.UI</RootNamespace>
+    <AssemblyName>TPP.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_AdmContenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmContenedor.Designer.cs">
+      <DependentUpon>frm_AdmContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmAutorizacion.Designer.cs">
+      <DependentUpon>frm_AdmAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmConductor.Designer.cs">
+      <DependentUpon>frm_AdmConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmEje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmEje.Designer.cs">
+      <DependentUpon>frm_AdmEje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmEmbalaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmEmbalaje.Designer.cs">
+      <DependentUpon>frm_AdmEmbalaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmNave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmNave.Designer.cs">
+      <DependentUpon>frm_AdmNave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmOperacion.Designer.cs">
+      <DependentUpon>frm_AdmOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmTamanioContenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmTamanioContenedor.Designer.cs">
+      <DependentUpon>frm_AdmTamanioContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmTipoContenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmTipoContenedor.Designer.cs">
+      <DependentUpon>frm_AdmTipoContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmTurno.Designer.cs">
+      <DependentUpon>frm_AdmTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmUsuario.Designer.cs">
+      <DependentUpon>frm_AdmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdmVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmVehiculo.Designer.cs">
+      <DependentUpon>frm_AdmVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Autorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Autorizacion.Designer.cs">
+      <DependentUpon>frm_Autorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Conductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Conductor.Designer.cs">
+      <DependentUpon>frm_Conductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Contenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Contenedor.Designer.cs">
+      <DependentUpon>frm_Contenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ControlarPesaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ControlarPesaje.Designer.cs">
+      <DependentUpon>frm_ControlarPesaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Eje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Eje.Designer.cs">
+      <DependentUpon>frm_Eje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Embalaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Embalaje.Designer.cs">
+      <DependentUpon>frm_Embalaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GuiaRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GuiaRemision.Designer.cs">
+      <DependentUpon>frm_GuiaRemision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Nave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Nave.Designer.cs">
+      <DependentUpon>frm_Nave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Operacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Operacion.Designer.cs">
+      <DependentUpon>frm_Operacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Principal.Designer.cs">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_RegistrarPesaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RegistrarPesaje.Designer.cs">
+      <DependentUpon>frm_RegistrarPesaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TamanioContenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TamanioContenedor.Designer.cs">
+      <DependentUpon>frm_TamanioContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TipoContenedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TipoContenedor.Designer.cs">
+      <DependentUpon>frm_TipoContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Turno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Turno.Designer.cs">
+      <DependentUpon>frm_Turno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Usuario.Designer.cs">
+      <DependentUpon>frm_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Vehiculo.Designer.cs">
+      <DependentUpon>frm_Vehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_AdmContenedor.resx">
+      <DependentUpon>frm_AdmContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmAutorizacion.resx">
+      <DependentUpon>frm_AdmAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmConductor.resx">
+      <DependentUpon>frm_AdmConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmEje.resx">
+      <DependentUpon>frm_AdmEje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmEmbalaje.resx">
+      <DependentUpon>frm_AdmEmbalaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmNave.resx">
+      <DependentUpon>frm_AdmNave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmOperacion.resx">
+      <DependentUpon>frm_AdmOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmTamanioContenedor.resx">
+      <DependentUpon>frm_AdmTamanioContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmTipoContenedor.resx">
+      <DependentUpon>frm_AdmTipoContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmTurno.resx">
+      <DependentUpon>frm_AdmTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmUsuario.resx">
+      <DependentUpon>frm_AdmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmVehiculo.resx">
+      <DependentUpon>frm_AdmVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Autorizacion.resx">
+      <DependentUpon>frm_Autorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Conductor.resx">
+      <DependentUpon>frm_Conductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Contenedor.resx">
+      <DependentUpon>frm_Contenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ControlarPesaje.resx">
+      <DependentUpon>frm_ControlarPesaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Eje.resx">
+      <DependentUpon>frm_Eje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Embalaje.resx">
+      <DependentUpon>frm_Embalaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GuiaRemision.resx">
+      <DependentUpon>frm_GuiaRemision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Nave.resx">
+      <DependentUpon>frm_Nave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Operacion.resx">
+      <DependentUpon>frm_Operacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Principal.resx">
+      <DependentUpon>frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_RegistrarPesaje.resx">
+      <DependentUpon>frm_RegistrarPesaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TamanioContenedor.resx">
+      <DependentUpon>frm_TamanioContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TipoContenedor.resx">
+      <DependentUpon>frm_TipoContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Turno.resx">
+      <DependentUpon>frm_Turno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Usuario.resx">
+      <DependentUpon>frm_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Vehiculo.resx">
+      <DependentUpon>frm_Vehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TPP.BL.BC\TPP.BL.BC.csproj">
+      <Project>{6fad0fc4-0c12-4459-8625-4109312bcce4}</Project>
+      <Name>TPP.BL.BC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TPP.DL.DataModel\TPP.DL.DataModel.csproj">
+      <Project>{63466cb1-3f18-4851-958a-836729b46cbc}</Project>
+      <Name>TPP.DL.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

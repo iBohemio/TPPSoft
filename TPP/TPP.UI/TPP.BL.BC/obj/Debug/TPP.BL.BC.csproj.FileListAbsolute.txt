@@ -1,0 +1,12 @@
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.dll.config
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.dll
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.pdb
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.dll
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.DL.DataModel.dll
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.DL.DataModel.pdb
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.xml
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.csprojResolveAssemblyReference.cache
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.dll
+D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.pdb

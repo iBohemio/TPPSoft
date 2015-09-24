@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="290a11f6088e458082c18984e9d9d95b" Name="Diagram1">
+        <EntityTypeShape EntityType="BDParacasModel.Autorizacion" Width="1.5" PointX="8" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Conductor" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Contenedor" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Eje" Width="1.5" PointX="10.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Embalaje" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.GuiaRemision" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Nave" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Operacion" Width="1.5" PointX="5.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.RolUsuario" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.TamanoContenedor" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.TipoContenedor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Turno" Width="1.5" PointX="2.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Usuario" Width="1.5" PointX="13" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Vehiculo" Width="1.5" PointX="13" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacasModel.Pesaje" Width="1.5" PointX="10" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="BDParacasModel.FK_Autorizacion_Embalaje" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.FK_Autorizacion_Operacion" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.FK_Pesaje_Conductor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.FK_Contenedor_TamanoContenedor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.FK_Contenedor_TipoContenedor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.FK_Vehiculo_Eje" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.FK_Usuario_rolUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacasModel.RNaveContenedor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

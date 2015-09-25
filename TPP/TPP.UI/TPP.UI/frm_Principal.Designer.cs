@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Principal));
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
-            this.tsInicio = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsAdministrar = new System.Windows.Forms.ToolStripMenuItem();
-            this.sSPrincipal = new System.Windows.Forms.StatusStrip();
-            this.sslbl_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sslbl_Rol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.miTicket = new System.Windows.Forms.ToolStripMenuItem();
+            this.miContedorbal = new System.Windows.Forms.ToolStripMenuItem();
             this.tsEntrada = new System.Windows.Forms.ToolStripMenuItem();
+            this.miRegistrarPesaje = new System.Windows.Forms.ToolStripMenuItem();
             this.tsSalida = new System.Windows.Forms.ToolStripMenuItem();
+            this.miControlarPesaje = new System.Windows.Forms.ToolStripMenuItem();
             this.tsReimpresion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsEntidad = new System.Windows.Forms.ToolStripMenuItem();
             this.miEje = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,10 +52,10 @@
             this.miTipoContenedor = new System.Windows.Forms.ToolStripMenuItem();
             this.miTamanioContenedor = new System.Windows.Forms.ToolStripMenuItem();
             this.miContenedor = new System.Windows.Forms.ToolStripMenuItem();
-            this.miRegistrarPesaje = new System.Windows.Forms.ToolStripMenuItem();
-            this.miControlarPesaje = new System.Windows.Forms.ToolStripMenuItem();
-            this.miTicket = new System.Windows.Forms.ToolStripMenuItem();
-            this.miContedorbal = new System.Windows.Forms.ToolStripMenuItem();
+            this.sSPrincipal = new System.Windows.Forms.StatusStrip();
+            this.sslbl_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sslbl_Rol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.miTipoVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.sSPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             // msPrincipal
             // 
             this.msPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsInicio,
+            this.tsCerrarSesion,
             this.tsAdministrar,
             this.tsEntrada,
             this.tsSalida,
@@ -74,12 +75,13 @@
             this.msPrincipal.TabIndex = 0;
             this.msPrincipal.Text = "menuStrip1";
             // 
-            // tsInicio
+            // tsCerrarSesion
             // 
-            this.tsInicio.Image = ((System.Drawing.Image)(resources.GetObject("tsInicio.Image")));
-            this.tsInicio.Name = "tsInicio";
-            this.tsInicio.Size = new System.Drawing.Size(64, 20);
-            this.tsInicio.Text = "Inicio";
+            this.tsCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("tsCerrarSesion.Image")));
+            this.tsCerrarSesion.Name = "tsCerrarSesion";
+            this.tsCerrarSesion.Size = new System.Drawing.Size(104, 20);
+            this.tsCerrarSesion.Text = "Cerrar Sesión";
+            this.tsCerrarSesion.Click += new System.EventHandler(this.tsCerrarSesion_Click);
             // 
             // tsAdministrar
             // 
@@ -92,29 +94,19 @@
             this.tsAdministrar.Text = "Administrar";
             this.tsAdministrar.Click += new System.EventHandler(this.tsEntidad_Click);
             // 
-            // sSPrincipal
+            // miTicket
             // 
-            this.sSPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sslbl_Usuario,
-            this.sslbl_Rol});
-            this.sSPrincipal.Location = new System.Drawing.Point(0, 346);
-            this.sSPrincipal.Name = "sSPrincipal";
-            this.sSPrincipal.Size = new System.Drawing.Size(602, 24);
-            this.sSPrincipal.TabIndex = 1;
-            this.sSPrincipal.Text = "statusStrip1";
+            this.miTicket.Image = ((System.Drawing.Image)(resources.GetObject("miTicket.Image")));
+            this.miTicket.Name = "miTicket";
+            this.miTicket.Size = new System.Drawing.Size(137, 22);
+            this.miTicket.Text = "Ticket";
             // 
-            // sslbl_Usuario
+            // miContedorbal
             // 
-            this.sslbl_Usuario.Name = "sslbl_Usuario";
-            this.sslbl_Usuario.Size = new System.Drawing.Size(66, 19);
-            this.sslbl_Usuario.Text = "Bienvenido";
-            // 
-            // sslbl_Rol
-            // 
-            this.sslbl_Rol.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
-            this.sslbl_Rol.Name = "sslbl_Rol";
-            this.sslbl_Rol.Size = new System.Drawing.Size(14, 19);
-            this.sslbl_Rol.Text = ".";
+            this.miContedorbal.Image = ((System.Drawing.Image)(resources.GetObject("miContedorbal.Image")));
+            this.miContedorbal.Name = "miContedorbal";
+            this.miContedorbal.Size = new System.Drawing.Size(137, 22);
+            this.miContedorbal.Text = "Contenedor";
             // 
             // tsEntrada
             // 
@@ -125,6 +117,14 @@
             this.tsEntrada.Size = new System.Drawing.Size(75, 20);
             this.tsEntrada.Text = "Entrada";
             // 
+            // miRegistrarPesaje
+            // 
+            this.miRegistrarPesaje.Image = ((System.Drawing.Image)(resources.GetObject("miRegistrarPesaje.Image")));
+            this.miRegistrarPesaje.Name = "miRegistrarPesaje";
+            this.miRegistrarPesaje.Size = new System.Drawing.Size(156, 22);
+            this.miRegistrarPesaje.Text = "Registrar Pesaje";
+            this.miRegistrarPesaje.Click += new System.EventHandler(this.miRegistrarPesaje_Click);
+            // 
             // tsSalida
             // 
             this.tsSalida.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,6 +133,14 @@
             this.tsSalida.Name = "tsSalida";
             this.tsSalida.Size = new System.Drawing.Size(66, 20);
             this.tsSalida.Text = "Salida";
+            // 
+            // miControlarPesaje
+            // 
+            this.miControlarPesaje.Image = ((System.Drawing.Image)(resources.GetObject("miControlarPesaje.Image")));
+            this.miControlarPesaje.Name = "miControlarPesaje";
+            this.miControlarPesaje.Size = new System.Drawing.Size(160, 22);
+            this.miControlarPesaje.Text = "Controlar Pesaje";
+            this.miControlarPesaje.Click += new System.EventHandler(this.miControlarPesaje_Click);
             // 
             // tsReimpresion
             // 
@@ -146,6 +154,7 @@
             this.tsEntidad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miEje,
             this.miVehiculo,
+            this.miTipoVehiculo,
             this.miConductor,
             this.miAutorizacion,
             this.miEmbalaje,
@@ -257,35 +266,37 @@
             this.miContenedor.Text = "Contenedor";
             this.miContenedor.Click += new System.EventHandler(this.miContenedor_Click);
             // 
-            // miRegistrarPesaje
+            // sSPrincipal
             // 
-            this.miRegistrarPesaje.Image = ((System.Drawing.Image)(resources.GetObject("miRegistrarPesaje.Image")));
-            this.miRegistrarPesaje.Name = "miRegistrarPesaje";
-            this.miRegistrarPesaje.Size = new System.Drawing.Size(156, 22);
-            this.miRegistrarPesaje.Text = "Registrar Pesaje";
-            this.miRegistrarPesaje.Click += new System.EventHandler(this.miRegistrarPesaje_Click);
+            this.sSPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sslbl_Usuario,
+            this.sslbl_Rol});
+            this.sSPrincipal.Location = new System.Drawing.Point(0, 346);
+            this.sSPrincipal.Name = "sSPrincipal";
+            this.sSPrincipal.Size = new System.Drawing.Size(602, 24);
+            this.sSPrincipal.TabIndex = 1;
+            this.sSPrincipal.Text = "statusStrip1";
             // 
-            // miControlarPesaje
+            // sslbl_Usuario
             // 
-            this.miControlarPesaje.Image = ((System.Drawing.Image)(resources.GetObject("miControlarPesaje.Image")));
-            this.miControlarPesaje.Name = "miControlarPesaje";
-            this.miControlarPesaje.Size = new System.Drawing.Size(160, 22);
-            this.miControlarPesaje.Text = "Controlar Pesaje";
-            this.miControlarPesaje.Click += new System.EventHandler(this.miControlarPesaje_Click);
+            this.sslbl_Usuario.Name = "sslbl_Usuario";
+            this.sslbl_Usuario.Size = new System.Drawing.Size(66, 19);
+            this.sslbl_Usuario.Text = "Bienvenido";
             // 
-            // miTicket
+            // sslbl_Rol
             // 
-            this.miTicket.Image = ((System.Drawing.Image)(resources.GetObject("miTicket.Image")));
-            this.miTicket.Name = "miTicket";
-            this.miTicket.Size = new System.Drawing.Size(152, 22);
-            this.miTicket.Text = "Ticket";
+            this.sslbl_Rol.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.sslbl_Rol.Name = "sslbl_Rol";
+            this.sslbl_Rol.Size = new System.Drawing.Size(14, 19);
+            this.sslbl_Rol.Text = ".";
             // 
-            // miContedorbal
+            // miTipoVehiculo
             // 
-            this.miContedorbal.Image = ((System.Drawing.Image)(resources.GetObject("miContedorbal.Image")));
-            this.miContedorbal.Name = "miContedorbal";
-            this.miContedorbal.Size = new System.Drawing.Size(152, 22);
-            this.miContedorbal.Text = "Contenedor";
+            this.miTipoVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("miTipoVehiculo.Image")));
+            this.miTipoVehiculo.Name = "miTipoVehiculo";
+            this.miTipoVehiculo.Size = new System.Drawing.Size(200, 22);
+            this.miTipoVehiculo.Text = "Tipo de vehículo";
+            this.miTipoVehiculo.Click += new System.EventHandler(this.miTipoVehiculo_Click);
             // 
             // frm_Principal
             // 
@@ -316,7 +327,7 @@
 
         private System.Windows.Forms.MenuStrip msPrincipal;
         private System.Windows.Forms.StatusStrip sSPrincipal;
-        private System.Windows.Forms.ToolStripMenuItem tsInicio;
+        private System.Windows.Forms.ToolStripMenuItem tsCerrarSesion;
         private System.Windows.Forms.ToolStripStatusLabel sslbl_Usuario;
         private System.Windows.Forms.ToolStripStatusLabel sslbl_Rol;
         private System.Windows.Forms.ToolStripMenuItem tsAdministrar;
@@ -340,6 +351,7 @@
         private System.Windows.Forms.ToolStripMenuItem miControlarPesaje;
         private System.Windows.Forms.ToolStripMenuItem miTicket;
         private System.Windows.Forms.ToolStripMenuItem miContedorbal;
+        private System.Windows.Forms.ToolStripMenuItem miTipoVehiculo;
     }
 }
 

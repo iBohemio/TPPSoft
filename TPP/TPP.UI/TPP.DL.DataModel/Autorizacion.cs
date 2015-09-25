@@ -14,19 +14,28 @@ namespace TPP.DL.DataModel
     
     public partial class Autorizacion
     {
+        public Autorizacion()
+        {
+            this.Pesaje = new HashSet<Pesaje>();
+        }
+    
         public int AutorizacionId { get; set; }
-        public int UsuarioId { get; set; }
-        public int Codigo { get; set; }
-        public int NaveId { get; set; }
-        public int OperacionId { get; set; }
+        public string Codigo { get; set; }
         public int EmbalajeId { get; set; }
-        public int Bultos { get; set; }
-        public double PesoManifestado { get; set; }
+        public int OperacionId { get; set; }
+        public decimal Peso { get; set; }
+        public int NroBultos { get; set; }
+        public string Estado { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public int UsuarioId { get; set; }
+        public int NaveId { get; set; }
         public string Producto { get; set; }
-        public int tipo { get; set; }
-        public int estado { get; set; }
+        public string Tipo { get; set; }
     
         public virtual Embalaje Embalaje { get; set; }
+        public virtual Nave Nave { get; set; }
         public virtual Operacion Operacion { get; set; }
+        public virtual Usuario Usuario { get; set; }
+        public virtual ICollection<Pesaje> Pesaje { get; set; }
     }
 }

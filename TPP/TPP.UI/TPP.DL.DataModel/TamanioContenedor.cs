@@ -12,18 +12,17 @@ namespace TPP.DL.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Eje
+    public partial class TamanioContenedor
     {
-        public Eje()
+        public TamanioContenedor()
         {
-            this.Vehiculo = new HashSet<Vehiculo>();
+            this.Contenedor = new HashSet<Contenedor>();
         }
     
-        public int EjeId { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
-        public int PesoMaximo { get; set; }
+        public int TamanioContenedorId { get; set; }
+        public string Descripcion { get; set; }
+        public string Estado { get; set; }
     
-        public virtual ICollection<Vehiculo> Vehiculo { get; set; }
+        public virtual ICollection<Contenedor> Contenedor { get; set; }
     }
 }

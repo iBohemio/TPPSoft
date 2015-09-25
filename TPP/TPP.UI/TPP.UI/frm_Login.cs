@@ -28,8 +28,8 @@ namespace TPP.UI
         {
             Usuario objUsuario = new Usuario();
             UsuarioBC UsuarioBC = new UsuarioBC();
-            objUsuario.Usuario1 = txtUsuario.Text;
-            objUsuario.Clave = txtContrasenia.Text;
+            objUsuario.Codigo = txtUsuario.Text;
+            objUsuario.Password = txtContrasenia.Text;
             if (UsuarioBC.ValidarUsuario(objUsuario) != null)
             {
                 objUsuario = UsuarioBC.ValidarUsuario(objUsuario);

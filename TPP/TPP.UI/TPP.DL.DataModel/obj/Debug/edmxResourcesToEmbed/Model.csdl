@@ -1,80 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BDParacasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BDParacas1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AuditoriaPesaje">
+    <Key>
+      <PropertyRef Name="AuditoriaPesajeId" />
+    </Key>
+    <Property Name="AuditoriaPesajeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="PesajeId" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_AuditoriaPesaje_Pesaje" FromRole="AuditoriaPesaje" ToRole="Pesaje" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_AuditoriaPesaje_Usuario" FromRole="AuditoriaPesaje" ToRole="Usuario" />
+  </EntityType>
   <EntityType Name="Autorizacion">
     <Key>
       <PropertyRef Name="AutorizacionId" />
     </Key>
     <Property Name="AutorizacionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
-    <Property Name="Codigo" Type="Int32" Nullable="false" />
-    <Property Name="NaveId" Type="Int32" Nullable="false" />
-    <Property Name="OperacionId" Type="Int32" Nullable="false" />
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="EmbalajeId" Type="Int32" Nullable="false" />
-    <Property Name="Bultos" Type="Int32" Nullable="false" />
-    <Property Name="PesoManifestado" Type="Double" Nullable="false" />
-    <Property Name="Producto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="tipo" Type="Int32" Nullable="false" />
-    <Property Name="estado" Type="Int32" Nullable="false" />
+    <Property Name="OperacionId" Type="Int32" Nullable="false" />
+    <Property Name="Peso" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="NroBultos" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="NaveId" Type="Int32" Nullable="false" />
+    <Property Name="Producto" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Embalaje" Relationship="Self.FK_Autorizacion_Embalaje" FromRole="Autorizacion" ToRole="Embalaje" />
+    <NavigationProperty Name="Nave" Relationship="Self.FK_Autorizacion_Nave" FromRole="Autorizacion" ToRole="Nave" />
     <NavigationProperty Name="Operacion" Relationship="Self.FK_Autorizacion_Operacion" FromRole="Autorizacion" ToRole="Operacion" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Autorizacion_Usuario" FromRole="Autorizacion" ToRole="Usuario" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Autorizacion" FromRole="Autorizacion" ToRole="Pesaje" />
   </EntityType>
   <EntityType Name="Conductor">
     <Key>
       <PropertyRef Name="ConductorId" />
     </Key>
     <Property Name="ConductorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Brevete" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ApePaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="ApeMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NroBrevete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Conductor" FromRole="Conductor" ToRole="Pesaje" />
+    <NavigationProperty Name="Vehiculo" Relationship="BDParacas1Model.FK_Vehiculo_Conductor" FromRole="Conductor" ToRole="Vehiculo" />
   </EntityType>
   <EntityType Name="Contenedor">
     <Key>
       <PropertyRef Name="ContenedorId" />
     </Key>
     <Property Name="ContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NContenedor" Type="Int32" Nullable="false" />
-    <Property Name="Consigna" Type="Int32" Nullable="false" />
-    <Property Name="PesoManifiesto" Type="Double" Nullable="false" />
-    <Property Name="AgAduanas" Type="Int32" Nullable="false" />
-    <Property Name="Reserva" Type="Int32" Nullable="false" />
-    <Property Name="TipoId" Type="Int32" Nullable="false" />
-    <Property Name="EstadoId" Type="Int32" Nullable="false" />
-    <Property Name="Tara" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Embarcadero" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AgenteAduana" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TipoMovimiento" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Codigo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tara" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="NumeroViaje" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PesoManifiesto" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="PrecintoAduanero" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Precinto1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Precinto2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Precinto3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaMuelle" Type="DateTime" Precision="3" />
+    <Property Name="FechaBarco" Type="DateTime" Precision="3" />
+    <Property Name="FechaIzaje" Type="DateTime" Precision="3" />
     <Property Name="TipoContenedorId" Type="Int32" Nullable="false" />
     <Property Name="TamanoContenedorId" Type="Int32" Nullable="false" />
-    <Property Name="NViaje" Type="Int32" Nullable="false" />
-    <Property Name="EIR" Type="Int32" Nullable="false" />
-    <Property Name="PAduanero" Type="Int32" Nullable="false" />
-    <Property Name="Precinto1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Precinto2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Precinto3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EIR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="HIzaje" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="HBarco" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="HMuelle" Type="DateTime" Nullable="false" Precision="0" />
-    <NavigationProperty Name="TamanoContenedor" Relationship="Self.FK_Contenedor_TamanoContenedor" FromRole="Contenedor" ToRole="TamanoContenedor" />
+    <Property Name="Autorizacion" Type="Int32" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="NaveId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Nave" Relationship="Self.FK_Contenedor_Nave" FromRole="Contenedor" ToRole="Nave" />
+    <NavigationProperty Name="TamanioContenedor" Relationship="Self.FK_Contenedor_TamanioContenedor" FromRole="Contenedor" ToRole="TamanioContenedor" />
     <NavigationProperty Name="TipoContenedor" Relationship="Self.FK_Contenedor_TipoContenedor" FromRole="Contenedor" ToRole="TipoContenedor" />
-    <NavigationProperty Name="Nave" Relationship="Self.RNaveContenedor" FromRole="Contenedor" ToRole="Nave" />
-  </EntityType>
-  <EntityType Name="Eje">
-    <Key>
-      <PropertyRef Name="EjeId" />
-    </Key>
-    <Property Name="EjeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Codigo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="PesoMaximo" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Vehiculo_Eje" FromRole="Eje" ToRole="Vehiculo" />
   </EntityType>
   <EntityType Name="Embalaje">
     <Key>
       <PropertyRef Name="EmbalajeId" />
     </Key>
     <Property Name="EmbalajeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Codigo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Embalaje" FromRole="Embalaje" ToRole="Autorizacion" />
   </EntityType>
   <EntityType Name="GuiaRemision">
@@ -82,49 +92,132 @@
       <PropertyRef Name="GuiaRemisionId" />
     </Key>
     <Property Name="GuiaRemisionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Documento" Type="Int32" Nullable="false" />
+    <Property Name="Documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Bultos" Type="Int32" Nullable="false" />
+    <Property Name="PesajeId" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_GuiaRemision_Pesaje" FromRole="GuiaRemision" ToRole="Pesaje" />
+  </EntityType>
+  <EntityType Name="MovimientoPesaje">
+    <Key>
+      <PropertyRef Name="MovimientoPesajeId" />
+    </Key>
+    <Property Name="MovimientoPesajeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PesajeId" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Peso" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="Tipo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="TipoRepesaje" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_MovimientoPesaje_Pesaje" FromRole="MovimientoPesaje" ToRole="Pesaje" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_MovimientoPesaje_Usuario" FromRole="MovimientoPesaje" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Nave">
     <Key>
       <PropertyRef Name="NaveId" />
     </Key>
     <Property Name="NaveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Contenedor" Relationship="Self.RNaveContenedor" FromRole="Nave" ToRole="Contenedor" />
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PesoTotal" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Nave" FromRole="Nave" ToRole="Autorizacion" />
+    <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_Nave" FromRole="Nave" ToRole="Contenedor" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Nave" FromRole="Nave" ToRole="Pesaje" />
   </EntityType>
   <EntityType Name="Operacion">
     <Key>
       <PropertyRef Name="OperacionId" />
     </Key>
     <Property Name="OperacionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Codigo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Descripcion" Type="Binary" MaxLength="250" FixedLength="false" Nullable="false" />
+    <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Operacion" FromRole="Operacion" ToRole="Autorizacion" />
   </EntityType>
-  <EntityType Name="RolUsuario">
+  <EntityType Name="Pesaje">
     <Key>
-      <PropertyRef Name="RolUsuarioId" />
+      <PropertyRef Name="PesajeId" />
     </Key>
-    <Property Name="RolUsuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_rolUsuario" FromRole="RolUsuario" ToRole="Usuario" />
+    <Property Name="PesajeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConductorId" Type="Int32" Nullable="false" />
+    <Property Name="VehiculoId" Type="Int32" Nullable="false" />
+    <Property Name="AutorizacionId" Type="Int32" Nullable="false" />
+    <Property Name="Observacion" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="Bruto" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Tara" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Neto" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="NaveId" Type="Int32" />
+    <Property Name="TipoContenedorId" Type="Int32" Nullable="false" />
+    <Property Name="TipoMercancia" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="CodSeguridad" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="CodContenedor" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Bultos" Type="Int32" Nullable="false" />
+    <Property Name="Tarja" Type="Int32" />
+    <Property Name="HoraGancho" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="AuditoriaPesaje" Relationship="Self.FK_AuditoriaPesaje_Pesaje" FromRole="Pesaje" ToRole="AuditoriaPesaje" />
+    <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Pesaje_Autorizacion" FromRole="Pesaje" ToRole="Autorizacion" />
+    <NavigationProperty Name="Conductor" Relationship="Self.FK_Pesaje_Conductor" FromRole="Pesaje" ToRole="Conductor" />
+    <NavigationProperty Name="GuiaRemision" Relationship="Self.FK_GuiaRemision_Pesaje" FromRole="Pesaje" ToRole="GuiaRemision" />
+    <NavigationProperty Name="MovimientoPesaje" Relationship="Self.FK_MovimientoPesaje_Pesaje" FromRole="Pesaje" ToRole="MovimientoPesaje" />
+    <NavigationProperty Name="Nave" Relationship="Self.FK_Pesaje_Nave" FromRole="Pesaje" ToRole="Nave" />
+    <NavigationProperty Name="TipoContenedor" Relationship="Self.FK_Pesaje_TipoContenedor" FromRole="Pesaje" ToRole="TipoContenedor" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Pesaje_Usuario" FromRole="Pesaje" ToRole="Usuario" />
+    <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Pesaje_Vehiculo" FromRole="Pesaje" ToRole="Vehiculo" />
   </EntityType>
-  <EntityType Name="TamanoContenedor">
+  <EntityType Name="Reporte">
     <Key>
-      <PropertyRef Name="TamanoContenedorId" />
+      <PropertyRef Name="ReporteId" />
     </Key>
-    <Property Name="TamanoContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReporteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TurnoId" Type="Int32" Nullable="false" />
+    <Property Name="EstadoFiltro" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Turno" Relationship="Self.FK_Reporte_Turno" FromRole="Reporte" ToRole="Turno" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Reporte_Usuario" FromRole="Reporte" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="RolId" />
+    </Key>
+    <Property Name="RolId" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_TamanoContenedor" FromRole="TamanoContenedor" ToRole="Contenedor" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Rol" FromRole="Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TamanioContenedor">
+    <Key>
+      <PropertyRef Name="TamanioContenedorId" />
+    </Key>
+    <Property Name="TamanioContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_TamanioContenedor" FromRole="TamanioContenedor" ToRole="Contenedor" />
   </EntityType>
   <EntityType Name="TipoContenedor">
     <Key>
       <PropertyRef Name="TipoContenedorId" />
     </Key>
     <Property Name="TipoContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_TipoContenedor" FromRole="TipoContenedor" ToRole="Contenedor" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_TipoContenedor" FromRole="TipoContenedor" ToRole="Pesaje" />
+  </EntityType>
+  <EntityType Name="TipoVehiculo">
+    <Key>
+      <PropertyRef Name="TipoVehiculoId" />
+    </Key>
+    <Property Name="TipoVehiculoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PesoMaximo" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Vehiculo_TipoVehiculo" FromRole="TipoVehiculo" ToRole="Vehiculo" />
   </EntityType>
   <EntityType Name="Turno">
     <Key>
@@ -132,42 +225,67 @@
     </Key>
     <Property Name="TurnoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="HoraInicio" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="HoraFin" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HoraInicio" Type="Int32" Nullable="false" />
+    <Property Name="MinutoInicio" Type="Int32" Nullable="false" />
+    <Property Name="HoraFin" Type="Int32" Nullable="false" />
+    <Property Name="MinutoFin" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Reporte" Relationship="Self.FK_Reporte_Turno" FromRole="Turno" ToRole="Reporte" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
-      <PropertyRef Name="UsuarioID" />
+      <PropertyRef Name="UsuarioId" />
     </Key>
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="RolUsuarioId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="RolUsuario" Relationship="Self.FK_Usuario_rolUsuario" FromRole="Usuario" ToRole="RolUsuario" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RolId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AuditoriaPesaje" Relationship="Self.FK_AuditoriaPesaje_Usuario" FromRole="Usuario" ToRole="AuditoriaPesaje" />
+    <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Usuario" FromRole="Usuario" ToRole="Autorizacion" />
+    <NavigationProperty Name="MovimientoPesaje" Relationship="Self.FK_MovimientoPesaje_Usuario" FromRole="Usuario" ToRole="MovimientoPesaje" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Usuario" FromRole="Usuario" ToRole="Pesaje" />
+    <NavigationProperty Name="Reporte" Relationship="Self.FK_Reporte_Usuario" FromRole="Usuario" ToRole="Reporte" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK_Usuario_Rol" FromRole="Usuario" ToRole="Rol" />
   </EntityType>
   <EntityType Name="Vehiculo">
     <Key>
       <PropertyRef Name="VehiculoId" />
     </Key>
     <Property Name="VehiculoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Placa" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Carrete" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="EjeId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Eje" Relationship="Self.FK_Vehiculo_Eje" FromRole="Vehiculo" ToRole="Eje" />
+    <Property Name="Placa" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Carrete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoVehiculoId" Type="Int32" />
+    <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Vehiculo" FromRole="Vehiculo" ToRole="Pesaje" />
+    <NavigationProperty Name="TipoVehiculo" Relationship="Self.FK_Vehiculo_TipoVehiculo" FromRole="Vehiculo" ToRole="TipoVehiculo" />
+    <Property Name="ConductorId" Type="Int32" />
+    <NavigationProperty Name="Conductor" Relationship="BDParacas1Model.FK_Vehiculo_Conductor" FromRole="Vehiculo" ToRole="Conductor" />
   </EntityType>
-  <EntityType Name="Pesaje">
-    <Key>
-      <PropertyRef Name="VehiculoId" />
-      <PropertyRef Name="ConductorId" />
-      <PropertyRef Name="AutorizacionId" />
-      <PropertyRef Name="Peso" />
-    </Key>
-    <Property Name="VehiculoId" Type="Int32" Nullable="false" />
-    <Property Name="ConductorId" Type="Int32" Nullable="false" />
-    <Property Name="AutorizacionId" Type="Int32" Nullable="false" />
-    <Property Name="Peso" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Conductor" Relationship="Self.FK_Pesaje_Conductor" FromRole="Pesaje" ToRole="Conductor" />
-  </EntityType>
+  <Association Name="FK_AuditoriaPesaje_Pesaje">
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="1" />
+    <End Role="AuditoriaPesaje" Type="Self.AuditoriaPesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pesaje">
+        <PropertyRef Name="PesajeId" />
+      </Principal>
+      <Dependent Role="AuditoriaPesaje">
+        <PropertyRef Name="PesajeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AuditoriaPesaje_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="AuditoriaPesaje" Type="Self.AuditoriaPesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="AuditoriaPesaje">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Autorizacion_Embalaje">
     <End Role="Embalaje" Type="Self.Embalaje" Multiplicity="1" />
     <End Role="Autorizacion" Type="Self.Autorizacion" Multiplicity="*" />
@@ -177,6 +295,18 @@
       </Principal>
       <Dependent Role="Autorizacion">
         <PropertyRef Name="EmbalajeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Autorizacion_Nave">
+    <End Role="Nave" Type="Self.Nave" Multiplicity="1" />
+    <End Role="Autorizacion" Type="Self.Autorizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nave">
+        <PropertyRef Name="NaveId" />
+      </Principal>
+      <Dependent Role="Autorizacion">
+        <PropertyRef Name="NaveId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -192,6 +322,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Autorizacion_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Autorizacion" Type="Self.Autorizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Autorizacion">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pesaje_Autorizacion">
+    <End Role="Autorizacion" Type="Self.Autorizacion" Multiplicity="1" />
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autorizacion">
+        <PropertyRef Name="AutorizacionId" />
+      </Principal>
+      <Dependent Role="Pesaje">
+        <PropertyRef Name="AutorizacionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Pesaje_Conductor">
     <End Role="Conductor" Type="Self.Conductor" Multiplicity="1" />
     <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
@@ -204,12 +358,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Contenedor_TamanoContenedor">
-    <End Role="TamanoContenedor" Type="Self.TamanoContenedor" Multiplicity="1" />
+  <Association Name="FK_Contenedor_Nave">
+    <End Role="Nave" Type="Self.Nave" Multiplicity="1" />
     <End Role="Contenedor" Type="Self.Contenedor" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="TamanoContenedor">
-        <PropertyRef Name="TamanoContenedorId" />
+      <Principal Role="Nave">
+        <PropertyRef Name="NaveId" />
+      </Principal>
+      <Dependent Role="Contenedor">
+        <PropertyRef Name="NaveId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contenedor_TamanioContenedor">
+    <End Role="TamanioContenedor" Type="Self.TamanioContenedor" Multiplicity="1" />
+    <End Role="Contenedor" Type="Self.Contenedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TamanioContenedor">
+        <PropertyRef Name="TamanioContenedorId" />
       </Principal>
       <Dependent Role="Contenedor">
         <PropertyRef Name="TamanoContenedorId" />
@@ -228,81 +394,271 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Vehiculo_Eje">
-    <End Role="Eje" Type="Self.Eje" Multiplicity="1" />
-    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="*" />
+  <Association Name="FK_GuiaRemision_Pesaje">
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="1" />
+    <End Role="GuiaRemision" Type="Self.GuiaRemision" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Eje">
-        <PropertyRef Name="EjeId" />
+      <Principal Role="Pesaje">
+        <PropertyRef Name="PesajeId" />
       </Principal>
-      <Dependent Role="Vehiculo">
-        <PropertyRef Name="EjeId" />
+      <Dependent Role="GuiaRemision">
+        <PropertyRef Name="PesajeId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Usuario_rolUsuario">
-    <End Role="RolUsuario" Type="Self.RolUsuario" Multiplicity="1" />
+  <Association Name="FK_MovimientoPesaje_Pesaje">
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="1" />
+    <End Role="MovimientoPesaje" Type="Self.MovimientoPesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pesaje">
+        <PropertyRef Name="PesajeId" />
+      </Principal>
+      <Dependent Role="MovimientoPesaje">
+        <PropertyRef Name="PesajeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoPesaje_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="MovimientoPesaje" Type="Self.MovimientoPesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="MovimientoPesaje">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pesaje_Nave">
+    <End Role="Nave" Type="Self.Nave" Multiplicity="0..1" />
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nave">
+        <PropertyRef Name="NaveId" />
+      </Principal>
+      <Dependent Role="Pesaje">
+        <PropertyRef Name="NaveId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pesaje_TipoContenedor">
+    <End Role="TipoContenedor" Type="Self.TipoContenedor" Multiplicity="1" />
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoContenedor">
+        <PropertyRef Name="TipoContenedorId" />
+      </Principal>
+      <Dependent Role="Pesaje">
+        <PropertyRef Name="TipoContenedorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pesaje_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Pesaje">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pesaje_Vehiculo">
+    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="1" />
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculo">
+        <PropertyRef Name="VehiculoId" />
+      </Principal>
+      <Dependent Role="Pesaje">
+        <PropertyRef Name="VehiculoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reporte_Turno">
+    <End Role="Turno" Type="Self.Turno" Multiplicity="1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turno">
+        <PropertyRef Name="TurnoId" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="TurnoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reporte_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Reporte" Type="Self.Reporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Reporte">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="RolUsuario">
-        <PropertyRef Name="RolUsuarioId" />
+      <Principal Role="Rol">
+        <PropertyRef Name="RolId" />
       </Principal>
       <Dependent Role="Usuario">
-        <PropertyRef Name="RolUsuarioId" />
+        <PropertyRef Name="RolId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="RNaveContenedor">
-    <End Role="Contenedor" Type="Self.Contenedor" Multiplicity="*" />
-    <End Role="Nave" Type="Self.Nave" Multiplicity="*" />
+  <Association Name="FK_Vehiculo_TipoVehiculo">
+    <End Role="TipoVehiculo" Type="Self.TipoVehiculo" Multiplicity="0..1" />
+    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoVehiculo">
+        <PropertyRef Name="TipoVehiculoId" />
+      </Principal>
+      <Dependent Role="Vehiculo">
+        <PropertyRef Name="TipoVehiculoId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BDParacasEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BDParacasEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AuditoriaPesaje" EntityType="Self.AuditoriaPesaje" />
     <EntitySet Name="Autorizacion" EntityType="Self.Autorizacion" />
     <EntitySet Name="Conductor" EntityType="Self.Conductor" />
     <EntitySet Name="Contenedor" EntityType="Self.Contenedor" />
-    <EntitySet Name="Eje" EntityType="Self.Eje" />
     <EntitySet Name="Embalaje" EntityType="Self.Embalaje" />
     <EntitySet Name="GuiaRemision" EntityType="Self.GuiaRemision" />
+    <EntitySet Name="MovimientoPesaje" EntityType="Self.MovimientoPesaje" />
     <EntitySet Name="Nave" EntityType="Self.Nave" />
     <EntitySet Name="Operacion" EntityType="Self.Operacion" />
-    <EntitySet Name="RolUsuario" EntityType="Self.RolUsuario" />
-    <EntitySet Name="TamanoContenedor" EntityType="Self.TamanoContenedor" />
+    <EntitySet Name="Pesaje" EntityType="Self.Pesaje" />
+    <EntitySet Name="Reporte" EntityType="Self.Reporte" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" />
+    <EntitySet Name="TamanioContenedor" EntityType="Self.TamanioContenedor" />
     <EntitySet Name="TipoContenedor" EntityType="Self.TipoContenedor" />
+    <EntitySet Name="TipoVehiculo" EntityType="Self.TipoVehiculo" />
     <EntitySet Name="Turno" EntityType="Self.Turno" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" />
-    <EntitySet Name="Pesaje" EntityType="Self.Pesaje" />
+    <AssociationSet Name="FK_AuditoriaPesaje_Pesaje" Association="Self.FK_AuditoriaPesaje_Pesaje">
+      <End Role="Pesaje" EntitySet="Pesaje" />
+      <End Role="AuditoriaPesaje" EntitySet="AuditoriaPesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AuditoriaPesaje_Usuario" Association="Self.FK_AuditoriaPesaje_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="AuditoriaPesaje" EntitySet="AuditoriaPesaje" />
+    </AssociationSet>
     <AssociationSet Name="FK_Autorizacion_Embalaje" Association="Self.FK_Autorizacion_Embalaje">
       <End Role="Embalaje" EntitySet="Embalaje" />
+      <End Role="Autorizacion" EntitySet="Autorizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Autorizacion_Nave" Association="Self.FK_Autorizacion_Nave">
+      <End Role="Nave" EntitySet="Nave" />
       <End Role="Autorizacion" EntitySet="Autorizacion" />
     </AssociationSet>
     <AssociationSet Name="FK_Autorizacion_Operacion" Association="Self.FK_Autorizacion_Operacion">
       <End Role="Operacion" EntitySet="Operacion" />
       <End Role="Autorizacion" EntitySet="Autorizacion" />
     </AssociationSet>
+    <AssociationSet Name="FK_Autorizacion_Usuario" Association="Self.FK_Autorizacion_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Autorizacion" EntitySet="Autorizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pesaje_Autorizacion" Association="Self.FK_Pesaje_Autorizacion">
+      <End Role="Autorizacion" EntitySet="Autorizacion" />
+      <End Role="Pesaje" EntitySet="Pesaje" />
+    </AssociationSet>
     <AssociationSet Name="FK_Pesaje_Conductor" Association="Self.FK_Pesaje_Conductor">
       <End Role="Conductor" EntitySet="Conductor" />
       <End Role="Pesaje" EntitySet="Pesaje" />
     </AssociationSet>
-    <AssociationSet Name="FK_Contenedor_TamanoContenedor" Association="Self.FK_Contenedor_TamanoContenedor">
-      <End Role="TamanoContenedor" EntitySet="TamanoContenedor" />
+    <AssociationSet Name="FK_Contenedor_Nave" Association="Self.FK_Contenedor_Nave">
+      <End Role="Nave" EntitySet="Nave" />
+      <End Role="Contenedor" EntitySet="Contenedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contenedor_TamanioContenedor" Association="Self.FK_Contenedor_TamanioContenedor">
+      <End Role="TamanioContenedor" EntitySet="TamanioContenedor" />
       <End Role="Contenedor" EntitySet="Contenedor" />
     </AssociationSet>
     <AssociationSet Name="FK_Contenedor_TipoContenedor" Association="Self.FK_Contenedor_TipoContenedor">
       <End Role="TipoContenedor" EntitySet="TipoContenedor" />
       <End Role="Contenedor" EntitySet="Contenedor" />
     </AssociationSet>
-    <AssociationSet Name="FK_Vehiculo_Eje" Association="Self.FK_Vehiculo_Eje">
-      <End Role="Eje" EntitySet="Eje" />
-      <End Role="Vehiculo" EntitySet="Vehiculo" />
+    <AssociationSet Name="FK_GuiaRemision_Pesaje" Association="Self.FK_GuiaRemision_Pesaje">
+      <End Role="Pesaje" EntitySet="Pesaje" />
+      <End Role="GuiaRemision" EntitySet="GuiaRemision" />
     </AssociationSet>
-    <AssociationSet Name="FK_Usuario_rolUsuario" Association="Self.FK_Usuario_rolUsuario">
-      <End Role="RolUsuario" EntitySet="RolUsuario" />
+    <AssociationSet Name="FK_MovimientoPesaje_Pesaje" Association="Self.FK_MovimientoPesaje_Pesaje">
+      <End Role="Pesaje" EntitySet="Pesaje" />
+      <End Role="MovimientoPesaje" EntitySet="MovimientoPesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoPesaje_Usuario" Association="Self.FK_MovimientoPesaje_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="MovimientoPesaje" EntitySet="MovimientoPesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pesaje_Nave" Association="Self.FK_Pesaje_Nave">
+      <End Role="Nave" EntitySet="Nave" />
+      <End Role="Pesaje" EntitySet="Pesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pesaje_TipoContenedor" Association="Self.FK_Pesaje_TipoContenedor">
+      <End Role="TipoContenedor" EntitySet="TipoContenedor" />
+      <End Role="Pesaje" EntitySet="Pesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pesaje_Usuario" Association="Self.FK_Pesaje_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pesaje" EntitySet="Pesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pesaje_Vehiculo" Association="Self.FK_Pesaje_Vehiculo">
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
+      <End Role="Pesaje" EntitySet="Pesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reporte_Turno" Association="Self.FK_Reporte_Turno">
+      <End Role="Turno" EntitySet="Turno" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reporte_Usuario" Association="Self.FK_Reporte_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Reporte" EntitySet="Reporte" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Rol" Association="Self.FK_Usuario_Rol">
+      <End Role="Rol" EntitySet="Rol" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
-    <AssociationSet Name="RNaveContenedor" Association="Self.RNaveContenedor">
-      <End Role="Contenedor" EntitySet="Contenedor" />
-      <End Role="Nave" EntitySet="Nave" />
+    <AssociationSet Name="FK_Vehiculo_TipoVehiculo" Association="Self.FK_Vehiculo_TipoVehiculo">
+      <End Role="TipoVehiculo" EntitySet="TipoVehiculo" />
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="BDParacas1Model.sysdiagrams" />
+    <AssociationSet Name="FK_Vehiculo_Conductor" Association="BDParacas1Model.FK_Vehiculo_Conductor">
+      <End Role="Conductor" EntitySet="Conductor" />
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Vehiculo_Conductor">
+    <End Type="BDParacas1Model.Conductor" Role="Conductor" Multiplicity="0..1" />
+    <End Type="BDParacas1Model.Vehiculo" Role="Vehiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conductor">
+        <PropertyRef Name="ConductorId" />
+      </Principal>
+      <Dependent Role="Vehiculo">
+        <PropertyRef Name="ConductorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

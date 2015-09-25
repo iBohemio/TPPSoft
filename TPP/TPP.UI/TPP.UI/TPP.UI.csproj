@@ -105,6 +105,12 @@
     <Compile Include="frm_AdmTipoContenedor.Designer.cs">
       <DependentUpon>frm_AdmTipoContenedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_AdmTipoVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdmTipoVehiculo.Designer.cs">
+      <DependentUpon>frm_AdmTipoVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_AdmTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,12 @@
     <Compile Include="frm_TipoContenedor.Designer.cs">
       <DependentUpon>frm_TipoContenedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TipoVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TipoVehiculo.Designer.cs">
+      <DependentUpon>frm_TipoVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Turno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AdmTipoContenedor.resx">
       <DependentUpon>frm_AdmTipoContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdmTipoVehiculo.resx">
+      <DependentUpon>frm_AdmTipoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AdmTurno.resx">
       <DependentUpon>frm_AdmTurno.cs</DependentUpon>
@@ -304,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TipoContenedor.resx">
       <DependentUpon>frm_TipoContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TipoVehiculo.resx">
+      <DependentUpon>frm_TipoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Turno.resx">
       <DependentUpon>frm_Turno.cs</DependentUpon>

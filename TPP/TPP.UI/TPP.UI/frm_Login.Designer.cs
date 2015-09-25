@@ -88,7 +88,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(74, 180);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(81, 28);
-            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(126, 81);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(235, 22);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 0;
             // 
             // txtContrasenia
             // 
@@ -107,7 +107,7 @@
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.PasswordChar = '*';
             this.txtContrasenia.Size = new System.Drawing.Size(235, 22);
-            this.txtContrasenia.TabIndex = 3;
+            this.txtContrasenia.TabIndex = 1;
             this.txtContrasenia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasenia_KeyPress);
             // 
             // label2
@@ -154,7 +154,7 @@
             this.btnSalir.Location = new System.Drawing.Point(244, 180);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(81, 28);
-            this.btnSalir.TabIndex = 7;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -180,7 +180,7 @@
             this.Name = "frm_Login";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TPP ERP";
+            this.Text = "1";
             this.Load += new System.EventHandler(this.frm_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -14,11 +14,20 @@ namespace TPP.DL.DataModel
     
     public partial class Vehiculo
     {
+        public Vehiculo()
+        {
+            this.Pesaje = new HashSet<Pesaje>();
+        }
+    
         public int VehiculoId { get; set; }
         public string Placa { get; set; }
         public string Carrete { get; set; }
-        public int EjeId { get; set; }
+        public string Estado { get; set; }
+        public Nullable<int> TipoVehiculoId { get; set; }
+        public Nullable<int> ConductorId { get; set; }
     
-        public virtual Eje Eje { get; set; }
+        public virtual ICollection<Pesaje> Pesaje { get; set; }
+        public virtual TipoVehiculo TipoVehiculo { get; set; }
+        public virtual Conductor Conductor { get; set; }
     }
 }

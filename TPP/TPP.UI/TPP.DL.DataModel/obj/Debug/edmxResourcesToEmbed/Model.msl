@@ -1,177 +1,250 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BDParacasModelStoreContainer" CdmEntityContainer="BDParacasEntities">
+  <EntityContainerMapping StorageEntityContainer="BDParacas1ModelStoreContainer" CdmEntityContainer="BDParacasEntity">
+    <EntitySetMapping Name="AuditoriaPesaje">
+      <EntityTypeMapping TypeName="BDParacas1Model.AuditoriaPesaje">
+        <MappingFragment StoreEntitySet="AuditoriaPesaje">
+          <ScalarProperty Name="AuditoriaPesajeId" ColumnName="AuditoriaPesajeId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="PesajeId" ColumnName="PesajeId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Autorizacion">
-      <EntityTypeMapping TypeName="BDParacasModel.Autorizacion">
+      <EntityTypeMapping TypeName="BDParacas1Model.Autorizacion">
         <MappingFragment StoreEntitySet="Autorizacion">
           <ScalarProperty Name="AutorizacionId" ColumnName="AutorizacionId" />
-          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />
-          <ScalarProperty Name="NaveId" ColumnName="NaveId" />
-          <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
           <ScalarProperty Name="EmbalajeId" ColumnName="EmbalajeId" />
-          <ScalarProperty Name="Bultos" ColumnName="Bultos" />
-          <ScalarProperty Name="PesoManifestado" ColumnName="PesoManifestado" />
+          <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="NroBultos" ColumnName="NroBultos" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="NaveId" ColumnName="NaveId" />
           <ScalarProperty Name="Producto" ColumnName="Producto" />
-          <ScalarProperty Name="tipo" ColumnName="tipo" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Conductor">
-      <EntityTypeMapping TypeName="BDParacasModel.Conductor">
+      <EntityTypeMapping TypeName="BDParacas1Model.Conductor">
         <MappingFragment StoreEntitySet="Conductor">
           <ScalarProperty Name="ConductorId" ColumnName="ConductorId" />
-          <ScalarProperty Name="Brevete" ColumnName="Brevete" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
-          <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+          <ScalarProperty Name="NroBrevete" ColumnName="NroBrevete" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Contenedor">
-      <EntityTypeMapping TypeName="BDParacasModel.Contenedor">
+      <EntityTypeMapping TypeName="BDParacas1Model.Contenedor">
         <MappingFragment StoreEntitySet="Contenedor">
           <ScalarProperty Name="ContenedorId" ColumnName="ContenedorId" />
-          <ScalarProperty Name="NContenedor" ColumnName="NContenedor" />
-          <ScalarProperty Name="Consigna" ColumnName="Consigna" />
-          <ScalarProperty Name="PesoManifiesto" ColumnName="PesoManifiesto" />
-          <ScalarProperty Name="AgAduanas" ColumnName="AgAduanas" />
-          <ScalarProperty Name="Reserva" ColumnName="Reserva" />
-          <ScalarProperty Name="TipoId" ColumnName="TipoId" />
-          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Embarcadero" ColumnName="Embarcadero" />
+          <ScalarProperty Name="AgenteAduana" ColumnName="AgenteAduana" />
+          <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
           <ScalarProperty Name="Tara" ColumnName="Tara" />
-          <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
-          <ScalarProperty Name="TamanoContenedorId" ColumnName="TamanoContenedorId" />
-          <ScalarProperty Name="NViaje" ColumnName="NViaje" />
-          <ScalarProperty Name="EIR" ColumnName="EIR" />
-          <ScalarProperty Name="PAduanero" ColumnName="PAduanero" />
+          <ScalarProperty Name="NumeroViaje" ColumnName="NumeroViaje" />
+          <ScalarProperty Name="PesoManifiesto" ColumnName="PesoManifiesto" />
+          <ScalarProperty Name="PrecintoAduanero" ColumnName="PrecintoAduanero" />
           <ScalarProperty Name="Precinto1" ColumnName="Precinto1" />
           <ScalarProperty Name="Precinto2" ColumnName="Precinto2" />
           <ScalarProperty Name="Precinto3" ColumnName="Precinto3" />
+          <ScalarProperty Name="FechaMuelle" ColumnName="FechaMuelle" />
+          <ScalarProperty Name="FechaBarco" ColumnName="FechaBarco" />
+          <ScalarProperty Name="FechaIzaje" ColumnName="FechaIzaje" />
+          <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
+          <ScalarProperty Name="TamanoContenedorId" ColumnName="TamanoContenedorId" />
+          <ScalarProperty Name="EIR" ColumnName="EIR" />
           <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
-          <ScalarProperty Name="HIzaje" ColumnName="HIzaje" />
-          <ScalarProperty Name="HBarco" ColumnName="HBarco" />
-          <ScalarProperty Name="HMuelle" ColumnName="HMuelle" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Eje">
-      <EntityTypeMapping TypeName="BDParacasModel.Eje">
-        <MappingFragment StoreEntitySet="Eje">
-          <ScalarProperty Name="EjeId" ColumnName="EjeId" />
-          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="PesoMaximo" ColumnName="PesoMaximo" />
+          <ScalarProperty Name="Autorizacion" ColumnName="Autorizacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NaveId" ColumnName="NaveId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Embalaje">
-      <EntityTypeMapping TypeName="BDParacasModel.Embalaje">
+      <EntityTypeMapping TypeName="BDParacas1Model.Embalaje">
         <MappingFragment StoreEntitySet="Embalaje">
           <ScalarProperty Name="EmbalajeId" ColumnName="EmbalajeId" />
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="GuiaRemision">
-      <EntityTypeMapping TypeName="BDParacasModel.GuiaRemision">
+      <EntityTypeMapping TypeName="BDParacas1Model.GuiaRemision">
         <MappingFragment StoreEntitySet="GuiaRemision">
           <ScalarProperty Name="GuiaRemisionId" ColumnName="GuiaRemisionId" />
           <ScalarProperty Name="Documento" ColumnName="Documento" />
           <ScalarProperty Name="Bultos" ColumnName="Bultos" />
+          <ScalarProperty Name="PesajeId" ColumnName="PesajeId" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimientoPesaje">
+      <EntityTypeMapping TypeName="BDParacas1Model.MovimientoPesaje">
+        <MappingFragment StoreEntitySet="MovimientoPesaje">
+          <ScalarProperty Name="MovimientoPesajeId" ColumnName="MovimientoPesajeId" />
+          <ScalarProperty Name="PesajeId" ColumnName="PesajeId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="TipoRepesaje" ColumnName="TipoRepesaje" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Nave">
-      <EntityTypeMapping TypeName="BDParacasModel.Nave">
+      <EntityTypeMapping TypeName="BDParacas1Model.Nave">
         <MappingFragment StoreEntitySet="Nave">
           <ScalarProperty Name="NaveId" ColumnName="NaveId" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PesoTotal" ColumnName="PesoTotal" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Operacion">
-      <EntityTypeMapping TypeName="BDParacasModel.Operacion">
+      <EntityTypeMapping TypeName="BDParacas1Model.Operacion">
         <MappingFragment StoreEntitySet="Operacion">
           <ScalarProperty Name="OperacionId" ColumnName="OperacionId" />
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="RolUsuario">
-      <EntityTypeMapping TypeName="BDParacasModel.RolUsuario">
-        <MappingFragment StoreEntitySet="RolUsuario">
-          <ScalarProperty Name="RolUsuarioId" ColumnName="RolUsuarioId" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TamanoContenedor">
-      <EntityTypeMapping TypeName="BDParacasModel.TamanoContenedor">
-        <MappingFragment StoreEntitySet="TamanoContenedor">
-          <ScalarProperty Name="TamanoContenedorId" ColumnName="TamanoContenedorId" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TipoContenedor">
-      <EntityTypeMapping TypeName="BDParacasModel.TipoContenedor">
-        <MappingFragment StoreEntitySet="TipoContenedor">
-          <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Turno">
-      <EntityTypeMapping TypeName="BDParacasModel.Turno">
-        <MappingFragment StoreEntitySet="Turno">
-          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
-          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Usuario">
-      <EntityTypeMapping TypeName="BDParacasModel.Usuario">
-        <MappingFragment StoreEntitySet="Usuario">
-          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
-          <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
-          <ScalarProperty Name="Clave" ColumnName="Clave" />
-          <ScalarProperty Name="RolUsuarioId" ColumnName="RolUsuarioId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Vehiculo">
-      <EntityTypeMapping TypeName="BDParacasModel.Vehiculo">
-        <MappingFragment StoreEntitySet="Vehiculo">
-          <ScalarProperty Name="VehiculoId" ColumnName="VehiculoId" />
-          <ScalarProperty Name="Placa" ColumnName="Placa" />
-          <ScalarProperty Name="Carrete" ColumnName="Carrete" />
-          <ScalarProperty Name="EjeId" ColumnName="EjeId" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pesaje">
-      <EntityTypeMapping TypeName="BDParacasModel.Pesaje">
+      <EntityTypeMapping TypeName="BDParacas1Model.Pesaje">
         <MappingFragment StoreEntitySet="Pesaje">
-          <ScalarProperty Name="VehiculoId" ColumnName="VehiculoId" />
+          <ScalarProperty Name="PesajeId" ColumnName="PesajeId" />
           <ScalarProperty Name="ConductorId" ColumnName="ConductorId" />
+          <ScalarProperty Name="VehiculoId" ColumnName="VehiculoId" />
           <ScalarProperty Name="AutorizacionId" ColumnName="AutorizacionId" />
-          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Bruto" ColumnName="Bruto" />
+          <ScalarProperty Name="Tara" ColumnName="Tara" />
+          <ScalarProperty Name="Neto" ColumnName="Neto" />
+          <ScalarProperty Name="NaveId" ColumnName="NaveId" />
+          <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
+          <ScalarProperty Name="TipoMercancia" ColumnName="TipoMercancia" />
+          <ScalarProperty Name="CodSeguridad" ColumnName="CodSeguridad" />
+          <ScalarProperty Name="CodContenedor" ColumnName="CodContenedor" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Bultos" ColumnName="Bultos" />
+          <ScalarProperty Name="Tarja" ColumnName="Tarja" />
+          <ScalarProperty Name="HoraGancho" ColumnName="HoraGancho" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="RNaveContenedor" TypeName="BDParacasModel.RNaveContenedor" StoreEntitySet="RNaveContenedor">
-      <EndProperty Name="Contenedor">
-        <ScalarProperty Name="ContenedorId" ColumnName="ContenedorId" />
-      </EndProperty>
-      <EndProperty Name="Nave">
-        <ScalarProperty Name="NaveId" ColumnName="NaveId" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="Reporte">
+      <EntityTypeMapping TypeName="BDParacas1Model.Reporte">
+        <MappingFragment StoreEntitySet="Reporte">
+          <ScalarProperty Name="ReporteId" ColumnName="ReporteId" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="EstadoFiltro" ColumnName="EstadoFiltro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="BDParacas1Model.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TamanioContenedor">
+      <EntityTypeMapping TypeName="BDParacas1Model.TamanioContenedor">
+        <MappingFragment StoreEntitySet="TamanioContenedor">
+          <ScalarProperty Name="TamanioContenedorId" ColumnName="TamanioContenedorId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoContenedor">
+      <EntityTypeMapping TypeName="BDParacas1Model.TipoContenedor">
+        <MappingFragment StoreEntitySet="TipoContenedor">
+          <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoVehiculo">
+      <EntityTypeMapping TypeName="BDParacas1Model.TipoVehiculo">
+        <MappingFragment StoreEntitySet="TipoVehiculo">
+          <ScalarProperty Name="TipoVehiculoId" ColumnName="TipoVehiculoId" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PesoMaximo" ColumnName="PesoMaximo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turno">
+      <EntityTypeMapping TypeName="BDParacas1Model.Turno">
+        <MappingFragment StoreEntitySet="Turno">
+          <ScalarProperty Name="TurnoId" ColumnName="TurnoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="MinutoInicio" ColumnName="MinutoInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="MinutoFin" ColumnName="MinutoFin" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="BDParacas1Model.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculo">
+      <EntityTypeMapping TypeName="BDParacas1Model.Vehiculo">
+        <MappingFragment StoreEntitySet="Vehiculo">
+          <ScalarProperty Name="ConductorId" ColumnName="ConductorId" />
+          <ScalarProperty Name="VehiculoId" ColumnName="VehiculoId" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Carrete" ColumnName="Carrete" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoVehiculoId" ColumnName="TipoVehiculoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BDParacas1Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

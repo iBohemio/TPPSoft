@@ -8,10 +8,10 @@ namespace TPP.BL.BC
 {
     public class RolBC
     {
-        public List<RolUsuario> ListarRol()
+        public List<Rol> ListarRol()
         {
-            BDParacasEntities context = new BDParacasEntities();
-            return context.RolUsuario.ToList();
+            BDParacasEntity context = new BDParacasEntity();
+            return context.Rol.ToList();
         }
     }
 }

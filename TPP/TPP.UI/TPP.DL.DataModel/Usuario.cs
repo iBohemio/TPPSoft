@@ -14,11 +14,26 @@ namespace TPP.DL.DataModel
     
     public partial class Usuario
     {
-        public int UsuarioID { get; set; }
-        public string Usuario1 { get; set; }
-        public string Clave { get; set; }
-        public int RolUsuarioId { get; set; }
+        public Usuario()
+        {
+            this.AuditoriaPesaje = new HashSet<AuditoriaPesaje>();
+            this.Autorizacion = new HashSet<Autorizacion>();
+            this.MovimientoPesaje = new HashSet<MovimientoPesaje>();
+            this.Pesaje = new HashSet<Pesaje>();
+            this.Reporte = new HashSet<Reporte>();
+        }
     
-        public virtual RolUsuario RolUsuario { get; set; }
+        public int UsuarioId { get; set; }
+        public string Codigo { get; set; }
+        public string Password { get; set; }
+        public string Estado { get; set; }
+        public int RolId { get; set; }
+    
+        public virtual ICollection<AuditoriaPesaje> AuditoriaPesaje { get; set; }
+        public virtual ICollection<Autorizacion> Autorizacion { get; set; }
+        public virtual ICollection<MovimientoPesaje> MovimientoPesaje { get; set; }
+        public virtual ICollection<Pesaje> Pesaje { get; set; }
+        public virtual ICollection<Reporte> Reporte { get; set; }
+        public virtual Rol Rol { get; set; }
     }
 }

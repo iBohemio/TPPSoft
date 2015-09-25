@@ -17,14 +17,17 @@ namespace TPP.DL.DataModel
         public Conductor()
         {
             this.Pesaje = new HashSet<Pesaje>();
+            this.Vehiculo = new HashSet<Vehiculo>();
         }
     
         public int ConductorId { get; set; }
-        public string Brevete { get; set; }
-        public string Nombre { get; set; }
-        public string ApePaterno { get; set; }
-        public string ApeMaterno { get; set; }
+        public string NroBrevete { get; set; }
+        public string Nombres { get; set; }
+        public string ApellidoPaterno { get; set; }
+        public string ApellidoMaterno { get; set; }
+        public string Estado { get; set; }
     
         public virtual ICollection<Pesaje> Pesaje { get; set; }
+        public virtual ICollection<Vehiculo> Vehiculo { get; set; }
     }
 }

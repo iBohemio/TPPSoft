@@ -12,16 +12,18 @@ namespace TPP.DL.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class TamanoContenedor
+    public partial class MovimientoPesaje
     {
-        public TamanoContenedor()
-        {
-            this.Contenedor = new HashSet<Contenedor>();
-        }
+        public int MovimientoPesajeId { get; set; }
+        public int PesajeId { get; set; }
+        public System.DateTime Fecha { get; set; }
+        public decimal Peso { get; set; }
+        public string Tipo { get; set; }
+        public int UsuarioId { get; set; }
+        public string TipoRepesaje { get; set; }
+        public string Estado { get; set; }
     
-        public int TamanoContenedorId { get; set; }
-        public string Descripcion { get; set; }
-    
-        public virtual ICollection<Contenedor> Contenedor { get; set; }
+        public virtual Pesaje Pesaje { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

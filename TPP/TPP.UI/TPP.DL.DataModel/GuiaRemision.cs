@@ -15,7 +15,11 @@ namespace TPP.DL.DataModel
     public partial class GuiaRemision
     {
         public int GuiaRemisionId { get; set; }
-        public int Documento { get; set; }
+        public string Documento { get; set; }
         public int Bultos { get; set; }
+        public int PesajeId { get; set; }
+        public string Estado { get; set; }
+    
+        public virtual Pesaje Pesaje { get; set; }
     }
 }

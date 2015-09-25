@@ -14,9 +14,19 @@ namespace TPP.DL.DataModel
     
     public partial class Turno
     {
+        public Turno()
+        {
+            this.Reporte = new HashSet<Reporte>();
+        }
+    
         public int TurnoId { get; set; }
         public string Nombre { get; set; }
-        public System.DateTime HoraInicio { get; set; }
-        public System.DateTime HoraFin { get; set; }
+        public int HoraInicio { get; set; }
+        public int MinutoInicio { get; set; }
+        public int HoraFin { get; set; }
+        public int MinutoFin { get; set; }
+        public string Estado { get; set; }
+    
+        public virtual ICollection<Reporte> Reporte { get; set; }
     }
 }

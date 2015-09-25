@@ -21,24 +21,27 @@ namespace TPP.UI
 
         private void ConfigurarControles()
         {
-            tsInicio.Visible = false;
+            tsCerrarSesion.Visible = false;
             tsAdministrar.Visible = false;
             tsEntrada.Visible = false;
             tsSalida.Visible = false;
             tsReimpresion.Visible = false;
             tsEntidad.Visible = false;
+            sslbl_Rol.Text = ".";
+            sslbl_Usuario.Text = "Bienvenido:";
         }
 
         private void RecibirDatos(Usuario UsuarioObj)
         {
 
-            sslbl_Usuario.Text = "Bienvenido: " + UsuarioObj.Usuario1.ToString();
-            sslbl_Rol.Text = "Rol: " + UsuarioObj.RolUsuario.Descripcion.ToString();
+            sslbl_Usuario.Text = "Bienvenido: " + UsuarioObj.Codigo.ToString();
+            sslbl_Rol.Text = "Rol: " + UsuarioObj.Rol.Descripcion.ToString();
             tsAdministrar.Visible = true;
             tsEntrada.Visible = true;
             tsSalida.Visible = true;
             tsReimpresion.Visible = true;
-            tsEntidad.Visible =UsuarioObj.RolUsuario.Descripcion=="ADMINISTRADOR"? true:false;
+            tsCerrarSesion.Visible = true;
+            tsEntidad.Visible =UsuarioObj.Rol.Descripcion.ToUpper()=="ADMINISTRADOR"? true:false;
           
             
         }
@@ -282,6 +285,30 @@ namespace TPP.UI
             frm.StartPosition = FormStartPosition.Manual;
             frm.Location = new Point(0, 0);
             frm.Show();
+        }
+
+        private void miTipoVehiculo_Click(object sender, EventArgs e)
+        {
+            Form frm = this.MdiChildren.FirstOrDefault(X => X is frm_AdmTipoVehiculo);
+            if (frm != null)
+            {
+                frm.BringToFront();
+                return;
+            }
+            frm = new frm_AdmTipoVehiculo();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Normal;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.Location = new Point(0, 0);
+            frm.Show();
+        }
+
+        private void tsCerrarSesion_Click(object sender, EventArgs e)
+        {
+            ConfigurarControles();
+            frm_Login frm = new frm_Login();
+            frm.MiDelegado += RecibirDatos;
+            frm.ShowDialog();
         }
     }
 }

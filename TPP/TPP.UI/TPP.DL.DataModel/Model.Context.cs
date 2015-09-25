@@ -13,10 +13,10 @@ namespace TPP.DL.DataModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDParacasEntities : DbContext
+    public partial class BDParacasEntity : DbContext
     {
-        public BDParacasEntities()
-            : base("name=BDParacasEntities")
+        public BDParacasEntity()
+            : base("name=BDParacasEntity")
         {
         }
     
@@ -25,20 +25,24 @@ namespace TPP.DL.DataModel
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<AuditoriaPesaje> AuditoriaPesaje { get; set; }
         public virtual DbSet<Autorizacion> Autorizacion { get; set; }
         public virtual DbSet<Conductor> Conductor { get; set; }
         public virtual DbSet<Contenedor> Contenedor { get; set; }
-        public virtual DbSet<Eje> Eje { get; set; }
         public virtual DbSet<Embalaje> Embalaje { get; set; }
         public virtual DbSet<GuiaRemision> GuiaRemision { get; set; }
+        public virtual DbSet<MovimientoPesaje> MovimientoPesaje { get; set; }
         public virtual DbSet<Nave> Nave { get; set; }
         public virtual DbSet<Operacion> Operacion { get; set; }
-        public virtual DbSet<RolUsuario> RolUsuario { get; set; }
-        public virtual DbSet<TamanoContenedor> TamanoContenedor { get; set; }
+        public virtual DbSet<Pesaje> Pesaje { get; set; }
+        public virtual DbSet<Reporte> Reporte { get; set; }
+        public virtual DbSet<Rol> Rol { get; set; }
+        public virtual DbSet<TamanioContenedor> TamanioContenedor { get; set; }
         public virtual DbSet<TipoContenedor> TipoContenedor { get; set; }
+        public virtual DbSet<TipoVehiculo> TipoVehiculo { get; set; }
         public virtual DbSet<Turno> Turno { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Vehiculo> Vehiculo { get; set; }
-        public virtual DbSet<Pesaje> Pesaje { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

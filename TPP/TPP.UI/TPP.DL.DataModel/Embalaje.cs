@@ -22,6 +22,7 @@ namespace TPP.DL.DataModel
         public int EmbalajeId { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
+        public string Estado { get; set; }
     
         public virtual ICollection<Autorizacion> Autorizacion { get; set; }
     }

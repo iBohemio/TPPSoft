@@ -14,35 +14,32 @@ namespace TPP.DL.DataModel
     
     public partial class Contenedor
     {
-        public Contenedor()
-        {
-            this.Nave = new HashSet<Nave>();
-        }
-    
         public int ContenedorId { get; set; }
-        public int NContenedor { get; set; }
-        public int Consigna { get; set; }
-        public double PesoManifiesto { get; set; }
-        public int AgAduanas { get; set; }
-        public int Reserva { get; set; }
-        public int TipoId { get; set; }
-        public int EstadoId { get; set; }
-        public int Tara { get; set; }
-        public int TipoContenedorId { get; set; }
-        public int TamanoContenedorId { get; set; }
-        public int NViaje { get; set; }
-        public int EIR { get; set; }
-        public int PAduanero { get; set; }
+        public string Estado { get; set; }
+        public string Embarcadero { get; set; }
+        public string AgenteAduana { get; set; }
+        public string TipoMovimiento { get; set; }
+        public string Codigo { get; set; }
+        public Nullable<decimal> Tara { get; set; }
+        public string NumeroViaje { get; set; }
+        public Nullable<decimal> PesoManifiesto { get; set; }
+        public string PrecintoAduanero { get; set; }
         public string Precinto1 { get; set; }
         public string Precinto2 { get; set; }
         public string Precinto3 { get; set; }
+        public Nullable<System.DateTime> FechaMuelle { get; set; }
+        public Nullable<System.DateTime> FechaBarco { get; set; }
+        public Nullable<System.DateTime> FechaIzaje { get; set; }
+        public int TipoContenedorId { get; set; }
+        public int TamanoContenedorId { get; set; }
+        public string EIR { get; set; }
         public string Ubicacion { get; set; }
-        public System.DateTime HIzaje { get; set; }
-        public System.DateTime HBarco { get; set; }
-        public System.DateTime HMuelle { get; set; }
+        public Nullable<int> Autorizacion { get; set; }
+        public Nullable<System.DateTime> Fecha { get; set; }
+        public int NaveId { get; set; }
     
-        public virtual TamanoContenedor TamanoContenedor { get; set; }
+        public virtual Nave Nave { get; set; }
+        public virtual TamanioContenedor TamanioContenedor { get; set; }
         public virtual TipoContenedor TipoContenedor { get; set; }
-        public virtual ICollection<Nave> Nave { get; set; }
     }
 }

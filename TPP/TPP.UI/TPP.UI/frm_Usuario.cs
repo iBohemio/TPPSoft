@@ -51,9 +51,9 @@ namespace TPP.UI
                     MensajeRespuesta = "Se editó el usuario satisfactoriamente.";
                     UsuarioBC objUsuarioBC = new UsuarioBC();
                     Usuario objUsuario = objUsuarioBC.BuscarUsuario(UsuarioId);
-                    txtUsuario.Text = objUsuario.Usuario1;
-                    txtContrasenia.Text = objUsuario.Clave;
-                    cbRol.SelectedValue = objUsuario.RolUsuarioId;
+                    txtUsuario.Text = objUsuario.Codigo;
+                    txtContrasenia.Text = objUsuario.Password;
+                    cbRol.SelectedValue = objUsuario.RolId;
                 }
 
             }
@@ -82,19 +82,20 @@ namespace TPP.UI
                 Usuario objUsuario = new Usuario();
                 if (Modo == TypeMode.Registrar)
                 {
-                    objUsuario.Usuario1 = txtUsuario.Text;
-                    objUsuario.Clave = txtContrasenia.Text;
-                    objUsuario.RolUsuarioId = Convert.ToInt32(cbRol.SelectedValue.ToString());
+                    objUsuario.Codigo = txtUsuario.Text;
+                    objUsuario.Password = txtContrasenia.Text;
+                    objUsuario.RolId = Convert.ToInt32(cbRol.SelectedValue.ToString());
                     objUsuarioBC.RegistrarUsuario(objUsuario);
-
+                    MessageBox.Show(MensajeRespuesta, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (Modo == TypeMode.Editar)
                 {
-                    objUsuario.UsuarioID = UsuarioId;
-                    objUsuario.Usuario1 = txtUsuario.Text;
-                    objUsuario.Clave = txtContrasenia.Text;
-                    objUsuario.RolUsuarioId = Convert.ToInt32(cbRol.SelectedValue.ToString());
+                    objUsuario.UsuarioId = UsuarioId;
+                    objUsuario.Codigo = txtUsuario.Text;
+                    objUsuario.Password = txtContrasenia.Text;
+                    objUsuario.RolId = Convert.ToInt32(cbRol.SelectedValue.ToString());
                     objUsuarioBC.EditarUsuario(objUsuario);
+                    MessageBox.Show(MensajeRespuesta, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 MiDelegado();
                 this.Dispose();

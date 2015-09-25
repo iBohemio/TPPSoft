@@ -12,16 +12,14 @@ namespace TPP.DL.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class RolUsuario
+    public partial class AuditoriaPesaje
     {
-        public RolUsuario()
-        {
-            this.Usuario = new HashSet<Usuario>();
-        }
+        public int AuditoriaPesajeId { get; set; }
+        public int UsuarioId { get; set; }
+        public int PesajeId { get; set; }
+        public System.DateTime Fecha { get; set; }
     
-        public int RolUsuarioId { get; set; }
-        public string Descripcion { get; set; }
-    
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual Pesaje Pesaje { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

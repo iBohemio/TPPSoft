@@ -24,7 +24,7 @@ namespace TPP.DL.DataModel
         public int NaveId { get; set; }
         public string Nombre { get; set; }
         public decimal PesoTotal { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Autorizacion> Autorizacion { get; set; }
         public virtual ICollection<Contenedor> Contenedor { get; set; }

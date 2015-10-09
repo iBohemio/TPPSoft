@@ -42,6 +42,7 @@
             this.tsEntidad = new System.Windows.Forms.ToolStripMenuItem();
             this.miEje = new System.Windows.Forms.ToolStripMenuItem();
             this.miVehiculo = new System.Windows.Forms.ToolStripMenuItem();
+            this.miTipoVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.miConductor = new System.Windows.Forms.ToolStripMenuItem();
             this.miAutorizacion = new System.Windows.Forms.ToolStripMenuItem();
             this.miEmbalaje = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,6 @@
             this.sSPrincipal = new System.Windows.Forms.StatusStrip();
             this.sslbl_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.sslbl_Rol = new System.Windows.Forms.ToolStripStatusLabel();
-            this.miTipoVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.sSPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,8 @@
             this.tsEntidad});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
-            this.msPrincipal.Size = new System.Drawing.Size(602, 24);
+            this.msPrincipal.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.msPrincipal.Size = new System.Drawing.Size(702, 24);
             this.msPrincipal.TabIndex = 0;
             this.msPrincipal.Text = "menuStrip1";
             // 
@@ -186,6 +187,14 @@
             this.miVehiculo.Text = "Vehiculo";
             this.miVehiculo.Click += new System.EventHandler(this.miVehiculo_Click);
             // 
+            // miTipoVehiculo
+            // 
+            this.miTipoVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("miTipoVehiculo.Image")));
+            this.miTipoVehiculo.Name = "miTipoVehiculo";
+            this.miTipoVehiculo.Size = new System.Drawing.Size(200, 22);
+            this.miTipoVehiculo.Text = "Tipo de vehículo";
+            this.miTipoVehiculo.Click += new System.EventHandler(this.miTipoVehiculo_Click);
+            // 
             // miConductor
             // 
             this.miConductor.Image = ((System.Drawing.Image)(resources.GetObject("miConductor.Image")));
@@ -271,9 +280,10 @@
             this.sSPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sslbl_Usuario,
             this.sslbl_Rol});
-            this.sSPrincipal.Location = new System.Drawing.Point(0, 346);
+            this.sSPrincipal.Location = new System.Drawing.Point(0, 431);
             this.sSPrincipal.Name = "sSPrincipal";
-            this.sSPrincipal.Size = new System.Drawing.Size(602, 24);
+            this.sSPrincipal.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.sSPrincipal.Size = new System.Drawing.Size(702, 24);
             this.sSPrincipal.TabIndex = 1;
             this.sSPrincipal.Text = "statusStrip1";
             // 
@@ -290,25 +300,19 @@
             this.sslbl_Rol.Size = new System.Drawing.Size(14, 19);
             this.sslbl_Rol.Text = ".";
             // 
-            // miTipoVehiculo
-            // 
-            this.miTipoVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("miTipoVehiculo.Image")));
-            this.miTipoVehiculo.Name = "miTipoVehiculo";
-            this.miTipoVehiculo.Size = new System.Drawing.Size(200, 22);
-            this.miTipoVehiculo.Text = "Tipo de vehículo";
-            this.miTipoVehiculo.Click += new System.EventHandler(this.miTipoVehiculo_Click);
-            // 
             // frm_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(602, 370);
+            this.ClientSize = new System.Drawing.Size(702, 455);
             this.Controls.Add(this.sSPrincipal);
             this.Controls.Add(this.msPrincipal);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msPrincipal;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TPP - ERP";

@@ -26,7 +26,7 @@ namespace TPP.DL.DataModel
         public int UsuarioId { get; set; }
         public string Codigo { get; set; }
         public string Password { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
         public int RolId { get; set; }
     
         public virtual ICollection<AuditoriaPesaje> AuditoriaPesaje { get; set; }

@@ -49,7 +49,7 @@ namespace TPP.UI
                     //txtNombre.Text = objDistrito.Nombre;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
                 throw;

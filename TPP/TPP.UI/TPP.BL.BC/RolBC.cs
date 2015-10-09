@@ -10,7 +10,7 @@ namespace TPP.BL.BC
     {
         public List<Rol> ListarRol()
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             return context.Rol.ToList();
         }
     }

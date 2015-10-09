@@ -91,6 +91,7 @@
             this.btnSalir.TabIndex = 15;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -104,6 +105,7 @@
             this.btnRegistrar.TabIndex = 14;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBuscar
             // 
@@ -185,6 +187,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_AdmTipoVehiculo";
             this.Text = "TPP ERP";
+            this.Load += new System.EventHandler(this.frm_AdmTipoVehiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoVehiculo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

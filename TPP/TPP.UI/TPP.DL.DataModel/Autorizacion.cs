@@ -25,7 +25,7 @@ namespace TPP.DL.DataModel
         public int OperacionId { get; set; }
         public decimal Peso { get; set; }
         public int NroBultos { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
         public System.DateTime Fecha { get; set; }
         public int UsuarioId { get; set; }
         public int NaveId { get; set; }

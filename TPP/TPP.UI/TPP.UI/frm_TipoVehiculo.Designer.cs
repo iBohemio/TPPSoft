@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TipoVehiculo));
-            this.txtBrevete = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblConductor = new System.Windows.Forms.Label();
+            this.lblTipoVehiculo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudPesoMaximo = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPesoMaximo)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtBrevete
+            // txtCodigo
             // 
-            this.txtBrevete.Location = new System.Drawing.Point(160, 90);
-            this.txtBrevete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBrevete.Name = "txtBrevete";
-            this.txtBrevete.Size = new System.Drawing.Size(177, 22);
-            this.txtBrevete.TabIndex = 46;
+            this.txtCodigo.Location = new System.Drawing.Point(160, 90);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(177, 22);
+            this.txtCodigo.TabIndex = 46;
             // 
             // label4
             // 
@@ -63,13 +63,13 @@
             this.label4.TabIndex = 45;
             this.label4.Text = "Código:";
             // 
-            // txtNombres
+            // txtNombre
             // 
-            this.txtNombres.Location = new System.Drawing.Point(160, 122);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(177, 22);
-            this.txtNombres.TabIndex = 41;
+            this.txtNombre.Location = new System.Drawing.Point(160, 122);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(177, 22);
+            this.txtNombre.TabIndex = 41;
             // 
             // label2
             // 
@@ -93,7 +93,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblConductor);
+            this.panel1.Controls.Add(this.lblTipoVehiculo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -112,16 +112,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // lblConductor
+            // lblTipoVehiculo
             // 
-            this.lblConductor.AutoSize = true;
-            this.lblConductor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConductor.ForeColor = System.Drawing.Color.White;
-            this.lblConductor.Location = new System.Drawing.Point(51, 25);
-            this.lblConductor.Name = "lblConductor";
-            this.lblConductor.Size = new System.Drawing.Size(115, 16);
-            this.lblConductor.TabIndex = 1;
-            this.lblConductor.Text = "Tipo de Vehiculo";
+            this.lblTipoVehiculo.AutoSize = true;
+            this.lblTipoVehiculo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoVehiculo.ForeColor = System.Drawing.Color.White;
+            this.lblTipoVehiculo.Location = new System.Drawing.Point(51, 25);
+            this.lblTipoVehiculo.Name = "lblTipoVehiculo";
+            this.lblTipoVehiculo.Size = new System.Drawing.Size(115, 16);
+            this.lblTipoVehiculo.TabIndex = 1;
+            this.lblTipoVehiculo.Text = "Tipo de Vehiculo";
             // 
             // btnSalir
             // 
@@ -151,12 +151,12 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // nudPesoMaximo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(160, 156);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(177, 22);
-            this.numericUpDown1.TabIndex = 47;
+            this.nudPesoMaximo.Location = new System.Drawing.Point(160, 156);
+            this.nudPesoMaximo.Name = "nudPesoMaximo";
+            this.nudPesoMaximo.Size = new System.Drawing.Size(177, 22);
+            this.nudPesoMaximo.TabIndex = 47;
             // 
             // label3
             // 
@@ -174,10 +174,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(387, 249);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.txtBrevete);
+            this.Controls.Add(this.nudPesoMaximo);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -188,10 +188,11 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_TipoVehiculo";
             this.Text = "TPP ERP";
+            this.Load += new System.EventHandler(this.frm_TipoVehiculo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPesoMaximo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,17 +200,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBrevete;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblConductor;
+        private System.Windows.Forms.Label lblTipoVehiculo;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudPesoMaximo;
         private System.Windows.Forms.Label label3;
     }
 }

@@ -21,7 +21,7 @@
     <Property Name="OperacionId" Type="Int32" Nullable="false" />
     <Property Name="Peso" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
     <Property Name="NroBultos" Type="Int32" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioId" Type="Int32" Nullable="false" />
     <Property Name="NaveId" Type="Int32" Nullable="false" />
@@ -42,16 +42,16 @@
     <Property Name="Nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ApellidoPaterno" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ApellidoMaterno" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Conductor" FromRole="Conductor" ToRole="Pesaje" />
-    <NavigationProperty Name="Vehiculo" Relationship="BDParacas1Model.FK_Vehiculo_Conductor" FromRole="Conductor" ToRole="Vehiculo" />
+    <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Vehiculo_Conductor" FromRole="Conductor" ToRole="Vehiculo" />
   </EntityType>
   <EntityType Name="Contenedor">
     <Key>
       <PropertyRef Name="ContenedorId" />
     </Key>
     <Property Name="ContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <Property Name="Embarcadero" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="AgenteAduana" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="TipoMovimiento" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
@@ -84,7 +84,7 @@
     <Property Name="EmbalajeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Embalaje" FromRole="Embalaje" ToRole="Autorizacion" />
   </EntityType>
   <EntityType Name="GuiaRemision">
@@ -95,7 +95,7 @@
     <Property Name="Documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Bultos" Type="Int32" Nullable="false" />
     <Property Name="PesajeId" Type="Int32" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_GuiaRemision_Pesaje" FromRole="GuiaRemision" ToRole="Pesaje" />
   </EntityType>
   <EntityType Name="MovimientoPesaje">
@@ -109,7 +109,7 @@
     <Property Name="Tipo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UsuarioId" Type="Int32" Nullable="false" />
     <Property Name="TipoRepesaje" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_MovimientoPesaje_Pesaje" FromRole="MovimientoPesaje" ToRole="Pesaje" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_MovimientoPesaje_Usuario" FromRole="MovimientoPesaje" ToRole="Usuario" />
   </EntityType>
@@ -120,7 +120,7 @@
     <Property Name="NaveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="PesoTotal" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Nave" FromRole="Nave" ToRole="Autorizacion" />
     <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_Nave" FromRole="Nave" ToRole="Contenedor" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Nave" FromRole="Nave" ToRole="Pesaje" />
@@ -132,7 +132,7 @@
     <Property Name="OperacionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Operacion" FromRole="Operacion" ToRole="Autorizacion" />
   </EntityType>
   <EntityType Name="Pesaje">
@@ -144,7 +144,7 @@
     <Property Name="VehiculoId" Type="Int32" Nullable="false" />
     <Property Name="AutorizacionId" Type="Int32" Nullable="false" />
     <Property Name="Observacion" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioId" Type="Int32" Nullable="false" />
     <Property Name="Bruto" Type="Decimal" Precision="9" Scale="2" />
@@ -177,7 +177,7 @@
     <Property Name="UsuarioId" Type="Int32" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TurnoId" Type="Int32" Nullable="false" />
-    <Property Name="EstadoFiltro" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EstadoFiltro" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Turno" Relationship="Self.FK_Reporte_Turno" FromRole="Reporte" ToRole="Turno" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Reporte_Usuario" FromRole="Reporte" ToRole="Usuario" />
   </EntityType>
@@ -195,7 +195,7 @@
     </Key>
     <Property Name="TamanioContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_TamanioContenedor" FromRole="TamanioContenedor" ToRole="Contenedor" />
   </EntityType>
   <EntityType Name="TipoContenedor">
@@ -204,7 +204,7 @@
     </Key>
     <Property Name="TipoContenedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_TipoContenedor" FromRole="TipoContenedor" ToRole="Contenedor" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_TipoContenedor" FromRole="TipoContenedor" ToRole="Pesaje" />
   </EntityType>
@@ -216,7 +216,7 @@
     <Property Name="Codigo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="PesoMaximo" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Vehiculo_TipoVehiculo" FromRole="TipoVehiculo" ToRole="Vehiculo" />
   </EntityType>
   <EntityType Name="Turno">
@@ -239,7 +239,7 @@
     <Property Name="UsuarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <Property Name="RolId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="AuditoriaPesaje" Relationship="Self.FK_AuditoriaPesaje_Usuario" FromRole="Usuario" ToRole="AuditoriaPesaje" />
     <NavigationProperty Name="Autorizacion" Relationship="Self.FK_Autorizacion_Usuario" FromRole="Usuario" ToRole="Autorizacion" />
@@ -253,14 +253,14 @@
       <PropertyRef Name="VehiculoId" />
     </Key>
     <Property Name="VehiculoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Placa" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Placa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Carrete" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
     <Property Name="TipoVehiculoId" Type="Int32" />
+    <Property Name="ConductorId" Type="Int32" />
+    <NavigationProperty Name="Conductor" Relationship="Self.FK_Vehiculo_Conductor" FromRole="Vehiculo" ToRole="Conductor" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_Vehiculo" FromRole="Vehiculo" ToRole="Pesaje" />
     <NavigationProperty Name="TipoVehiculo" Relationship="Self.FK_Vehiculo_TipoVehiculo" FromRole="Vehiculo" ToRole="TipoVehiculo" />
-    <Property Name="ConductorId" Type="Int32" />
-    <NavigationProperty Name="Conductor" Relationship="BDParacas1Model.FK_Vehiculo_Conductor" FromRole="Vehiculo" ToRole="Conductor" />
   </EntityType>
   <Association Name="FK_AuditoriaPesaje_Pesaje">
     <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="1" />
@@ -354,6 +354,18 @@
         <PropertyRef Name="ConductorId" />
       </Principal>
       <Dependent Role="Pesaje">
+        <PropertyRef Name="ConductorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehiculo_Conductor">
+    <End Role="Conductor" Type="Self.Conductor" Multiplicity="0..1" />
+    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conductor">
+        <PropertyRef Name="ConductorId" />
+      </Principal>
+      <Dependent Role="Vehiculo">
         <PropertyRef Name="ConductorId" />
       </Dependent>
     </ReferentialConstraint>
@@ -526,7 +538,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BDParacasEntity" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BDParacasEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AuditoriaPesaje" EntityType="Self.AuditoriaPesaje" />
     <EntitySet Name="Autorizacion" EntityType="Self.Autorizacion" />
     <EntitySet Name="Conductor" EntityType="Self.Conductor" />
@@ -576,6 +588,10 @@
     <AssociationSet Name="FK_Pesaje_Conductor" Association="Self.FK_Pesaje_Conductor">
       <End Role="Conductor" EntitySet="Conductor" />
       <End Role="Pesaje" EntitySet="Pesaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehiculo_Conductor" Association="Self.FK_Vehiculo_Conductor">
+      <End Role="Conductor" EntitySet="Conductor" />
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
     </AssociationSet>
     <AssociationSet Name="FK_Contenedor_Nave" Association="Self.FK_Contenedor_Nave">
       <End Role="Nave" EntitySet="Nave" />
@@ -633,32 +649,5 @@
       <End Role="TipoVehiculo" EntitySet="TipoVehiculo" />
       <End Role="Vehiculo" EntitySet="Vehiculo" />
     </AssociationSet>
-    <EntitySet Name="sysdiagrams" EntityType="BDParacas1Model.sysdiagrams" />
-    <AssociationSet Name="FK_Vehiculo_Conductor" Association="BDParacas1Model.FK_Vehiculo_Conductor">
-      <End Role="Conductor" EntitySet="Conductor" />
-      <End Role="Vehiculo" EntitySet="Vehiculo" />
-    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <Association Name="FK_Vehiculo_Conductor">
-    <End Type="BDParacas1Model.Conductor" Role="Conductor" Multiplicity="0..1" />
-    <End Type="BDParacas1Model.Vehiculo" Role="Vehiculo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Conductor">
-        <PropertyRef Name="ConductorId" />
-      </Principal>
-      <Dependent Role="Vehiculo">
-        <PropertyRef Name="ConductorId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

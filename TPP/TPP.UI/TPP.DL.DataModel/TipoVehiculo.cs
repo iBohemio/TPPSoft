@@ -23,7 +23,7 @@ namespace TPP.DL.DataModel
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public decimal PesoMaximo { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Vehiculo> Vehiculo { get; set; }
     }

@@ -25,7 +25,7 @@ namespace TPP.DL.DataModel
         public string Nombres { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Pesaje> Pesaje { get; set; }
         public virtual ICollection<Vehiculo> Vehiculo { get; set; }

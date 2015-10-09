@@ -22,7 +22,7 @@ namespace TPP.DL.DataModel
         public int OperacionId { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Autorizacion> Autorizacion { get; set; }
     }

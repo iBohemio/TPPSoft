@@ -10,27 +10,27 @@ namespace TPP.BL.BC
     {
         public Vehiculo BuscarVehiculo(int VehiculoId)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             return context.Vehiculo.FirstOrDefault(X => X.VehiculoId == VehiculoId);
         }
 
         public List<Vehiculo> ListarVehiculo()
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             return context.Vehiculo.ToList();
         }
 
 
         public void RegistrarVehiculo(Vehiculo objVehiculo)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             context.Vehiculo.Add(objVehiculo);
             context.SaveChanges();
         }
 
         public void EditarVehiculo(Vehiculo objVehiculo)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             Vehiculo objVehiculoSel = context.Vehiculo.FirstOrDefault(X => X.VehiculoId == objVehiculo.VehiculoId);
             objVehiculoSel.Placa = objVehiculo.Placa;
             objVehiculoSel.Carrete = objVehiculo.Carrete;
@@ -41,7 +41,7 @@ namespace TPP.BL.BC
 
         public void EliminarVehiculo(int VehiculoId)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             Vehiculo objVehiculoSel = context.Vehiculo.FirstOrDefault(X => X.VehiculoId == VehiculoId);
             context.Vehiculo.Remove(objVehiculoSel);
             context.SaveChanges();

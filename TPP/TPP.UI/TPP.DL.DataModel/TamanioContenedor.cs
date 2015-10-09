@@ -21,7 +21,7 @@ namespace TPP.DL.DataModel
     
         public int TamanioContenedorId { get; set; }
         public string Descripcion { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Contenedor> Contenedor { get; set; }
     }

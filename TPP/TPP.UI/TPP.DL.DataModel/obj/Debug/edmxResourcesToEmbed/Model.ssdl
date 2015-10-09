@@ -19,7 +19,7 @@
     <Property Name="OperacionId" Type="int" Nullable="false" />
     <Property Name="Peso" Type="decimal" Precision="9" Scale="2" Nullable="false" />
     <Property Name="NroBultos" Type="int" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="false" />
     <Property Name="UsuarioId" Type="int" Nullable="false" />
     <Property Name="NaveId" Type="int" Nullable="false" />
@@ -35,14 +35,14 @@
     <Property Name="Nombres" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="ApellidoPaterno" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="150" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="Contenedor">
     <Key>
       <PropertyRef Name="ContenedorId" />
     </Key>
     <Property Name="ContenedorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
     <Property Name="Embarcadero" Type="varchar" MaxLength="100" />
     <Property Name="AgenteAduana" Type="varchar" MaxLength="100" />
     <Property Name="TipoMovimiento" Type="varchar" MaxLength="3" />
@@ -72,7 +72,7 @@
     <Property Name="EmbalajeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Codigo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="150" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="GuiaRemision">
     <Key>
@@ -82,7 +82,7 @@
     <Property Name="Documento" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Bultos" Type="int" Nullable="false" />
     <Property Name="PesajeId" Type="int" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="MovimientoPesaje">
     <Key>
@@ -95,7 +95,7 @@
     <Property Name="Tipo" Type="varchar" MaxLength="3" Nullable="false" />
     <Property Name="UsuarioId" Type="int" Nullable="false" />
     <Property Name="TipoRepesaje" Type="varchar" MaxLength="3" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="Nave">
     <Key>
@@ -104,7 +104,7 @@
     <Property Name="NaveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="PesoTotal" Type="decimal" Precision="9" Scale="2" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="Operacion">
     <Key>
@@ -113,7 +113,7 @@
     <Property Name="OperacionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Codigo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="150" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="Pesaje">
     <Key>
@@ -124,7 +124,7 @@
     <Property Name="VehiculoId" Type="int" Nullable="false" />
     <Property Name="AutorizacionId" Type="int" Nullable="false" />
     <Property Name="Observacion" Type="varchar" MaxLength="5000" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="false" />
     <Property Name="UsuarioId" Type="int" Nullable="false" />
     <Property Name="Bruto" Type="decimal" Precision="9" Scale="2" />
@@ -148,7 +148,7 @@
     <Property Name="UsuarioId" Type="int" Nullable="false" />
     <Property Name="Fecha" Type="datetime" Nullable="false" />
     <Property Name="TurnoId" Type="int" Nullable="false" />
-    <Property Name="EstadoFiltro" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="EstadoFiltro" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -157,23 +157,13 @@
     <Property Name="RolId" Type="int" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TamanioContenedor">
     <Key>
       <PropertyRef Name="TamanioContenedorId" />
     </Key>
     <Property Name="TamanioContenedorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="TipoContenedor">
     <Key>
@@ -181,7 +171,7 @@
     </Key>
     <Property Name="TipoContenedorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="TipoVehiculo">
     <Key>
@@ -191,7 +181,7 @@
     <Property Name="Codigo" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="PesoMaximo" Type="decimal" Precision="9" Scale="2" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="Turno">
     <Key>
@@ -212,7 +202,7 @@
     <Property Name="UsuarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Codigo" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
     <Property Name="RolId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Vehiculo">
@@ -220,9 +210,9 @@
       <PropertyRef Name="VehiculoId" />
     </Key>
     <Property Name="VehiculoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Placa" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Placa" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Carrete" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Estado" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
     <Property Name="TipoVehiculoId" Type="int" />
     <Property Name="ConductorId" Type="int" />
   </EntityType>
@@ -515,7 +505,6 @@
     <EntitySet Name="Pesaje" EntityType="Self.Pesaje" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Reporte" EntityType="Self.Reporte" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TamanioContenedor" EntityType="Self.TamanioContenedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoContenedor" EntityType="Self.TipoContenedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoVehiculo" EntityType="Self.TipoVehiculo" Schema="dbo" store:Type="Tables" />

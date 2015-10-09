@@ -18,7 +18,7 @@ namespace TPP.DL.DataModel
         public int UsuarioId { get; set; }
         public System.DateTime Fecha { get; set; }
         public int TurnoId { get; set; }
-        public string EstadoFiltro { get; set; }
+        public short EstadoFiltro { get; set; }
     
         public virtual Turno Turno { get; set; }
         public virtual Usuario Usuario { get; set; }

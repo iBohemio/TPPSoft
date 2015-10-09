@@ -35,7 +35,7 @@ namespace TPP.UI
                 RolBC objRolBC = new RolBC();
                 cbRol.DataSource = objRolBC.ListarRol();
                 cbRol.DisplayMember = "Descripcion";
-                cbRol.ValueMember = "RolUsuarioId";
+                cbRol.ValueMember = "RolId";
                 if(Modo==TypeMode.Registrar)
                 {
                     lblUsuario.Text = "Registrar Usuario";
@@ -59,9 +59,10 @@ namespace TPP.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("El sistema esta fuera de servicio", this.Text,
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-           
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                   this.Text,
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
             }
         }
 
@@ -100,10 +101,12 @@ namespace TPP.UI
                 MiDelegado();
                 this.Dispose();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString(), this.Text,
-                     MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                this.Text,
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
     }

@@ -21,7 +21,7 @@ namespace TPP.DL.DataModel
         public string Tipo { get; set; }
         public int UsuarioId { get; set; }
         public string TipoRepesaje { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual Pesaje Pesaje { get; set; }
         public virtual Usuario Usuario { get; set; }

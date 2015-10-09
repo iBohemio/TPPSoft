@@ -26,7 +26,7 @@ namespace TPP.DL.DataModel
         public int VehiculoId { get; set; }
         public int AutorizacionId { get; set; }
         public string Observacion { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
         public System.DateTime Fecha { get; set; }
         public int UsuarioId { get; set; }
         public Nullable<decimal> Bruto { get; set; }

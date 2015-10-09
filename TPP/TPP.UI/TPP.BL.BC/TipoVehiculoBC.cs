@@ -10,27 +10,27 @@ namespace TPP.BL.BC
     {
         public TipoVehiculo BuscarTipoVehiculo(int TipoVehiculoId)
         {
-            BDParacasEntity context = new BDParacasEntity();
-            return context.TipoVehiculo.FirstOrDefault(X => X.TipoVehiculoId == TipoVehiculoId);
+            BDParacasEntities context = new BDParacasEntities();
+            return context.TipoVehiculo.FirstOrDefault(X => X.TipoVehiculoId == TipoVehiculoId && X.Estado==1);
         }
 
         public List<TipoVehiculo> ListarTipoVehiculo()
         {
-            BDParacasEntity context = new BDParacasEntity();
-            return context.TipoVehiculo.ToList();
+            BDParacasEntities context = new BDParacasEntities();
+            return context.TipoVehiculo.Where(X=>X.Estado==1).ToList();
         }
 
 
         public void RegistrarTipoVehiculo(TipoVehiculo objTipoVehiculo)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             context.TipoVehiculo.Add(objTipoVehiculo);
             context.SaveChanges();
         }
 
         public void EditarTipoVehiculo(TipoVehiculo objTipoVehiculo)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             TipoVehiculo objTipoVehiculoSel = context.TipoVehiculo.FirstOrDefault(X => X.TipoVehiculoId == objTipoVehiculo.TipoVehiculoId);
             objTipoVehiculoSel.Codigo = objTipoVehiculo.Codigo;
             objTipoVehiculoSel.Nombre = objTipoVehiculo.Nombre;
@@ -40,9 +40,9 @@ namespace TPP.BL.BC
 
         public void EliminarTipoVehiculo(int TipoVehiculoId)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             TipoVehiculo objTipoVehiculoSel = context.TipoVehiculo.FirstOrDefault(X => X.TipoVehiculoId == TipoVehiculoId);
-            context.TipoVehiculo.Remove(objTipoVehiculoSel);
+            objTipoVehiculoSel.Estado = 0;
             context.SaveChanges();
         }
     }

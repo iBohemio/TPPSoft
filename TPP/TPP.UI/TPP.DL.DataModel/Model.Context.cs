@@ -13,10 +13,10 @@ namespace TPP.DL.DataModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDParacasEntity : DbContext
+    public partial class BDParacasEntities : DbContext
     {
-        public BDParacasEntity()
-            : base("name=BDParacasEntity")
+        public BDParacasEntities()
+            : base("name=BDParacasEntities")
         {
         }
     
@@ -43,6 +43,5 @@ namespace TPP.DL.DataModel
         public virtual DbSet<Turno> Turno { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Vehiculo> Vehiculo { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

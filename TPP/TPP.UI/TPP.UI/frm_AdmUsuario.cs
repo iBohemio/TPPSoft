@@ -30,6 +30,7 @@ namespace TPP.UI
         }
         public void dgvUsuarioConfigurar()
         {
+
             dgvUsuario.Columns["UsuarioId"].DisplayIndex = 0;
             dgvUsuario.Columns["Nombres"].DisplayIndex = 1;
             dgvUsuario.Columns["Rol"].DisplayIndex = 2;
@@ -37,7 +38,6 @@ namespace TPP.UI
             dgvUsuario.Columns["UsuarioId"].HeaderText = "Código";
             dgvUsuario.Columns["Nombres"].HeaderText = "Usuario";
             dgvUsuario.Columns["Rol"].HeaderText = "Rol";
-
         }
         private void RefrescarGrilla()
         {
@@ -69,19 +69,41 @@ namespace TPP.UI
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            frm_Usuario frm = new frm_Usuario();
-            frm.Modo=frm_Usuario.TypeMode.Registrar;
-            frm.MiDelegado += RefrescarGrilla;
-            frm.ShowDialog();
+            try
+            {
+                frm_Usuario frm = new frm_Usuario();
+                frm.Modo=frm_Usuario.TypeMode.Registrar;
+                frm.MiDelegado += RefrescarGrilla;
+                frm.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                 this.Text,
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            frm_Usuario frm = new frm_Usuario();
-            frm.Modo = frm_Usuario.TypeMode.Editar;
-            frm.UsuarioId = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["UsuarioId"].Value);
-            frm.MiDelegado += RefrescarGrilla;
-            frm.ShowDialog();
+            try
+            {
+                frm_Usuario frm = new frm_Usuario();
+                frm.Modo = frm_Usuario.TypeMode.Editar;
+                frm.UsuarioId = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["UsuarioId"].Value);
+                frm.MiDelegado += RefrescarGrilla;
+                frm.ShowDialog();
+            }
+            catch (Exception)
+            {
+               MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                 this.Text,
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+          
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -101,10 +123,13 @@ namespace TPP.UI
                 }
                  
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                 this.Text,
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
             }
         }
     }

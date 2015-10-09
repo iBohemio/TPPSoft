@@ -18,7 +18,7 @@ namespace TPP.DL.DataModel
         public string Documento { get; set; }
         public int Bultos { get; set; }
         public int PesajeId { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual Pesaje Pesaje { get; set; }
     }

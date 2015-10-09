@@ -15,7 +15,7 @@ namespace TPP.DL.DataModel
     public partial class Contenedor
     {
         public int ContenedorId { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
         public string Embarcadero { get; set; }
         public string AgenteAduana { get; set; }
         public string TipoMovimiento { get; set; }

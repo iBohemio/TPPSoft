@@ -172,9 +172,6 @@
         55XXRaTgD4xs7pP8nKLpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="epUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btnSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -193,6 +190,9 @@
         EP4cAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="epForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAEAIAAoCAEAJgAAAAAAAAABACAAxjMBAE4IAQAoAAAAgAAAAAABAAABACAAAAAAAAAA
@@ -2638,7 +2638,4 @@
         YXRlOm1vZGlmeQAyMDEzLTAyLTA0VDAyOjA1OjQwLTA2OjAwY9TMcQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="epContrasenia.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>124, 17</value>
-  </metadata>
 </root>

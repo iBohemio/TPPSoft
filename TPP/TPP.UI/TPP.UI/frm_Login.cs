@@ -44,9 +44,32 @@ namespace TPP.UI
                 return;
             }
         }
+
+        bool DatosValidos()
+        {
+            if(txtUsuario.Text.Trim().Length==0)
+            {
+                epForm.SetError(txtUsuario, "Ingrese Usuario");
+                return false;
+            }
+            else if(txtContrasenia.Text.Trim().Length==0)
+            {
+                epForm.Clear();
+                epForm.SetError(txtContrasenia, "Ingrese Contraseña");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            ValidarUsuario();
+            if (DatosValidos())
+            {
+                epForm.Clear();
+                ValidarUsuario();
+            }   
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

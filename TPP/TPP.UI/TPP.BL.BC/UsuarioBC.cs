@@ -12,22 +12,22 @@ namespace TPP.BL.BC
      
         public Usuario ValidarUsuario(Usuario objUsuario)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             return context.Usuario.FirstOrDefault(X => X.Password == objUsuario.Password &&
-                X.Codigo == objUsuario.Codigo);
+                X.Codigo == objUsuario.Codigo && X.Estado==1);
         }
 
         public Usuario BuscarUsuario(int UsuarioId)
         {
-            BDParacasEntity context = new BDParacasEntity();
-            return context.Usuario.FirstOrDefault(X => X.UsuarioId == UsuarioId);
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Usuario.FirstOrDefault(X => X.UsuarioId == UsuarioId && X.Estado == 1);
         }
 
 
         public IEnumerable<Object> UsuarioListarCompleto()
         {
-            BDParacasEntity context = new BDParacasEntity();
-            IEnumerable<Object> LstUsuario = (from obj in context.Usuario
+            BDParacasEntities context = new BDParacasEntities();
+            IEnumerable<Object> LstUsuario = (from obj in context.Usuario where obj.Estado==1
                                                 select new
                                                 {
                                                     UsuarioId = obj.UsuarioId,
@@ -40,15 +40,15 @@ namespace TPP.BL.BC
 
         public void RegistrarUsuario(Usuario objUsuario)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             context.Usuario.Add(objUsuario);
             context.SaveChanges();
         }
 
         public void EditarUsuario(Usuario objUsuario)
         {
-            BDParacasEntity context = new BDParacasEntity();
-            Usuario objUsuarioSel = context.Usuario.FirstOrDefault(X => X.UsuarioId == objUsuario.UsuarioId);
+            BDParacasEntities context = new BDParacasEntities();
+            Usuario objUsuarioSel = context.Usuario.FirstOrDefault(X => X.UsuarioId == objUsuario.UsuarioId && X.Estado ==1);
             objUsuarioSel.Codigo = objUsuario.Codigo;
             objUsuarioSel.Password = objUsuario.Password;
             objUsuarioSel.RolId = objUsuario.RolId;
@@ -57,9 +57,9 @@ namespace TPP.BL.BC
         
         public void EliminarUsuario(int UsuarioId)
         {
-            BDParacasEntity context = new BDParacasEntity();
+            BDParacasEntities context = new BDParacasEntities();
             Usuario objUsuarioSel = context.Usuario.FirstOrDefault(X => X.UsuarioId == UsuarioId);
-            context.Usuario.Remove(objUsuarioSel);
+            objUsuarioSel.Estado = 0;
             context.SaveChanges();
         }
     }

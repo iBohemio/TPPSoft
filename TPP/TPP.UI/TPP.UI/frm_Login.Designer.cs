@@ -38,14 +38,12 @@
             this.txtContrasenia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.epUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblMensaje = new System.Windows.Forms.Label();
-            this.epContrasenia = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSalir = new System.Windows.Forms.Button();
+            this.epForm = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epContrasenia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,10 +126,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Contraseña:";
             // 
-            // epUsuario
-            // 
-            this.epUsuario.ContainerControl = this;
-            // 
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
@@ -142,10 +136,6 @@
             this.lblMensaje.TabIndex = 6;
             this.lblMensaje.Text = "Mensaje";
             this.lblMensaje.Visible = false;
-            // 
-            // epContrasenia
-            // 
-            this.epContrasenia.ContainerControl = this;
             // 
             // btnSalir
             // 
@@ -158,6 +148,10 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // epForm
+            // 
+            this.epForm.ContainerControl = this;
             // 
             // frm_Login
             // 
@@ -185,8 +179,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epContrasenia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,9 +195,8 @@
         private System.Windows.Forms.TextBox txtContrasenia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ErrorProvider epUsuario;
         private System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.ErrorProvider epContrasenia;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ErrorProvider epForm;
     }
 }

@@ -100,9 +100,6 @@
     <Compile Include="Rol.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="TamanioContenedor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

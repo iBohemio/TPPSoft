@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BDParacas1ModelStoreContainer" CdmEntityContainer="BDParacasEntity">
+  <EntityContainerMapping StorageEntityContainer="BDParacas1ModelStoreContainer" CdmEntityContainer="BDParacasEntities">
     <EntitySetMapping Name="AuditoriaPesaje">
       <EntityTypeMapping TypeName="BDParacas1Model.AuditoriaPesaje">
         <MappingFragment StoreEntitySet="AuditoriaPesaje">
@@ -226,23 +226,12 @@
     <EntitySetMapping Name="Vehiculo">
       <EntityTypeMapping TypeName="BDParacas1Model.Vehiculo">
         <MappingFragment StoreEntitySet="Vehiculo">
-          <ScalarProperty Name="ConductorId" ColumnName="ConductorId" />
           <ScalarProperty Name="VehiculoId" ColumnName="VehiculoId" />
           <ScalarProperty Name="Placa" ColumnName="Placa" />
           <ScalarProperty Name="Carrete" ColumnName="Carrete" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="TipoVehiculoId" ColumnName="TipoVehiculoId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="BDParacas1Model.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ConductorId" ColumnName="ConductorId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

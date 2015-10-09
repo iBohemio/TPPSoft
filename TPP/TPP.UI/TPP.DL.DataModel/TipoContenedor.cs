@@ -22,7 +22,7 @@ namespace TPP.DL.DataModel
     
         public int TipoContenedorId { get; set; }
         public string Descripcion { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Contenedor> Contenedor { get; set; }
         public virtual ICollection<Pesaje> Pesaje { get; set; }

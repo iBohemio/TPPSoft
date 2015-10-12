@@ -31,10 +31,12 @@ namespace TPP.UI
         public void dgvTipoVehiculoConfigurar()
         {
             dgvTipoVehiculo.Columns["TipoVehiculoId"].Visible = false;
+            dgvTipoVehiculo.Columns["Estado"].Visible = false;
+            dgvTipoVehiculo.Columns["Vehiculo"].Visible = false;
             dgvTipoVehiculo.Columns["Codigo"].HeaderText = "Código";
             dgvTipoVehiculo.Columns["Nombre"].HeaderText = "Nombre";
             dgvTipoVehiculo.Columns["PesoMaximo"].HeaderText = "Peso Máximo";
-            dgvTipoVehiculo.Columns["Estado"].Visible = false;
+          
 
         }
         private void RefrescarGrilla()
@@ -70,14 +72,62 @@ namespace TPP.UI
             try
             {
                 frm_TipoVehiculo frm = new frm_TipoVehiculo();
-                
+                frm.Modo = frm_TipoVehiculo.TypeMode.Registrar;
+                frm.MiDelegado += RefrescarGrilla;
+                frm.ShowDialog();
             }
             catch (Exception)
             {
-                 MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
-                                   this.Text,
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                 this.Text,
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_TipoVehiculo frm = new frm_TipoVehiculo();
+                frm.Modo = frm_TipoVehiculo.TypeMode.Editar;
+                frm.TipoVehiculoId = Convert.ToInt32(dgvTipoVehiculo.SelectedRows[0].Cells["TipoVehiculoId"].Value);
+                frm.MiDelegado += RefrescarGrilla;
+                frm.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                  this.Text,
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvTipoVehiculo.SelectedRows.Count != 0)
+                {
+                    if (MessageBox.Show("¿Está seguro que quiere eliminar el Tipo de Vehiculo: " + dgvTipoVehiculo.SelectedRows[0].Cells["Nombre"].Value.ToString() + "?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                    {
+                        return;
+                    }
+                    TipoVehiculoBC objTipoVehiculoBC = new TipoVehiculoBC();
+                    objTipoVehiculoBC.EliminarTipoVehiculo(Convert.ToInt32(dgvTipoVehiculo.SelectedRows[0].Cells["TipoVehiculoId"].Value));
+                    RefrescarGrilla();
+                    MessageBox.Show("Se eliminó satisfactoriamente el Tipo de Vehiculo.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                 this.Text,
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
             }
         }
     }

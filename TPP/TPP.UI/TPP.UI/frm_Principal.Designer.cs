@@ -40,7 +40,6 @@
             this.miControlarPesaje = new System.Windows.Forms.ToolStripMenuItem();
             this.tsReimpresion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsEntidad = new System.Windows.Forms.ToolStripMenuItem();
-            this.miEje = new System.Windows.Forms.ToolStripMenuItem();
             this.miVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.miTipoVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.miConductor = new System.Windows.Forms.ToolStripMenuItem();
@@ -153,7 +152,6 @@
             // tsEntidad
             // 
             this.tsEntidad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miEje,
             this.miVehiculo,
             this.miTipoVehiculo,
             this.miConductor,
@@ -170,14 +168,6 @@
             this.tsEntidad.Name = "tsEntidad";
             this.tsEntidad.Size = new System.Drawing.Size(75, 20);
             this.tsEntidad.Text = "Entidad";
-            // 
-            // miEje
-            // 
-            this.miEje.Image = ((System.Drawing.Image)(resources.GetObject("miEje.Image")));
-            this.miEje.Name = "miEje";
-            this.miEje.Size = new System.Drawing.Size(200, 22);
-            this.miEje.Text = "Eje";
-            this.miEje.Click += new System.EventHandler(this.miEje_Click);
             // 
             // miVehiculo
             // 
@@ -339,7 +329,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsSalida;
         private System.Windows.Forms.ToolStripMenuItem tsReimpresion;
         private System.Windows.Forms.ToolStripMenuItem tsEntidad;
-        private System.Windows.Forms.ToolStripMenuItem miEje;
         private System.Windows.Forms.ToolStripMenuItem miVehiculo;
         private System.Windows.Forms.ToolStripMenuItem miConductor;
         private System.Windows.Forms.ToolStripMenuItem miAutorizacion;

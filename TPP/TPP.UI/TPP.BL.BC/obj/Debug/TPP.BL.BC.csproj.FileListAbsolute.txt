@@ -10,15 +10,3 @@ D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.Sql
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.csprojResolveAssemblyReference.cache
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.dll
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.pdb
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.dll.config
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.pdb
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.DL.DataModel.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.DL.DataModel.pdb
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.xml
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.xml
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.csprojResolveAssemblyReference.cache
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.pdb

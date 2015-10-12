@@ -47,6 +47,7 @@
             // 
             // dgvTipoVehiculo
             // 
+            this.dgvTipoVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTipoVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoVehiculo.Location = new System.Drawing.Point(19, 97);
             this.dgvTipoVehiculo.Name = "dgvTipoVehiculo";
@@ -65,6 +66,7 @@
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -78,6 +80,7 @@
             this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSalir
             // 

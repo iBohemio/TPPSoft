@@ -34,7 +34,7 @@ namespace TPP.UI
             {
                 objUsuario = UsuarioBC.ValidarUsuario(objUsuario);
                 MiDelegado(objUsuario);
-                this.Hide();
+                this.Dispose();
             }
             else
             {

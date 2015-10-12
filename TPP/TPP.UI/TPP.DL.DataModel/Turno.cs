@@ -25,7 +25,7 @@ namespace TPP.DL.DataModel
         public int MinutoInicio { get; set; }
         public int HoraFin { get; set; }
         public int MinutoFin { get; set; }
-        public string Estado { get; set; }
+        public short Estado { get; set; }
     
         public virtual ICollection<Reporte> Reporte { get; set; }
     }

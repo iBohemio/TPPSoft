@@ -198,7 +198,7 @@
           <Property Name="MinutoInicio" Type="int" Nullable="false" />
           <Property Name="HoraFin" Type="int" Nullable="false" />
           <Property Name="MinutoFin" Type="int" Nullable="false" />
-          <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Estado" Type="smallint" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -843,7 +843,7 @@
           <Property Name="MinutoInicio" Type="Int32" Nullable="false" />
           <Property Name="HoraFin" Type="Int32" Nullable="false" />
           <Property Name="MinutoFin" Type="Int32" Nullable="false" />
-          <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Reporte" Relationship="Self.FK_Reporte_Turno" FromRole="Turno" ToRole="Reporte" />
         </EntityType>
         <EntityType Name="Usuario">

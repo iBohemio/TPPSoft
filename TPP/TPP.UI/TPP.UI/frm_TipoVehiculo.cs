@@ -30,9 +30,6 @@ namespace TPP.UI
         {
             try
             {
-
-                
-            
                 if (Modo == TypeMode.Registrar)
                 {
                     lblTipoVehiculo.Text = "Registrar Tipo de Vehiculo";
@@ -48,12 +45,11 @@ namespace TPP.UI
                     MensajeRespuesta = "Se editó el Tipo de Vehiculo satisfactoriamente.";
                     TipoVehiculoBC objTipoVehiculoBC = new TipoVehiculoBC();
                     TipoVehiculo objTipoVehiculo = objTipoVehiculoBC.BuscarTipoVehiculo(TipoVehiculoId);
-                    //falta
-                    //txtCodigo.Text = objTipoVehiculo.;
-                    //txtNombre.Text = objTipoVehiculo.Password;
-                    //nudPesoMaximo.Value = objUsuario.RolId;
+                    txtCodigo.Text = objTipoVehiculo.Codigo;
+                    txtNombre.Text = objTipoVehiculo.Nombre;
+                    nudPesoMaximo.Value = objTipoVehiculo.PesoMaximo;
                 }
-
+                txtCodigo.Focus();
             }
             catch (Exception ex)
             {
@@ -62,6 +58,49 @@ namespace TPP.UI
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                {
+                    return;
+                }
+                TipoVehiculoBC objTipoVehiculoBC = new TipoVehiculoBC();
+                TipoVehiculo objTipoVehiculo = new TipoVehiculo();
+                objTipoVehiculo.Codigo = txtCodigo.Text.ToUpper();
+                objTipoVehiculo.Nombre = txtNombre.Text.ToUpper();
+                objTipoVehiculo.PesoMaximo = nudPesoMaximo.Value;
+                objTipoVehiculo.Estado = 1;
+                if (Modo == TypeMode.Registrar)
+                {
+                    objTipoVehiculoBC.RegistrarTipoVehiculo(objTipoVehiculo);
+                    MessageBox.Show(MensajeRespuesta, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+                else if (Modo == TypeMode.Editar)
+                {
+                    objTipoVehiculo.TipoVehiculoId = TipoVehiculoId;
+                    objTipoVehiculoBC.EditarTipoVehiculo(objTipoVehiculo);
+                    MessageBox.Show(MensajeRespuesta, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                MiDelegado();
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                   this.Text,
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

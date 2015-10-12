@@ -11,13 +11,24 @@ namespace TPP.BL.BC
         public Vehiculo BuscarVehiculo(int VehiculoId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Vehiculo.FirstOrDefault(X => X.VehiculoId == VehiculoId);
+            return context.Vehiculo.FirstOrDefault(X => X.VehiculoId == VehiculoId && X.Estado==1);
         }
 
-        public List<Vehiculo> ListarVehiculo()
+        public IEnumerable<Object> ListarVehiculo()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Vehiculo.ToList();
+            IEnumerable<Object> LstVehiculo = (from obj in context.Vehiculo
+                                              where obj.Estado == 1
+                                              select new
+                                              {
+                                                  VehiculoId = obj.VehiculoId,
+                                                  Placa = obj.Placa,
+                                                  Carrete = obj.Carrete,
+                                                  Estado = obj.Estado,
+                                                  TipoVehiculoId = obj.TipoVehiculoId,
+                                                  TipoVehiculo = obj.TipoVehiculo.Codigo
+                                              }).ToList();
+            return LstVehiculo;
         }
 
 

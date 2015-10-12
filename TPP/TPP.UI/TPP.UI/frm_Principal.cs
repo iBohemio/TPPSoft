@@ -68,38 +68,7 @@ namespace TPP.UI
 
         }
 
-        private void miEje_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //se localiza el formulario buscandolo entre los forms abiertos 
-                Form frm = this.MdiChildren.FirstOrDefault(X => X is frm_AdmEje);
-                if (frm != null)
-                {
-                    //si la instancia existe la pongo en primer plano
-                    frm.BringToFront();
-                    return;
-                }
-
-                //se abre el form de clientes
-                frm = new frm_AdmEje();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
-            }
-            catch (Exception)
-            {
-               MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
-                                   this.Text,
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-            }
-           
-        }
-
-        private void miVehiculo_Click(object sender, EventArgs e)
+       private void miVehiculo_Click(object sender, EventArgs e)
         {
             try
             {

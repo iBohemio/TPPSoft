@@ -38,6 +38,8 @@
             this.txtCarrete = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbTipoVehiculo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,12 +50,13 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(157, 137);
+            this.btnSalir.Location = new System.Drawing.Point(227, 171);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(102, 30);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -61,12 +64,13 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(30, 137);
+            this.btnRegistrar.Location = new System.Drawing.Point(19, 171);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(102, 30);
             this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // pictureBox1
             // 
@@ -99,21 +103,21 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 60);
+            this.panel1.Size = new System.Drawing.Size(350, 60);
             this.panel1.TabIndex = 7;
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(76, 71);
-            this.txtPlaca.Mask = "LLL-LLL";
+            this.txtPlaca.Location = new System.Drawing.Point(137, 71);
+            this.txtPlaca.Mask = "AAA-AAA";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(192, 22);
             this.txtPlaca.TabIndex = 8;
             // 
             // txtCarrete
             // 
-            this.txtCarrete.Location = new System.Drawing.Point(76, 100);
-            this.txtCarrete.Mask = "LLL-LLL";
+            this.txtCarrete.Location = new System.Drawing.Point(137, 100);
+            this.txtCarrete.Mask = "AAA-AAA";
             this.txtCarrete.Name = "txtCarrete";
             this.txtCarrete.Size = new System.Drawing.Size(192, 22);
             this.txtCarrete.TabIndex = 9;
@@ -121,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 77);
+            this.label1.Location = new System.Drawing.Point(16, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 10;
@@ -136,12 +140,31 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Carrete:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Tipo de Vehiculo:";
+            // 
+            // cbTipoVehiculo
+            // 
+            this.cbTipoVehiculo.FormattingEnabled = true;
+            this.cbTipoVehiculo.Location = new System.Drawing.Point(137, 131);
+            this.cbTipoVehiculo.Name = "cbTipoVehiculo";
+            this.cbTipoVehiculo.Size = new System.Drawing.Size(192, 24);
+            this.cbTipoVehiculo.TabIndex = 14;
+            // 
             // frm_Vehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(303, 187);
+            this.ClientSize = new System.Drawing.Size(350, 213);
+            this.Controls.Add(this.cbTipoVehiculo);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCarrete);
@@ -154,6 +177,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Vehiculo";
             this.Text = "TPP ERP";
+            this.Load += new System.EventHandler(this.frm_Vehiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -173,5 +197,7 @@
         private System.Windows.Forms.MaskedTextBox txtCarrete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbTipoVehiculo;
     }
 }

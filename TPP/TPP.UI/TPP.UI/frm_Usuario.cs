@@ -81,20 +81,18 @@ namespace TPP.UI
                 }
                 UsuarioBC objUsuarioBC = new UsuarioBC();
                 Usuario objUsuario = new Usuario();
+                objUsuario.Codigo = txtUsuario.Text;
+                objUsuario.Password = txtContrasenia.Text;
+                objUsuario.RolId = Convert.ToInt32(cbRol.SelectedValue.ToString());
+                objUsuario.Estado = 1;
                 if (Modo == TypeMode.Registrar)
                 {
-                    objUsuario.Codigo = txtUsuario.Text;
-                    objUsuario.Password = txtContrasenia.Text;
-                    objUsuario.RolId = Convert.ToInt32(cbRol.SelectedValue.ToString());
                     objUsuarioBC.RegistrarUsuario(objUsuario);
                     MessageBox.Show(MensajeRespuesta, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (Modo == TypeMode.Editar)
                 {
                     objUsuario.UsuarioId = UsuarioId;
-                    objUsuario.Codigo = txtUsuario.Text;
-                    objUsuario.Password = txtContrasenia.Text;
-                    objUsuario.RolId = Convert.ToInt32(cbRol.SelectedValue.ToString());
                     objUsuarioBC.EditarUsuario(objUsuario);
                     MessageBox.Show(MensajeRespuesta, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

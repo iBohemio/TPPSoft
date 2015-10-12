@@ -27,6 +27,7 @@ namespace TPP.UI
             dgv.ReadOnly = true;
             dgv.MultiSelect = false;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         public void dgvTipoVehiculoConfigurar()
         {

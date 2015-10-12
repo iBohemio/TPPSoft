@@ -11,16 +11,16 @@ namespace TPP.BL.BC
         public List<Embalaje> ListarEmbalaje()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Embalaje.ToList();
+            return context.Embalaje.Where(X => X.Estado == 1).ToList();
         }
 
-        public Embalaje ObtenerEmbalaje(int EmbalajeId)
+        public Embalaje BuscarEmbalaje(int EmbalajeId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Embalaje.FirstOrDefault(X => X.EmbalajeId == EmbalajeId);
+            return context.Embalaje.FirstOrDefault(X => X.EmbalajeId == EmbalajeId && X.Estado == 1);
         }
 
-        public void RegistratEmbalaje(Embalaje objEmbalaje)
+        public void RegistrarEmbalaje(Embalaje objEmbalaje)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.Embalaje.Add(objEmbalaje);
@@ -30,20 +30,18 @@ namespace TPP.BL.BC
         public void EliminarEmbalaje(int EmbalajeId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Embalaje objEmbalajeOri = context.Embalaje.FirstOrDefault(X => X.EmbalajeId == EmbalajeId);
-            context.Embalaje.Remove(objEmbalajeOri);
+            Embalaje objEmbalajeSel = context.Embalaje.FirstOrDefault(X => X.EmbalajeId == EmbalajeId);
+            objEmbalajeSel.Estado = 0;
             context.SaveChanges();
         }
 
         public void EditarEmbalaje(Embalaje objEmbalaje)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Embalaje objEmbalajeOri = context.Embalaje.FirstOrDefault(X => X.EmbalajeId == objEmbalaje.EmbalajeId);            
-            objEmbalajeOri.Codigo = objEmbalaje.Codigo;
-            objEmbalajeOri.Descripcion = objEmbalaje.Descripcion;
-            objEmbalajeOri.Estado = objEmbalaje.Estado; // no se si este va             
+            Embalaje objConductorSel = context.Embalaje.FirstOrDefault(X => X.EmbalajeId == objEmbalaje.EmbalajeId && X.Estado == 1);
+            objConductorSel.Codigo = objEmbalaje.Codigo;
+            objConductorSel.Descripcion = objEmbalaje.Descripcion;      
             context.SaveChanges();
-
         }
     }
 }

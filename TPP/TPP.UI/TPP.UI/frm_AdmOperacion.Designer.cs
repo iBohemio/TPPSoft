@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AdmOperacion));
-            this.dgvAutorizacion = new System.Windows.Forms.DataGridView();
+            this.dgvOperacion = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -40,18 +40,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperacion)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvAutorizacion
+            // dgvOperacion
             // 
-            this.dgvAutorizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAutorizacion.Location = new System.Drawing.Point(11, 98);
-            this.dgvAutorizacion.Name = "dgvAutorizacion";
-            this.dgvAutorizacion.Size = new System.Drawing.Size(752, 292);
-            this.dgvAutorizacion.TabIndex = 54;
+            this.dgvOperacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOperacion.Location = new System.Drawing.Point(11, 98);
+            this.dgvOperacion.Name = "dgvOperacion";
+            this.dgvOperacion.Size = new System.Drawing.Size(752, 292);
+            this.dgvOperacion.TabIndex = 54;
             // 
             // btnEliminar
             // 
@@ -65,6 +65,7 @@
             this.btnEliminar.TabIndex = 53;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -78,6 +79,7 @@
             this.btnEditar.TabIndex = 52;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSalir
             // 
@@ -91,6 +93,7 @@
             this.btnSalir.TabIndex = 51;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -104,6 +107,7 @@
             this.btnRegistrar.TabIndex = 50;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBuscar
             // 
@@ -171,7 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(777, 439);
-            this.Controls.Add(this.dgvAutorizacion);
+            this.Controls.Add(this.dgvOperacion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalir);
@@ -185,7 +189,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_AdmOperacion";
             this.Text = "TPP ERP";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).EndInit();
+            this.Load += new System.EventHandler(this.frm_AdmOperacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -196,7 +201,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvAutorizacion;
+        private System.Windows.Forms.DataGridView dgvOperacion;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSalir;

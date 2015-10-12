@@ -61,7 +61,7 @@
             this.txtAPaterno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAPaterno.Name = "txtAPaterno";
             this.txtAPaterno.Size = new System.Drawing.Size(177, 22);
-            this.txtAPaterno.TabIndex = 31;
+            this.txtAPaterno.TabIndex = 2;
             // 
             // txtNombres
             // 
@@ -69,7 +69,7 @@
             this.txtNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(177, 22);
-            this.txtNombres.TabIndex = 30;
+            this.txtNombres.TabIndex = 1;
             // 
             // label2
             // 
@@ -133,9 +133,10 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(119, 37);
-            this.btnSalir.TabIndex = 26;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -147,9 +148,10 @@
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(119, 37);
-            this.btnRegistrar.TabIndex = 25;
+            this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtAMaterno
             // 
@@ -157,16 +159,16 @@
             this.txtAMaterno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAMaterno.Name = "txtAMaterno";
             this.txtAMaterno.Size = new System.Drawing.Size(177, 22);
-            this.txtAMaterno.TabIndex = 33;
+            this.txtAMaterno.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(24, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 34;
-            this.label4.Text = "Brevete:";
+            this.label4.Text = "Nro. Brevete:";
             // 
             // txtBrevete
             // 
@@ -174,7 +176,7 @@
             this.txtBrevete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrevete.Name = "txtBrevete";
             this.txtBrevete.Size = new System.Drawing.Size(177, 22);
-            this.txtBrevete.TabIndex = 35;
+            this.txtBrevete.TabIndex = 0;
             // 
             // frm_Conductor
             // 
@@ -198,6 +200,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Conductor";
             this.Text = "TPP ERP";
+            this.Load += new System.EventHandler(this.frm_Conductor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

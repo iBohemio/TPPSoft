@@ -11,38 +11,36 @@ namespace TPP.BL.BC
         public List<TamanioContenedor> ListarTamanioContenedor()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.TamanioContenedor.ToList();
+            return context.TamanioContenedor.Where(X => X.Estado == 1).ToList();
         }
 
-        public TamanioContenedor ObtenerTamanioContenedor(int TamanioContenedorId)
+        public TamanioContenedor BuscarTamanioContenedor(int TamanioContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.TamanioContenedor.FirstOrDefault(X => X.TamanioContenedorId == TamanioContenedorId);
+            return context.TamanioContenedor.FirstOrDefault(X => X.TamanioContenedorId == TamanioContenedorId && X.Estado == 1);
         }
 
-        public void RegistratTamanioContenedor(TamanioContenedor objTamanioContenedor)
+        public void RegistrarTamanioContenedor(TamanioContenedor objTamanioContenedor)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.TamanioContenedor.Add(objTamanioContenedor);
             context.SaveChanges();
         }
 
-        public void EliminaTamanioContenedor(int TamanioContenedorId)
+        public void EliminarTamanioContenedor(int TamanioContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            TamanioContenedor objTamanioContenedorOri = context.TamanioContenedor.FirstOrDefault(X => X.TamanioContenedorId == TamanioContenedorId);
-            context.TamanioContenedor.Remove(objTamanioContenedorOri);
+            TamanioContenedor objTamanioContenedorSel = context.TamanioContenedor.FirstOrDefault(X => X.TamanioContenedorId == TamanioContenedorId);
+            objTamanioContenedorSel.Estado = 0;
             context.SaveChanges();
         }
 
         public void EditarTamanioContenedor(TamanioContenedor objTamanioContenedor)
         {
             BDParacasEntities context = new BDParacasEntities();
-            TamanioContenedor objTamanioContenedorOri = context.TamanioContenedor.FirstOrDefault(X => X.TamanioContenedorId == objTamanioContenedor.TamanioContenedorId);
-            objTamanioContenedorOri.Estado = objTamanioContenedor.Estado;
-            objTamanioContenedorOri.Descripcion = objTamanioContenedor.Descripcion;
+            TamanioContenedor objTamanioContenedorSel = context.TamanioContenedor.FirstOrDefault(X => X.TamanioContenedorId == objTamanioContenedor.TamanioContenedorId && X.Estado == 1);
+            objTamanioContenedorSel.Descripcion = objTamanioContenedor.Descripcion;
             context.SaveChanges();
-
         }
     }
 }

@@ -46,8 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditoriaPesajeBC.cs" />
+    <Compile Include="AutorizacionBC.cs" />
+    <Compile Include="ConductorBC.cs" />
+    <Compile Include="ContenedorBC.cs" />
+    <Compile Include="EmbalajeBC.cs" />
     <Compile Include="GuiaRemisionBC.cs" />
+    <Compile Include="MovimientoPesajeBC.cs" />
+    <Compile Include="NaveBC.cs" />
+    <Compile Include="OperacionBC.cs" />
+    <Compile Include="PesajeBC.cs" />
+    <Compile Include="ReporteBC.cs" />
     <Compile Include="RolBC.cs" />
+    <Compile Include="TamanioContenedorBC.cs" />
+    <Compile Include="TipoContenedorBC.cs" />
     <Compile Include="TipoVehiculoBC.cs" />
     <Compile Include="TurnoBC.cs" />
     <Compile Include="UsuarioBC.cs" />

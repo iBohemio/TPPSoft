@@ -8,10 +8,10 @@ namespace TPP.BL.BC
 {
     public class TurnoBC
     {
-        public GuiaRemision BuscarGuiaRemision(int GuiaRemisionId)
+        public Turno BuscarTurno(int TurnoId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.GuiaRemision.FirstOrDefault(X => X.GuiaRemisionId == GuiaRemisionId && X.Estado == 1);
+            return context.Turno.FirstOrDefault(X => X.TurnoId == TurnoId && X.Estado == 1);
         }
 
         public List<GuiaRemision> ListarGuiaRemision()

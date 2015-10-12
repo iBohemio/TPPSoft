@@ -11,38 +11,36 @@ namespace TPP.BL.BC
         public List<TipoContenedor> ListarTipoContenedor()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.TipoContenedor.ToList();
+            return context.TipoContenedor.Where(X => X.Estado == 1).ToList();
         }
 
-        public TipoContenedor ObtenerTipoContenedor(int TipoContenedorId)
+        public TipoContenedor BuscarTipoContenedor(int TipoContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.TipoContenedor.FirstOrDefault(X => X.TipoContenedorId == TipoContenedorId);
+            return context.TipoContenedor.FirstOrDefault(X => X.TipoContenedorId == TipoContenedorId && X.Estado == 1);
         }
 
-        public void RegistratTipoContenedor(TipoContenedor objTipoContenedor)
+        public void RegistrarTipoContenedor(TipoContenedor objTipoContenedor)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.TipoContenedor.Add(objTipoContenedor);
             context.SaveChanges();
         }
 
-        public void EliminaTipoContenedor(int TipoContenedorId)
+        public void EliminarTipoContenedor(int TipoContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            TipoContenedor objTipoContenedorOri = context.TipoContenedor.FirstOrDefault(X => X.TipoContenedorId == TipoContenedorId);
-            context.TipoContenedor.Remove(objTipoContenedorOri);
+            TipoContenedor objTipoContenedorSel = context.TipoContenedor.FirstOrDefault(X => X.TipoContenedorId == TipoContenedorId);
+            objTipoContenedorSel.Estado = 0;
             context.SaveChanges();
         }
 
         public void EditarTipoContenedor(TipoContenedor objTipoContenedor)
         {
             BDParacasEntities context = new BDParacasEntities();
-            TipoContenedor objTipoContenedorOri = context.TipoContenedor.FirstOrDefault(X => X.TipoContenedorId == objTipoContenedor.TipoContenedorId);
-            objTipoContenedorOri.Descripcion = objTipoContenedor.Descripcion;
-            objTipoContenedorOri.Estado = objTipoContenedor.Estado;
+            TipoContenedor objTipoContenedorSel = context.TipoContenedor.FirstOrDefault(X => X.TipoContenedorId == objTipoContenedor.TipoContenedorId && X.Estado == 1);
+            objTipoContenedorSel.Descripcion = objTipoContenedor.Descripcion;
             context.SaveChanges();
-
         }
     }
 }

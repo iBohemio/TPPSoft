@@ -25,24 +25,25 @@ namespace TPP.UI
         public dlgRefrescarGrilla MiDelegado;
         private string MensajePregunta;
         private string MensajeRespuesta;
-
+        private string Entidad;
         private void frm_TipoVehiculo_Load(object sender, EventArgs e)
         {
             try
             {
+                Entidad = "Tipo de Vehiculo";
                 if (Modo == TypeMode.Registrar)
                 {
-                    lblTipoVehiculo.Text = "Registrar Tipo de Vehiculo";
+                    lblTipoVehiculo.Text = "Registrar " + Entidad;
                     btnRegistrar.Text = "Registrar";
-                    MensajePregunta = "¿Está seguro de registrar el Tipo de Vehiculo?";
-                    MensajeRespuesta = "Se registró el Tipo de Vehiculo satisfactoriamente.";
+                    MensajePregunta = "¿Está seguro de registrar el " + Entidad + "?";
+                    MensajeRespuesta = "Se registró el " + Entidad + " satisfactoriamente.";
                 }
                 else if (Modo == TypeMode.Editar)
                 {
-                    lblTipoVehiculo.Text = "Editar Tipo de Vehiculo";
+                    lblTipoVehiculo.Text = "Editar " + Entidad;
                     btnRegistrar.Text = "Editar";
-                    MensajePregunta = "¿Está seguro de editar el Tipo de Vehiculo?";
-                    MensajeRespuesta = "Se editó el Tipo de Vehiculo satisfactoriamente.";
+                    MensajePregunta = "¿Está seguro de editar el " + Entidad + "?";
+                    MensajeRespuesta = "Se editó el " + Entidad + " satisfactoriamente.";
                     TipoVehiculoBC objTipoVehiculoBC = new TipoVehiculoBC();
                     TipoVehiculo objTipoVehiculo = objTipoVehiculoBC.BuscarTipoVehiculo(TipoVehiculoId);
                     txtCodigo.Text = objTipoVehiculo.Codigo;
@@ -51,7 +52,7 @@ namespace TPP.UI
                 }
                 txtCodigo.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
                                    this.Text,
@@ -89,7 +90,7 @@ namespace TPP.UI
                 MiDelegado();
                 this.Dispose();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
                                    this.Text,

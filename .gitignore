@@ -216,3 +216,4 @@ pip-log.txt
 .mr.developer.cfg
 TPP/TPP.UI/TPP.DL.DataModel/App.Config
 TPP/TPP.UI/TPP.DL.DataModel/App.Config
+*.Config

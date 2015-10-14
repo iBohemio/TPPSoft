@@ -46,5 +46,12 @@ namespace TPP.BL.BC
             context.SaveChanges();
 
         }
+
+        public List<Conductor> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Conductor.Where(X => X.Nombres.Contains(Nombre)).ToList();
+        }
+
     }
 }

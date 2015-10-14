@@ -42,5 +42,11 @@ namespace TPP.BL.BC
             objTipoContenedorSel.Descripcion = objTipoContenedor.Descripcion;
             context.SaveChanges();
         }
+
+        public List<TipoContenedor> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.TipoContenedor.Where(X => X.Descripcion.Contains(Nombre)).ToList();
+        }
     }
 }

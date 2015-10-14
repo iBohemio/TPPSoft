@@ -14,36 +14,45 @@ namespace TPP.BL.BC
             return context.Turno.FirstOrDefault(X => X.TurnoId == TurnoId && X.Estado == 1);
         }
 
-        public List<GuiaRemision> ListarGuiaRemision()
+        public List<Turno> ListarTurno()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.GuiaRemision.Where(X => X.Estado == 1).ToList();
+            return context.Turno.Where(X => X.Estado == 1).ToList();
         }
 
 
-        public void RegistrarGuiaRemision(GuiaRemision objGuiaRemision)
+        public void RegistrarTurno(Turno objTurno)
         {
             BDParacasEntities context = new BDParacasEntities();
-            context.GuiaRemision.Add(objGuiaRemision);
+            context.Turno.Add(objTurno);
             context.SaveChanges();
         }
 
-        public void EditarGuiaRemision(GuiaRemision objGuiaRemision)
+        public void EditarTurno(Turno objTurno)
         {
             BDParacasEntities context = new BDParacasEntities();
-            GuiaRemision objGuiaRemisionSel = context.GuiaRemision.FirstOrDefault(X => X.GuiaRemisionId == objGuiaRemision.GuiaRemisionId);
-            objGuiaRemisionSel.Documento = objGuiaRemision.Documento;
-            objGuiaRemisionSel.Bultos = objGuiaRemision.Bultos;
-            objGuiaRemisionSel.PesajeId = objGuiaRemision.PesajeId;
+            Turno objTurnoSel = context.Turno.FirstOrDefault(X => X.TurnoId == objTurno.TurnoId);
+            objTurnoSel.Nombre = objTurno.Nombre;
+            objTurnoSel.HoraInicio = objTurno.HoraInicio;
+            objTurnoSel.MinutoInicio = objTurno.MinutoInicio;
+            objTurnoSel.HoraFin = objTurno.HoraFin;
+            objTurnoSel.MinutoFin = objTurno.MinutoFin;
             context.SaveChanges();
         }
 
-        public void EliminarGuiaRemision(int GuiaRemisionId)
+        public void EliminarTurno(int TurnoId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            GuiaRemision objGuiaRemisionSel = context.GuiaRemision.FirstOrDefault(X => X.GuiaRemisionId == GuiaRemisionId);
-            objGuiaRemisionSel.Estado = 0;
+            Turno objTurnoSel = context.Turno.FirstOrDefault(X => X.TurnoId == TurnoId);
+            objTurnoSel.Estado = 0;
             context.SaveChanges();
+        }
+
+
+        public List<Turno> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Turno.Where(X => X.Nombre.Contains(Nombre)).ToList();
         }
     }
 }

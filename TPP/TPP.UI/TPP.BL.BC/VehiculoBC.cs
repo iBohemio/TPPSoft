@@ -57,5 +57,10 @@ namespace TPP.BL.BC
             context.Vehiculo.Remove(objVehiculoSel);
             context.SaveChanges();
         }
+        public List<Vehiculo> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Vehiculo.Where(X => X.Placa.Contains(Nombre)).ToList();
+        }
     }
 }

@@ -127,5 +127,22 @@ namespace TPP.UI
                                  MessageBoxIcon.Error);
             }
         }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                OperacionBC objOperacionBC = new OperacionBC();
+                dgvOperacion.DataSource = objOperacionBC.Filtro(txtFiltro.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Disculpe, el sistema se encuetra fuera de servicio",
+                    this.Text,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
     }
 }

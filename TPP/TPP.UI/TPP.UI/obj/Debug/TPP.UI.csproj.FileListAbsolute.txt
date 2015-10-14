@@ -88,3 +88,6 @@ D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Resources.resources
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb

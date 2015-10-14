@@ -38,12 +38,12 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbHoraIni = new System.Windows.Forms.ComboBox();
             this.cbMinIni = new System.Windows.Forms.ComboBox();
             this.cbHoraFin = new System.Windows.Forms.ComboBox();
             this.cbMinFin = new System.Windows.Forms.ComboBox();
-            this.cbHoraIni = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 60);
+            this.panel1.Size = new System.Drawing.Size(466, 60);
             this.panel1.TabIndex = 56;
             // 
             // pictureBox1
@@ -114,13 +114,14 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(281, 156);
+            this.btnSalir.Location = new System.Drawing.Point(320, 156);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(119, 37);
             this.btnSalir.TabIndex = 55;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -128,31 +129,23 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(91, 156);
+            this.btnRegistrar.Location = new System.Drawing.Point(19, 156);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(119, 37);
             this.btnRegistrar.TabIndex = 54;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 117);
+            this.label2.Location = new System.Drawing.Point(253, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 16);
             this.label2.TabIndex = 61;
             this.label2.Text = "Fin:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(141, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(12, 16);
-            this.label3.TabIndex = 62;
-            this.label3.Text = ":";
             // 
             // label5
             // 
@@ -163,9 +156,113 @@
             this.label5.TabIndex = 63;
             this.label5.Text = ":";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(141, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(12, 16);
+            this.label3.TabIndex = 62;
+            this.label3.Text = ":";
+            // 
+            // cbHoraIni
+            // 
+            this.cbHoraIni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHoraIni.FormattingEnabled = true;
+            this.cbHoraIni.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.cbHoraIni.Location = new System.Drawing.Point(79, 114);
+            this.cbHoraIni.Name = "cbHoraIni";
+            this.cbHoraIni.Size = new System.Drawing.Size(58, 24);
+            this.cbHoraIni.TabIndex = 67;
+            // 
             // cbMinIni
             // 
+            this.cbMinIni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMinIni.FormattingEnabled = true;
+            this.cbMinIni.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
             this.cbMinIni.Location = new System.Drawing.Point(155, 114);
             this.cbMinIni.Name = "cbMinIni";
             this.cbMinIni.Size = new System.Drawing.Size(58, 24);
@@ -173,37 +270,116 @@
             // 
             // cbHoraFin
             // 
+            this.cbHoraFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHoraFin.FormattingEnabled = true;
+            this.cbHoraFin.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
             this.cbHoraFin.Location = new System.Drawing.Point(299, 114);
             this.cbHoraFin.Name = "cbHoraFin";
             this.cbHoraFin.Size = new System.Drawing.Size(58, 24);
-            this.cbHoraFin.TabIndex = 65;
+            this.cbHoraFin.TabIndex = 68;
             // 
             // cbMinFin
             // 
+            this.cbMinFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMinFin.FormattingEnabled = true;
+            this.cbMinFin.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
             this.cbMinFin.Location = new System.Drawing.Point(381, 114);
             this.cbMinFin.Name = "cbMinFin";
             this.cbMinFin.Size = new System.Drawing.Size(58, 24);
-            this.cbMinFin.TabIndex = 66;
-            // 
-            // cbHoraIni
-            // 
-            this.cbHoraIni.FormattingEnabled = true;
-            this.cbHoraIni.Location = new System.Drawing.Point(79, 114);
-            this.cbHoraIni.Name = "cbHoraIni";
-            this.cbHoraIni.Size = new System.Drawing.Size(58, 24);
-            this.cbHoraIni.TabIndex = 67;
+            this.cbMinFin.TabIndex = 69;
             // 
             // frm_Turno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(493, 206);
-            this.Controls.Add(this.cbHoraIni);
+            this.ClientSize = new System.Drawing.Size(466, 206);
             this.Controls.Add(this.cbMinFin);
             this.Controls.Add(this.cbHoraFin);
+            this.Controls.Add(this.cbHoraIni);
             this.Controls.Add(this.cbMinIni);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -239,11 +415,11 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbHoraIni;
         private System.Windows.Forms.ComboBox cbMinIni;
         private System.Windows.Forms.ComboBox cbHoraFin;
         private System.Windows.Forms.ComboBox cbMinFin;
-        private System.Windows.Forms.ComboBox cbHoraIni;
     }
 }

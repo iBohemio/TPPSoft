@@ -43,13 +43,11 @@ D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Reso
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.SqlServer.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.dll
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.xml
@@ -88,3 +86,5 @@ D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Resources.resources
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb

@@ -13,35 +13,68 @@ namespace TPP.BL.BC
             BDParacasEntities context = new BDParacasEntities();
             return context.Autorizacion.ToList();
         }
+        public IEnumerable<Object> AutorizacionListarCompleto()
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            IEnumerable<object> LstAutorizacion = (from obj in context.Autorizacion
+                                             select new
+                                             {
+                                                 AutorizacionId = obj.AutorizacionId,
+                                                 Codigo = obj.Codigo,
+                                                 EmbalajeId = obj.EmbalajeId,
+                                                 Embalaje = obj.Embalaje.Codigo,
+                                                 OperacionId = obj.OperacionId,
+                                                 Operacion = obj.Operacion.Codigo,
+                                                 Peso = obj.Peso,
+                                                 NroBultos = obj.NroBultos,
+                                                 Estado = obj.Estado,
+                                                 Fecha = obj.Fecha,
+                                                 UsuarioId = obj.UsuarioId,
+                                                 Usuario = obj.Usuario.Codigo,
+                                                 NaveId = obj.NaveId,
+                                                 Nave = obj.Nave.Nombre,
+                                                 Producto = obj.Producto,
+                                                 Tipo = obj.Tipo
+                                             }).ToList();
+            return LstAutorizacion;
+        }
 
-        public Autorizacion ObtenerAutorizacion(int AutorizacionId)
+        public Autorizacion BuscarAutorizacion(int AutorizacionId)
         {
             BDParacasEntities context = new BDParacasEntities();
             return context.Autorizacion.FirstOrDefault(X => X.AutorizacionId == AutorizacionId);
         }
 
-        public void RegistratAutorizacion(Autorizacion objAutorizacion)
+        public void RegistrarAutorizacion(Autorizacion objAutorizacion)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.Autorizacion.Add(objAutorizacion);
             context.SaveChanges();
         }
 
-        public void EliminaAutorizacion(int AutorizacionId)
+        public void EliminarAutorizacion(int AutorizacionId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Autorizacion objAutorizacionOri = context.Autorizacion.FirstOrDefault(X => X.AutorizacionId == AutorizacionId);
-            context.Autorizacion.Remove(objAutorizacionOri);
+            Autorizacion objAutorizacionSel = context.Autorizacion.FirstOrDefault(X => X.AutorizacionId == AutorizacionId);
+            context.Autorizacion.Remove(objAutorizacionSel);
             context.SaveChanges();
         }
 
         public void EditarAutorizacion(Autorizacion objAutorizacion)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Autorizacion objAutorizacionOri = context.Autorizacion.FirstOrDefault(X => X.AutorizacionId == objAutorizacion.AutorizacionId);
-          
-            //creo q no se edita pero avisas para completar
-                       
+            Autorizacion objAutorizacionSel = context.Autorizacion.FirstOrDefault(X => X.AutorizacionId == objAutorizacion.AutorizacionId);
+            objAutorizacionSel.Codigo = objAutorizacion.Codigo;
+            objAutorizacionSel.EmbalajeId = objAutorizacion.EmbalajeId;
+            objAutorizacionSel.OperacionId = objAutorizacion.OperacionId;
+            objAutorizacionSel.Peso = objAutorizacion.Peso;
+            objAutorizacionSel.NroBultos = objAutorizacion.NroBultos;
+            objAutorizacionSel.Fecha = objAutorizacion.Fecha;
+            objAutorizacionSel.UsuarioId = objAutorizacion.UsuarioId;
+            objAutorizacionSel.NaveId = objAutorizacion.NaveId;
+            objAutorizacionSel.Producto = objAutorizacion.Producto;
+            objAutorizacionSel.Tipo = objAutorizacion.Tipo;
+            objAutorizacionSel.Estado = objAutorizacion.Estado;
             context.SaveChanges();
 
         }

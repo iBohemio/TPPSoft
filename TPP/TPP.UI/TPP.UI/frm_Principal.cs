@@ -18,7 +18,7 @@ namespace TPP.UI
         {
             InitializeComponent();
         }
-
+        public int usuarioId { get; set; }
         private void ConfigurarControles()
         {
             tsCerrarSesion.Visible = false;
@@ -33,9 +33,9 @@ namespace TPP.UI
 
         private void RecibirDatos(Usuario UsuarioObj)
         {
-
             sslbl_Usuario.Text = "Bienvenido: " + UsuarioObj.Codigo.ToString();
             sslbl_Rol.Text = "Rol: " + UsuarioObj.Rol.Descripcion.ToString();
+            usuarioId = UsuarioObj.UsuarioId;
             tsAdministrar.Visible = true;
             tsEntrada.Visible = true;
             tsSalida.Visible = true;
@@ -132,12 +132,16 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_AdmAutorizacion();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                frm_AdmAutorizacion frm1 = new frm_AdmAutorizacion();
+                frm1.UsuarioId = usuarioId;
+                frm1.MdiParent = this;
+                frm1.WindowState = FormWindowState.Normal;
+                frm1.StartPosition = FormStartPosition.Manual;
+                frm1.Location = new Point(0, 0);
+                frm1.Show();
+                }
             }
             catch (Exception)
             {
@@ -159,12 +163,16 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_AdmEmbalaje();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                frm_AdmEmbalaje frm1 = new frm_AdmEmbalaje();
+                frm1.Modo = frm_AdmEmbalaje.TypeMode.Normal;
+                frm1.MdiParent = this;
+                frm1.WindowState = FormWindowState.Normal;
+                frm1.StartPosition = FormStartPosition.Manual;
+                frm1.Location = new Point(0, 0);
+                frm1.Show();
+                }
             }
             catch (Exception)
             {
@@ -186,12 +194,16 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_AdmOperacion();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                    frm_AdmOperacion frm1 = new frm_AdmOperacion();
+                    frm1.Modo = frm_AdmOperacion.TypeMode.Normal;
+                    frm1.MdiParent = this;
+                    frm1.WindowState = FormWindowState.Normal;
+                    frm1.StartPosition = FormStartPosition.Manual;
+                    frm1.Location = new Point(0, 0);
+                    frm1.Show();
+                }
             }
             catch (Exception)
             {
@@ -240,12 +252,16 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_AdmNave();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                    frm_AdmNave frm1 = new frm_AdmNave();
+                    frm1.Modo = frm_AdmNave.TypeMode.Normal;
+                    frm1.MdiParent = this;
+                    frm1.WindowState = FormWindowState.Normal;
+                    frm1.StartPosition = FormStartPosition.Manual;
+                    frm1.Location = new Point(0, 0);
+                    frm1.Show();
+                }
             }
             catch (Exception)
             {

@@ -189,6 +189,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_AdmAutorizacion";
             this.Text = "TPP ERP";
+            this.Load += new System.EventHandler(this.frm_AdmAutorizacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

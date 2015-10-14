@@ -17,6 +17,10 @@ namespace TPP.UI
         {
             InitializeComponent();
         }
+        public enum TypeMode { Buscar, Normal }
+        public TypeMode Modo { get; set; }
+        public delegate void EnviarDatos(int OperacionId, string codigo, string descripcion);
+        public EnviarDatos MiDelegado;
         public void ConfigurarControles(DataGridView dgv)
         {
             dgv.AllowDrop = false;
@@ -47,6 +51,14 @@ namespace TPP.UI
         {
             try
             {
+                if (Modo == TypeMode.Normal)
+                {
+                    lblAdmOperacion.Text = "Administrar Operación";
+                }
+                else if (Modo == TypeMode.Buscar)
+                {
+                    lblAdmOperacion.Text = "Buscar Operación";
+                }
                 ConfigurarControles(dgvOperacion);
                 RefrescarGrilla();
             }
@@ -142,6 +154,15 @@ namespace TPP.UI
                     this.Text,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvOperacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Modo == TypeMode.Buscar)
+            {
+                MiDelegado(Convert.ToInt32(dgvOperacion.SelectedRows[0].Cells["OperacionId"].Value.ToString()), dgvOperacion.SelectedRows[0].Cells["Codigo"].Value.ToString(), dgvOperacion.SelectedRows[0].Cells["Descripcion"].Value.ToString());
+                this.Dispose();
             }
         }
     }

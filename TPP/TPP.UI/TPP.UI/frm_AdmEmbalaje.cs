@@ -17,6 +17,10 @@ namespace TPP.UI
         {
             InitializeComponent();
         }
+        public enum TypeMode { Buscar, Normal }
+        public TypeMode Modo { get; set; }
+        public delegate void EnviarDatos(int EmbalajeId,string codigo, string descripcion);
+        public EnviarDatos MiDelegado;
         public void ConfigurarControles(DataGridView dgv)
         {
             dgv.AllowDrop = false;
@@ -47,6 +51,14 @@ namespace TPP.UI
         {
             try
             {
+                if (Modo == TypeMode.Normal)
+                {
+                    lblAdmEmbalaje.Text = "Administrar Embalaje";
+                }
+                if (Modo ==TypeMode.Buscar)
+                {
+                    lblAdmEmbalaje.Text = "Buscar Embalaje";
+                }
                 ConfigurarControles(dgvEmbalaje);
                 RefrescarGrilla();
             }
@@ -142,6 +154,15 @@ namespace TPP.UI
                     this.Text,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvEmbalaje_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Modo == TypeMode.Buscar)
+            {
+                MiDelegado(Convert.ToInt32(dgvEmbalaje.SelectedRows[0].Cells["EmbalajeId"].Value.ToString()), dgvEmbalaje.SelectedRows[0].Cells["Codigo"].Value.ToString(), dgvEmbalaje.SelectedRows[0].Cells["Descripcion"].Value.ToString());
+                this.Dispose();
             }
         }
     }

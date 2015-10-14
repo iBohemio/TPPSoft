@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdmEmbalaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbalaje)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +52,7 @@
             this.dgvEmbalaje.Name = "dgvEmbalaje";
             this.dgvEmbalaje.Size = new System.Drawing.Size(752, 292);
             this.dgvEmbalaje.TabIndex = 45;
+            this.dgvEmbalaje.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmbalaje_CellDoubleClick);
             // 
             // btnEliminar
             // 
@@ -140,7 +141,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblAdmEmbalaje);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -159,16 +160,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblAdmEmbalaje
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(47, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Administrar Embalaje";
+            this.lblAdmEmbalaje.AutoSize = true;
+            this.lblAdmEmbalaje.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmEmbalaje.ForeColor = System.Drawing.Color.White;
+            this.lblAdmEmbalaje.Location = new System.Drawing.Point(47, 25);
+            this.lblAdmEmbalaje.Name = "lblAdmEmbalaje";
+            this.lblAdmEmbalaje.Size = new System.Drawing.Size(145, 16);
+            this.lblAdmEmbalaje.TabIndex = 1;
+            this.lblAdmEmbalaje.Text = "Administrar Embalaje";
             // 
             // frm_AdmEmbalaje
             // 
@@ -212,6 +213,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAdmEmbalaje;
     }
 }

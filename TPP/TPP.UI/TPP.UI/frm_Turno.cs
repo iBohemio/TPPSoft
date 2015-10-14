@@ -36,6 +36,8 @@ namespace TPP.UI
                     btnRegistrar.Text = "Registrar";
                     MensajePregunta = "¿Está seguro de registrar el " + Entidad + "?";
                     MensajeRespuesta = "Se registró el " + Entidad + " satisfactoriamente.";
+                    cbHoraIni.SelectedIndex = cbMinIni.SelectedIndex = cbMinFin.SelectedIndex = cbHoraFin.SelectedIndex = 0;
+               
                 }
                 else if (Modo == TypeMode.Editar)
                 {
@@ -46,14 +48,12 @@ namespace TPP.UI
                     TurnoBC objTurnoBC = new TurnoBC();
                     Turno objTurno = objTurnoBC.BuscarTurno(TurnoId);
                     txtNombre.Text = objTurno.Nombre;
-                    //esta sonsera no sale xd
-                    cbHoraIni.SelectedText = objTurno.HoraInicio.ToString();
+                    cbHoraIni.SelectedItem = objTurno.HoraInicio.ToString();
                     cbMinIni.SelectedItem = objTurno.MinutoInicio.ToString();
                     cbHoraFin.SelectedItem = objTurno.HoraFin.ToString();
                     cbMinFin.SelectedItem = objTurno.MinutoFin.ToString();
                 }
-                cbHoraIni.SelectedIndex = cbMinIni.SelectedIndex = cbMinFin.SelectedIndex = cbHoraFin.SelectedIndex =0;
-                txtNombre.Focus();
+                 txtNombre.Focus();
             }
             catch (Exception ex)
             {

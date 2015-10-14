@@ -44,10 +44,10 @@ namespace TPP.BL.BC
             context.SaveChanges();
         }
 
-        public List<Embalaje> Filtro(String Nombre)
+        public List<Embalaje> Filtro(String Filtro)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Embalaje.Where(X => X.Descripcion.Contains(Nombre)).ToList();
+            return context.Embalaje.Where(X => (X.Descripcion.Contains(Filtro) || X.Codigo.Contains(Filtro)) && X.Estado == 1).ToList();
         }
     }
 }

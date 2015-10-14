@@ -1,53 +1,10 @@
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.dll
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.SqlServer.dll
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.dll
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.dll
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.pdb
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.pdb
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.xml
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.SqlServer.xml
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csprojResolveAssemblyReference.cache
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmContenedor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmAutorizacion.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmConductor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmEje.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmEmbalaje.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmNave.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmOperacion.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTamanioContenedor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTipoContenedor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTurno.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmUsuario.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmVehiculo.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Autorizacion.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Conductor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Contenedor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_ControlarPesaje.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Eje.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Embalaje.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_GuiaRemision.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Login.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Nave.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Operacion.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Principal.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_RegistrarPesaje.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_TamanioContenedor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_TipoContenedor.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Turno.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Usuario.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Vehiculo.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Resources.resources
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
-D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.SqlServer.dll
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.dll
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.xml
@@ -86,53 +43,3 @@ D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Resources.resources
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb
-<<<<<<< HEAD
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.SqlServer.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.BL.BC.pdb
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.DL.DataModel.pdb
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.xml
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\EntityFramework.SqlServer.xml
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csprojResolveAssemblyReference.cache
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmContenedor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmAutorizacion.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmConductor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmEmbalaje.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmNave.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmOperacion.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTamanioContenedor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTipoContenedor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTipoVehiculo.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmTurno.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmUsuario.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_AdmVehiculo.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Autorizacion.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Conductor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Contenedor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_ControlarPesaje.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Embalaje.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_GuiaRemision.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Login.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Nave.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Operacion.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Principal.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_RegistrarPesaje.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_TamanioContenedor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_TipoContenedor.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_TipoVehiculo.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Turno.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Usuario.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Vehiculo.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Resources.resources
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
-=======
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb
->>>>>>> refs/remotes/origin/master

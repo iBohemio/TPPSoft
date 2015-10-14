@@ -17,6 +17,10 @@ namespace TPP.UI
         {
             InitializeComponent();
         }
+        public enum TypeMode { Buscar, Normal }
+        public TypeMode Modo { get; set; }
+        public delegate void EnviarDatos(int NaveId, string nombre);
+        public EnviarDatos MiDelegado;
         public void ConfigurarControles(DataGridView dgv)
         {
             dgv.AllowDrop = false;
@@ -47,6 +51,14 @@ namespace TPP.UI
         {
             try
             {
+                if (Modo == TypeMode.Normal)
+                {
+                    lblAdmNave.Text = "Administrar Nave";
+                }
+                else if (Modo == TypeMode.Buscar)
+                {
+                    lblAdmNave.Text = "Buscar Nave";
+                }
                 ConfigurarControles(dgvNave);
                 RefrescarGrilla();
             }
@@ -125,6 +137,15 @@ namespace TPP.UI
                                  this.Text,
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvNave_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Modo == TypeMode.Buscar)
+            {
+                MiDelegado(Convert.ToInt32(dgvNave.SelectedRows[0].Cells["NaveId"].Value.ToString()), dgvNave.SelectedRows[0].Cells["Nombre"].Value.ToString());
+                this.Dispose();
             }
         }
     }

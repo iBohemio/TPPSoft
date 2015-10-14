@@ -11,37 +11,36 @@ namespace TPP.BL.BC
         public List<Nave> ListarNave()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Nave.ToList();
+            return context.Nave.Where(X => X.Estado == 1).ToList();
         }
 
-        public Nave ObtenerNave(int NaveId)
+        public Nave BuscarNave(int NaveId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Nave.FirstOrDefault(X => X.NaveId == NaveId);
+            return context.Nave.FirstOrDefault(X => X.NaveId == NaveId && X.Estado == 1);
         }
 
-        public void RegistratNave(Nave objNave)
+        public void RegistrarNave(Nave objNave)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.Nave.Add(objNave);
             context.SaveChanges();
         }
 
-        public void EliminaNave(int NaveId)
+        public void EliminarNave(int NaveId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Nave objNaveOri = context.Nave.FirstOrDefault(X => X.NaveId == NaveId);
-            context.Nave.Remove(objNaveOri);
+            Nave objNaveSel = context.Nave.FirstOrDefault(X => X.NaveId == NaveId);
+            objNaveSel.Estado = 0;
             context.SaveChanges();
         }
 
         public void EditarNave(Nave objNave)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Nave objNaveOri = context.Nave.FirstOrDefault(X => X.NaveId == objNave.NaveId);
-            objNaveOri.Nombre = objNave.Nombre;
-            objNaveOri.PesoTotal = objNave.PesoTotal;
-            objNaveOri.Estado = objNave.Estado;           
+            Nave objNaveSel = context.Nave.FirstOrDefault(X => X.NaveId == objNave.NaveId);
+            objNaveSel.Nombre = objNave.Nombre;
+            objNaveSel.PesoTotal = objNave.PesoTotal;    
             context.SaveChanges();
 
         }

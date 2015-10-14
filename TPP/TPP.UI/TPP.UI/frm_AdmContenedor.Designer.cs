@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -165,12 +166,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrar Contenedor";
             // 
-            // frmAdmContenedor
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(420, 52);
+            this.maskedTextBox1.Mask = "00:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox1.TabIndex = 73;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // frm_AdmContenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(773, 448);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.dgvAutorizacion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -183,7 +194,7 @@
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmAdmContenedor";
+            this.Name = "frm_AdmContenedor";
             this.Text = "TPP ERP";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -207,5 +218,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

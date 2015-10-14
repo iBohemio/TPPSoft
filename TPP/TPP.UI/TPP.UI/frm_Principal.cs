@@ -52,9 +52,9 @@ namespace TPP.UI
                 frm.MiDelegado += RecibirDatos;
                 frm.ShowDialog();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                MessageBox.Show(ex.ToString(),
                                    this.Text,
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Error);

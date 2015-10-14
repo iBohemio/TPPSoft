@@ -62,5 +62,11 @@ namespace TPP.BL.BC
             objUsuarioSel.Estado = 0;
             context.SaveChanges();
         }
+
+        public List<Usuario> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Usuario.Where(X => X.Codigo.Contains(Nombre)).ToList();
+        }
     }
 }

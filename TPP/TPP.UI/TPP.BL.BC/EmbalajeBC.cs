@@ -43,5 +43,11 @@ namespace TPP.BL.BC
             objConductorSel.Descripcion = objEmbalaje.Descripcion;      
             context.SaveChanges();
         }
+
+        public List<Embalaje> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Embalaje.Where(X => X.Descripcion.Contains(Nombre)).ToList();
+        }
     }
 }

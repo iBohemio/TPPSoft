@@ -47,5 +47,12 @@ namespace TPP.BL.BC
             objTurnoSel.Estado = 0;
             context.SaveChanges();
         }
+
+
+        public List<Turno> Filtro(String Nombre)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            return context.Turno.Where(X => X.Nombre.Contains(Nombre)).ToList();
+        }
     }
 }

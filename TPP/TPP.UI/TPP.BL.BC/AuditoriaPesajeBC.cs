@@ -9,6 +9,7 @@ namespace TPP.BL.BC
 {
     public class AuditoriaPesajeBC
     {
+        //cambio nuevo
         public List<AuditoriaPesaje> ListarAuditoriaPesaje()
         {
             BDParacasEntities context = new BDParacasEntities();

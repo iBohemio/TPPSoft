@@ -14,6 +14,7 @@ namespace TPP.DL.DataModel
     
     public partial class Conductor
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Conductor()
         {
             this.Pesaje = new HashSet<Pesaje>();
@@ -27,7 +28,9 @@ namespace TPP.DL.DataModel
         public string ApellidoMaterno { get; set; }
         public short Estado { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pesaje> Pesaje { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehiculo> Vehiculo { get; set; }
     }
 }

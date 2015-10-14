@@ -217,3 +217,7 @@ pip-log.txt
 TPP/TPP.UI/TPP.DL.DataModel/App.Config
 TPP/TPP.UI/TPP.DL.DataModel/App.Config
 *.Config
+*.Config
+TPP/TPP.UI/TPP.DL.DataModel/App.Config
+TPP/TPP.UI/TPP.DL.DataModel/App.Config
+TPP/TPP.UI/TPP.UI/App.config

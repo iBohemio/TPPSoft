@@ -22,3 +22,15 @@ D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.xml
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.csprojResolveAssemblyReference.cache
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.pdb
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.dll.config
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.BL.BC.pdb
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.DL.DataModel.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\TPP.DL.DataModel.pdb
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.xml
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.csprojResolveAssemblyReference.cache
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.BL.BC\obj\Debug\TPP.BL.BC.pdb

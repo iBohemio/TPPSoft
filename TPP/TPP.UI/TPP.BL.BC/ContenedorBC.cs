@@ -14,37 +14,55 @@ namespace TPP.BL.BC
             return context.Contenedor.ToList();
         }
 
-        public Contenedor ObtenerContenedor(int ContenedorId)
+        public Contenedor BuscarContenedor(int ContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Contenedor.FirstOrDefault(X => X.ContenedorId == ContenedorId);
+            return context.Contenedor.FirstOrDefault(X => X.ContenedorId == ContenedorId && X.Estado==1);
         }
 
-        public void RegistratContenedor(Contenedor objContenedor)
+        public void RegistrarContenedor(Contenedor objContenedor)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.Contenedor.Add(objContenedor);
             context.SaveChanges();
         }
 
-        public void EliminaContenedor(int ContenedorId)
+        public void EliminarContenedor(int ContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Contenedor objContenedorOri = context.Contenedor.FirstOrDefault(X => X.ContenedorId == ContenedorId);
-            context.Contenedor.Remove(objContenedorOri);
+            Contenedor objContenedorSel = context.Contenedor.FirstOrDefault(X => X.ContenedorId == ContenedorId);
+            context.Contenedor.Remove(objContenedorSel);
             context.SaveChanges();
         }
 
         public void EditarContenedor(Contenedor objContenedor)
         {
             BDParacasEntities context = new BDParacasEntities();
-            Contenedor objContenedorOri = context.Contenedor.FirstOrDefault(X => X.ContenedorId == objContenedor.ContenedorId);
-            
-            //creo q tampoco se edita
+            Contenedor objContenedorSel = context.Contenedor.FirstOrDefault(X => X.ContenedorId == objContenedor.ContenedorId);
 
-
+            objContenedorSel.Codigo = objContenedor.Codigo;
+            objContenedorSel.Embarcadero = objContenedor.Embarcadero;
+            objContenedorSel.PesoManifiesto = objContenedor.PesoManifiesto;
+            objContenedorSel.AgenteAduana = objContenedor.AgenteAduana;
+            objContenedorSel.TipoMovimiento = objContenedor.TipoMovimiento;
+            objContenedorSel.Tara = objContenedor.Tara;
+            objContenedorSel.TamanoContenedorId = objContenedor.TamanoContenedorId;
+            objContenedorSel.TipoContenedorId = objContenedor.TipoContenedorId;
+            objContenedorSel.NumeroViaje = objContenedor.NumeroViaje;
+            objContenedorSel.EIR = objContenedor.EIR;
+            objContenedorSel.Estado = objContenedor.Estado;
+            objContenedorSel.PrecintoAduanero = objContenedor.PrecintoAduanero;
+            objContenedorSel.Precinto1 = objContenedor.Precinto1;
+            objContenedorSel.Precinto2 = objContenedor.Precinto2;
+            objContenedorSel.Precinto3 = objContenedor.Precinto3;
+            objContenedorSel.Ubicacion = objContenedor.Ubicacion;
+            objContenedorSel.NaveId = objContenedor.NaveId;
+            objContenedorSel.FechaIzaje = objContenedor.FechaIzaje;
+            objContenedorSel.FechaBarco = objContenedor.FechaBarco;
+            objContenedorSel.FechaMuelle = objContenedor.FechaMuelle;
+            objContenedorSel.Autorizacion = objContenedor.Autorizacion;
+            objContenedorSel.Fecha = objContenedor.Fecha;
             context.SaveChanges();
-
         }
 
         public IEnumerable<Object> ContenedorListarCompleto()

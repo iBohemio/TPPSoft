@@ -50,7 +50,7 @@
             this.dgvAutorizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAutorizacion.Location = new System.Drawing.Point(12, 107);
             this.dgvAutorizacion.Name = "dgvAutorizacion";
-            this.dgvAutorizacion.Size = new System.Drawing.Size(752, 292);
+            this.dgvAutorizacion.Size = new System.Drawing.Size(1066, 292);
             this.dgvAutorizacion.TabIndex = 36;
             // 
             // btnEliminar
@@ -87,7 +87,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(662, 412);
+            this.btnSalir.Location = new System.Drawing.Point(976, 412);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(102, 30);
             this.btnSalir.TabIndex = 33;
@@ -112,7 +112,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(738, 77);
+            this.btnBuscar.Location = new System.Drawing.Point(1052, 76);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(26, 23);
             this.btnBuscar.TabIndex = 31;
@@ -123,7 +123,7 @@
             this.txtFiltro.Location = new System.Drawing.Point(74, 78);
             this.txtFiltro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(658, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(972, 22);
             this.txtFiltro.TabIndex = 30;
             // 
             // label2
@@ -144,7 +144,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 60);
+            this.panel1.Size = new System.Drawing.Size(1099, 60);
             this.panel1.TabIndex = 28;
             // 
             // pictureBox1
@@ -174,7 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(781, 454);
+            this.ClientSize = new System.Drawing.Size(1099, 454);
             this.Controls.Add(this.dgvAutorizacion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);

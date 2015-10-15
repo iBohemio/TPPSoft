@@ -37,8 +37,21 @@ namespace TPP.UI
             dgvAutorizacion.Columns["UsuarioId"].Visible = false;
             dgvAutorizacion.Columns["EmbalajeId"].Visible = false;
             dgvAutorizacion.Columns["OperacionId"].Visible = false;
-            //dgvAutorizacion.Columns["Estado"].Visible = false;
-            //dgvAutorizacion.Columns["Autorizacion"].Visible = false;
+            dgvAutorizacion.Columns["AutorizacionId"].Visible = false;
+            dgvAutorizacion.Columns["Codigo"].DisplayIndex = 0;
+            dgvAutorizacion.Columns["Nave"].DisplayIndex = 1;
+            dgvAutorizacion.Columns["Operacion"].DisplayIndex = 2;
+            dgvAutorizacion.Columns["Embalaje"].DisplayIndex = 3;
+            dgvAutorizacion.Columns["NroBultos"].DisplayIndex = 4;
+            dgvAutorizacion.Columns["Peso"].DisplayIndex = 5;
+            dgvAutorizacion.Columns["Producto"].DisplayIndex = 6;
+            dgvAutorizacion.Columns["Estado"].DisplayIndex = 7;
+            dgvAutorizacion.Columns["Codigo"].HeaderText = "Código";
+            dgvAutorizacion.Columns["Operacion"].HeaderText = "Operación";
+            dgvAutorizacion.Columns["NroBultos"].HeaderText = "Nro. Bultos";
+            dgvAutorizacion.Columns["Peso"].HeaderText = "Peso (Kg.)";
+            dgvAutorizacion.Columns["Peso"].Width = 100;
+            dgvAutorizacion.Columns["Fecha"].Width = 150;
             //dgvAutorizacion.Columns["Contenedor"].Visible = false;
         }
         private void RefrescarGrilla()

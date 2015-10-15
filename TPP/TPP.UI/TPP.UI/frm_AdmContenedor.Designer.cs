@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AdmContenedor));
-            this.dgvAutorizacion = new System.Windows.Forms.DataGridView();
+            this.dgvContenedor = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -40,19 +40,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContenedor)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvAutorizacion
+            // dgvContenedor
             // 
-            this.dgvAutorizacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAutorizacion.Location = new System.Drawing.Point(9, 110);
-            this.dgvAutorizacion.Name = "dgvAutorizacion";
-            this.dgvAutorizacion.Size = new System.Drawing.Size(752, 292);
-            this.dgvAutorizacion.TabIndex = 72;
+            this.dgvContenedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContenedor.Location = new System.Drawing.Point(9, 110);
+            this.dgvContenedor.Name = "dgvContenedor";
+            this.dgvContenedor.Size = new System.Drawing.Size(752, 292);
+            this.dgvContenedor.TabIndex = 72;
             // 
             // btnEliminar
             // 
@@ -66,6 +65,7 @@
             this.btnEliminar.TabIndex = 71;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -79,6 +79,7 @@
             this.btnEditar.TabIndex = 70;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSalir
             // 
@@ -92,6 +93,7 @@
             this.btnSalir.TabIndex = 69;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -105,6 +107,7 @@
             this.btnRegistrar.TabIndex = 68;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBuscar
             // 
@@ -166,23 +169,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrar Contenedor";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(420, 52);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox1.TabIndex = 73;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
             // frm_AdmContenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(773, 448);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.dgvAutorizacion);
+            this.Controls.Add(this.dgvContenedor);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalir);
@@ -196,7 +189,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_AdmContenedor";
             this.Text = "TPP ERP";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizacion)).EndInit();
+            this.Load += new System.EventHandler(this.frm_AdmContenedor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContenedor)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -207,7 +201,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvAutorizacion;
+        private System.Windows.Forms.DataGridView dgvContenedor;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSalir;
@@ -218,6 +212,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

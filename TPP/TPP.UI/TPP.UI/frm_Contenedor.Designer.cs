@@ -29,68 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Contenedor));
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblContenedor = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmbarcadero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPesoManifiesto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAgenteAduanas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtReserva = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbTipoMovimiento = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtEIR = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtNumViaje = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtTara = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbTamanioContenedor = new System.Windows.Forms.ComboBox();
+            this.cbTipoContenedor = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPrecinto3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtPrecintoAduanero = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtPrecinto1 = new System.Windows.Forms.TextBox();
+            this.txtPrecinto2 = new System.Windows.Forms.TextBox();
+            this.txtNave = new System.Windows.Forms.TextBox();
             this.btnBuscarNave = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.dtpFechaIzaje = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaBarco = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaMuelle = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
+            this.dtpHoraIzaje = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraBarco = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraMuelle = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtNombre
+            // txtCodigo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(157, 84);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(140, 22);
-            this.txtNombre.TabIndex = 83;
+            this.txtCodigo.Location = new System.Drawing.Point(157, 84);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(140, 22);
+            this.txtCodigo.TabIndex = 83;
             // 
             // label4
             // 
@@ -110,7 +110,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 60);
+            this.panel1.Size = new System.Drawing.Size(977, 60);
             this.panel1.TabIndex = 81;
             // 
             // pictureBox1
@@ -141,13 +141,14 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(528, 383);
+            this.btnSalir.Location = new System.Drawing.Point(831, 383);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(119, 37);
             this.btnSalir.TabIndex = 80;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -155,21 +156,22 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(245, 383);
+            this.btnRegistrar.Location = new System.Drawing.Point(19, 383);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(119, 37);
             this.btnRegistrar.TabIndex = 79;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // textBox1
+            // txtEmbarcadero
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 114);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 22);
-            this.textBox1.TabIndex = 85;
+            this.txtEmbarcadero.Location = new System.Drawing.Point(157, 114);
+            this.txtEmbarcadero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmbarcadero.Name = "txtEmbarcadero";
+            this.txtEmbarcadero.Size = new System.Drawing.Size(140, 22);
+            this.txtEmbarcadero.TabIndex = 85;
             // 
             // label1
             // 
@@ -180,13 +182,13 @@
             this.label1.TabIndex = 84;
             this.label1.Text = "Consig. / Embarca. :";
             // 
-            // textBox2
+            // txtPesoManifiesto
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 144);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 22);
-            this.textBox2.TabIndex = 87;
+            this.txtPesoManifiesto.Location = new System.Drawing.Point(157, 144);
+            this.txtPesoManifiesto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPesoManifiesto.Name = "txtPesoManifiesto";
+            this.txtPesoManifiesto.Size = new System.Drawing.Size(140, 22);
+            this.txtPesoManifiesto.TabIndex = 87;
             // 
             // label2
             // 
@@ -197,13 +199,13 @@
             this.label2.TabIndex = 86;
             this.label2.Text = "Peso Manifiesto:";
             // 
-            // textBox3
+            // txtAgenteAduanas
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 174);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 22);
-            this.textBox3.TabIndex = 89;
+            this.txtAgenteAduanas.Location = new System.Drawing.Point(157, 174);
+            this.txtAgenteAduanas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAgenteAduanas.Name = "txtAgenteAduanas";
+            this.txtAgenteAduanas.Size = new System.Drawing.Size(140, 22);
+            this.txtAgenteAduanas.TabIndex = 89;
             // 
             // label3
             // 
@@ -214,13 +216,13 @@
             this.label3.TabIndex = 88;
             this.label3.Text = "Ag. Aduanas:";
             // 
-            // textBox4
+            // txtReserva
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 204);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 22);
-            this.textBox4.TabIndex = 91;
+            this.txtReserva.Location = new System.Drawing.Point(157, 204);
+            this.txtReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtReserva.Name = "txtReserva";
+            this.txtReserva.Size = new System.Drawing.Size(140, 22);
+            this.txtReserva.TabIndex = 91;
             // 
             // label5
             // 
@@ -240,23 +242,29 @@
             this.label6.TabIndex = 92;
             this.label6.Text = "Tipo Movimiento:";
             // 
-            // comboBox1
+            // cbTipoMovimiento
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(157, 236);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 24);
-            this.comboBox1.TabIndex = 93;
+            this.cbTipoMovimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoMovimiento.FormattingEnabled = true;
+            this.cbTipoMovimiento.Items.AddRange(new object[] {
+            "IMPORTACIÓN",
+            "EXPORTACIÓN"});
+            this.cbTipoMovimiento.Location = new System.Drawing.Point(157, 236);
+            this.cbTipoMovimiento.Name = "cbTipoMovimiento";
+            this.cbTipoMovimiento.Size = new System.Drawing.Size(140, 24);
+            this.cbTipoMovimiento.TabIndex = 93;
             // 
-            // comboBox2
+            // cbEstado
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(436, 236);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 24);
-            this.comboBox2.TabIndex = 105;
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "FINALIZADO",
+            "ACTIVO"});
+            this.cbEstado.Location = new System.Drawing.Point(436, 236);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(211, 24);
+            this.cbEstado.TabIndex = 105;
             // 
             // label7
             // 
@@ -267,13 +275,13 @@
             this.label7.TabIndex = 104;
             this.label7.Text = "Estado:";
             // 
-            // textBox5
+            // txtEIR
             // 
-            this.textBox5.Location = new System.Drawing.Point(436, 204);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(140, 22);
-            this.textBox5.TabIndex = 103;
+            this.txtEIR.Location = new System.Drawing.Point(436, 204);
+            this.txtEIR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEIR.Name = "txtEIR";
+            this.txtEIR.Size = new System.Drawing.Size(211, 22);
+            this.txtEIR.TabIndex = 103;
             // 
             // label8
             // 
@@ -284,13 +292,13 @@
             this.label8.TabIndex = 102;
             this.label8.Text = "E.I.R.:";
             // 
-            // textBox6
+            // txtNumViaje
             // 
-            this.textBox6.Location = new System.Drawing.Point(436, 174);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 22);
-            this.textBox6.TabIndex = 101;
+            this.txtNumViaje.Location = new System.Drawing.Point(436, 174);
+            this.txtNumViaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNumViaje.Name = "txtNumViaje";
+            this.txtNumViaje.Size = new System.Drawing.Size(211, 22);
+            this.txtNumViaje.TabIndex = 101;
             // 
             // label9
             // 
@@ -319,13 +327,13 @@
             this.label11.TabIndex = 96;
             this.label11.Text = "Tamaño:";
             // 
-            // textBox9
+            // txtTara
             // 
-            this.textBox9.Location = new System.Drawing.Point(436, 84);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(140, 22);
-            this.textBox9.TabIndex = 95;
+            this.txtTara.Location = new System.Drawing.Point(436, 84);
+            this.txtTara.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTara.Name = "txtTara";
+            this.txtTara.Size = new System.Drawing.Size(211, 22);
+            this.txtTara.TabIndex = 95;
             // 
             // label12
             // 
@@ -336,62 +344,62 @@
             this.label12.TabIndex = 94;
             this.label12.Text = "Tara:";
             // 
-            // comboBox3
+            // cbTamanioContenedor
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(436, 114);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(140, 24);
-            this.comboBox3.TabIndex = 106;
+            this.cbTamanioContenedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTamanioContenedor.FormattingEnabled = true;
+            this.cbTamanioContenedor.Location = new System.Drawing.Point(436, 114);
+            this.cbTamanioContenedor.Name = "cbTamanioContenedor";
+            this.cbTamanioContenedor.Size = new System.Drawing.Size(211, 24);
+            this.cbTamanioContenedor.TabIndex = 106;
             // 
-            // comboBox4
+            // cbTipoContenedor
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(436, 144);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 24);
-            this.comboBox4.TabIndex = 107;
+            this.cbTipoContenedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoContenedor.FormattingEnabled = true;
+            this.cbTipoContenedor.Location = new System.Drawing.Point(436, 144);
+            this.cbTipoContenedor.Name = "cbTipoContenedor";
+            this.cbTipoContenedor.Size = new System.Drawing.Size(211, 24);
+            this.cbTipoContenedor.TabIndex = 107;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(607, 240);
+            this.label13.Location = new System.Drawing.Point(691, 240);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 16);
             this.label13.TabIndex = 116;
             this.label13.Text = "Nave:";
             // 
-            // textBox7
+            // txtUbicacion
             // 
-            this.textBox7.Location = new System.Drawing.Point(694, 204);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 22);
-            this.textBox7.TabIndex = 115;
+            this.txtUbicacion.Location = new System.Drawing.Point(778, 204);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Size = new System.Drawing.Size(140, 22);
+            this.txtUbicacion.TabIndex = 115;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(607, 207);
+            this.label14.Location = new System.Drawing.Point(691, 207);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 16);
             this.label14.TabIndex = 114;
             this.label14.Text = "Ubicación:";
             // 
-            // textBox8
+            // txtPrecinto3
             // 
-            this.textBox8.Location = new System.Drawing.Point(694, 174);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(140, 22);
-            this.textBox8.TabIndex = 113;
+            this.txtPrecinto3.Location = new System.Drawing.Point(778, 174);
+            this.txtPrecinto3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrecinto3.Name = "txtPrecinto3";
+            this.txtPrecinto3.Size = new System.Drawing.Size(140, 22);
+            this.txtPrecinto3.TabIndex = 113;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(607, 177);
+            this.label15.Location = new System.Drawing.Point(691, 177);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 16);
             this.label15.TabIndex = 112;
@@ -400,7 +408,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(607, 147);
+            this.label16.Location = new System.Drawing.Point(691, 147);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 16);
             this.label16.TabIndex = 111;
@@ -409,69 +417,62 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(607, 117);
+            this.label17.Location = new System.Drawing.Point(691, 117);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(71, 16);
             this.label17.TabIndex = 110;
             this.label17.Text = "Precinto 1:";
             // 
-            // textBox10
+            // txtPrecintoAduanero
             // 
-            this.textBox10.Location = new System.Drawing.Point(694, 84);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(140, 22);
-            this.textBox10.TabIndex = 109;
+            this.txtPrecintoAduanero.Location = new System.Drawing.Point(778, 84);
+            this.txtPrecintoAduanero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrecintoAduanero.Name = "txtPrecintoAduanero";
+            this.txtPrecintoAduanero.Size = new System.Drawing.Size(140, 22);
+            this.txtPrecintoAduanero.TabIndex = 109;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(607, 87);
+            this.label18.Location = new System.Drawing.Point(691, 87);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 16);
             this.label18.TabIndex = 108;
             this.label18.Text = "P. Aduanero:";
             // 
-            // textBox11
+            // txtPrecinto1
             // 
-            this.textBox11.Location = new System.Drawing.Point(694, 114);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(140, 22);
-            this.textBox11.TabIndex = 118;
+            this.txtPrecinto1.Location = new System.Drawing.Point(778, 114);
+            this.txtPrecinto1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrecinto1.Name = "txtPrecinto1";
+            this.txtPrecinto1.Size = new System.Drawing.Size(140, 22);
+            this.txtPrecinto1.TabIndex = 118;
             // 
-            // textBox12
+            // txtPrecinto2
             // 
-            this.textBox12.Location = new System.Drawing.Point(694, 144);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(140, 22);
-            this.textBox12.TabIndex = 119;
+            this.txtPrecinto2.Location = new System.Drawing.Point(778, 144);
+            this.txtPrecinto2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrecinto2.Name = "txtPrecinto2";
+            this.txtPrecinto2.Size = new System.Drawing.Size(140, 22);
+            this.txtPrecinto2.TabIndex = 119;
             // 
-            // textBox13
+            // txtNave
             // 
-            this.textBox13.Location = new System.Drawing.Point(694, 237);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(140, 22);
-            this.textBox13.TabIndex = 120;
+            this.txtNave.Location = new System.Drawing.Point(778, 237);
+            this.txtNave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNave.Name = "txtNave";
+            this.txtNave.Size = new System.Drawing.Size(140, 22);
+            this.txtNave.TabIndex = 120;
             // 
             // btnBuscarNave
             // 
             this.btnBuscarNave.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarNave.Image")));
-            this.btnBuscarNave.Location = new System.Drawing.Point(840, 236);
+            this.btnBuscarNave.Location = new System.Drawing.Point(924, 236);
             this.btnBuscarNave.Name = "btnBuscarNave";
             this.btnBuscarNave.Size = new System.Drawing.Size(26, 23);
             this.btnBuscarNave.TabIndex = 121;
             this.btnBuscarNave.UseVisualStyleBackColor = true;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(245, 299);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(98, 24);
-            this.comboBox5.TabIndex = 123;
+            this.btnBuscarNave.Click += new System.EventHandler(this.btnBuscarNave_Click);
             // 
             // label19
             // 
@@ -482,14 +483,6 @@
             this.label19.TabIndex = 122;
             this.label19.Text = "H. Izaje:";
             // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(245, 331);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(98, 24);
-            this.comboBox6.TabIndex = 125;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -499,37 +492,29 @@
             this.label20.TabIndex = 124;
             this.label20.Text = "H. Barco:";
             // 
-            // dateTimePicker1
+            // dtpFechaIzaje
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(98, 301);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker1.TabIndex = 126;
+            this.dtpFechaIzaje.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaIzaje.Location = new System.Drawing.Point(98, 301);
+            this.dtpFechaIzaje.Name = "dtpFechaIzaje";
+            this.dtpFechaIzaje.Size = new System.Drawing.Size(115, 22);
+            this.dtpFechaIzaje.TabIndex = 126;
             // 
-            // dateTimePicker2
+            // dtpFechaBarco
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(98, 331);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker2.TabIndex = 127;
+            this.dtpFechaBarco.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaBarco.Location = new System.Drawing.Point(98, 331);
+            this.dtpFechaBarco.Name = "dtpFechaBarco";
+            this.dtpFechaBarco.Size = new System.Drawing.Size(115, 22);
+            this.dtpFechaBarco.TabIndex = 127;
             // 
-            // dateTimePicker3
+            // dtpFechaMuelle
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(452, 329);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker3.TabIndex = 130;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(594, 328);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(98, 24);
-            this.comboBox7.TabIndex = 129;
+            this.dtpFechaMuelle.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaMuelle.Location = new System.Drawing.Point(452, 329);
+            this.dtpFechaMuelle.Name = "dtpFechaMuelle";
+            this.dtpFechaMuelle.Size = new System.Drawing.Size(115, 22);
+            this.dtpFechaMuelle.TabIndex = 130;
             // 
             // label21
             // 
@@ -540,57 +525,81 @@
             this.label21.TabIndex = 128;
             this.label21.Text = "H. Muelle:";
             // 
+            // dtpHoraIzaje
+            // 
+            this.dtpHoraIzaje.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraIzaje.Location = new System.Drawing.Point(230, 300);
+            this.dtpHoraIzaje.Name = "dtpHoraIzaje";
+            this.dtpHoraIzaje.Size = new System.Drawing.Size(115, 22);
+            this.dtpHoraIzaje.TabIndex = 131;
+            // 
+            // dtpHoraBarco
+            // 
+            this.dtpHoraBarco.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraBarco.Location = new System.Drawing.Point(230, 331);
+            this.dtpHoraBarco.Name = "dtpHoraBarco";
+            this.dtpHoraBarco.Size = new System.Drawing.Size(115, 22);
+            this.dtpHoraBarco.TabIndex = 132;
+            // 
+            // dtpHoraMuelle
+            // 
+            this.dtpHoraMuelle.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraMuelle.Location = new System.Drawing.Point(593, 329);
+            this.dtpHoraMuelle.Name = "dtpHoraMuelle";
+            this.dtpHoraMuelle.Size = new System.Drawing.Size(115, 22);
+            this.dtpHoraMuelle.TabIndex = 133;
+            // 
             // frm_Contenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(898, 433);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.comboBox7);
+            this.ClientSize = new System.Drawing.Size(977, 433);
+            this.Controls.Add(this.dtpHoraMuelle);
+            this.Controls.Add(this.dtpHoraBarco);
+            this.Controls.Add(this.dtpHoraIzaje);
+            this.Controls.Add(this.dtpFechaMuelle);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.dtpFechaBarco);
+            this.Controls.Add(this.dtpFechaIzaje);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.btnBuscarNave);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtNave);
+            this.Controls.Add(this.txtPrecinto2);
+            this.Controls.Add(this.txtPrecinto1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtUbicacion);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtPrecinto3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtPrecintoAduanero);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbTipoContenedor);
+            this.Controls.Add(this.cbTamanioContenedor);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtEIR);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtNumViaje);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtTara);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbTipoMovimiento);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtReserva);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAgenteAduanas);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPesoManifiesto);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmbarcadero);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
@@ -600,6 +609,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Contenedor";
             this.Text = "TPP ERP";
+            this.Load += new System.EventHandler(this.frm_Contenedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -610,56 +620,56 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblContenedor;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmbarcadero;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPesoManifiesto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAgenteAduanas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtReserva;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbTipoMovimiento;
+        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtEIR;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtNumViaje;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtTara;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbTamanioContenedor;
+        private System.Windows.Forms.ComboBox cbTipoContenedor;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtUbicacion;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtPrecinto3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtPrecintoAduanero;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtPrecinto1;
+        private System.Windows.Forms.TextBox txtPrecinto2;
+        private System.Windows.Forms.TextBox txtNave;
         private System.Windows.Forms.Button btnBuscarNave;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.DateTimePicker dtpFechaIzaje;
+        private System.Windows.Forms.DateTimePicker dtpFechaBarco;
+        private System.Windows.Forms.DateTimePicker dtpFechaMuelle;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DateTimePicker dtpHoraIzaje;
+        private System.Windows.Forms.DateTimePicker dtpHoraBarco;
+        private System.Windows.Forms.DateTimePicker dtpHoraMuelle;
     }
 }

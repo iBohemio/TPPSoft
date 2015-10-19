@@ -26,7 +26,7 @@ namespace TPP.BL.BC
                                                   Carrete = obj.Carrete,
                                                   Estado = obj.Estado,
                                                   TipoVehiculoId = obj.TipoVehiculoId,
-                                                  TipoVehiculo = obj.TipoVehiculo.Codigo
+                                                  TipoVehiculo = obj.TipoVehiculo.Nombre
                                               }).ToList();
             return LstVehiculo;
         }
@@ -60,7 +60,7 @@ namespace TPP.BL.BC
         public List<Vehiculo> Filtro(String Nombre)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Vehiculo.Where(X => X.Placa.Contains(Nombre)).ToList();
+            return context.Vehiculo.Where(X => X.Placa.Contains(Nombre) && X.Estado == 1).ToList();
         }
     }
 }

@@ -17,6 +17,10 @@ namespace TPP.UI
         {
             InitializeComponent();
         }
+        public enum TypeMode { Buscar, Normal }
+        public TypeMode Modo { get; set; }
+        public delegate void EnviarDatos(int ConductorId,string Nombre, string NroBrevete);
+        public EnviarDatos MiDelegado;
         public void ConfigurarControles(DataGridView dgv)
         {
             dgv.AllowDrop = false;
@@ -49,6 +53,14 @@ namespace TPP.UI
         {
             try
             {
+                if (Modo == TypeMode.Normal)
+                {
+                    lblAdmConductor.Text = "Administrar Conductor";
+                }
+                if (Modo == TypeMode.Buscar)
+                {
+                    lblAdmConductor.Text = "Buscar Conductor";
+                }
                 ConfigurarControles(dgvConductor);
                 RefrescarGrilla();
             }
@@ -138,12 +150,22 @@ namespace TPP.UI
                 dgvConductor.DataSource = objConductorBC.Filtro(txtFiltro.Text);
 
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuetra fuera de servicio", 
                     this.Text, 
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvConductor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Modo == TypeMode.Buscar)
+            {
+                string nombreCompleto = dgvConductor.SelectedRows[0].Cells["Nombres"].Value.ToString() + " " + dgvConductor.SelectedRows[0].Cells["ApellidoPaterno"].Value.ToString() + " " + dgvConductor.SelectedRows[0].Cells["ApellidoMaterno"].Value.ToString();
+                MiDelegado(Convert.ToInt32(dgvConductor.SelectedRows[0].Cells["ConductorId"].Value.ToString()), nombreCompleto, dgvConductor.SelectedRows[0].Cells["NroBrevete"].Value.ToString());
+                this.Dispose();
             }
         }
 

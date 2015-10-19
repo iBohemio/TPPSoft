@@ -32,7 +32,7 @@ namespace TPP.UI
                 Entidad = "Vehiculo";
                 TipoVehiculoBC objTipoVehiculoBC = new TipoVehiculoBC();
                 cbTipoVehiculo.DataSource = objTipoVehiculoBC.ListarTipoVehiculo();
-                cbTipoVehiculo.DisplayMember = "Codigo";
+                cbTipoVehiculo.DisplayMember = "Nombre";
                 cbTipoVehiculo.ValueMember = "TipoVehiculoId";
                 if (Modo == TypeMode.Registrar)
                 {
@@ -55,7 +55,7 @@ namespace TPP.UI
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
                                    this.Text,

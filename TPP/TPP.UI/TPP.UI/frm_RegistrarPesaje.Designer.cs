@@ -29,119 +29,119 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_RegistrarPesaje));
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtEmbalaje = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtOperacion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblContenedor = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarVehiculo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBuscarConductor = new System.Windows.Forms.Button();
+            this.txtBrevete = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnBuscarAutorizacion = new System.Windows.Forms.Button();
+            this.txtCodigoAutorizacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnEliminarGuia = new System.Windows.Forms.Button();
+            this.btnEditarGuia = new System.Windows.Forms.Button();
+            this.btnRegistrarGuia = new System.Windows.Forms.Button();
+            this.dgvGuiaRemision = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbContenedor = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.btnBuscarAutorizacion2 = new System.Windows.Forms.Button();
+            this.txtBooking = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dtpExpMuelleHor = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpBarcoHor = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpIzajeHor = new System.Windows.Forms.DateTimePicker();
+            this.chkHabRegCont = new System.Windows.Forms.CheckBox();
             this.btnBuscarNave = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtExpNaveContenedor = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.dtpExpMuelleFec = new System.Windows.Forms.DateTimePicker();
             this.label34 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.dtpExpBarcoFec = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpIzajeFec = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtExpPrecinto2 = new System.Windows.Forms.TextBox();
+            this.txtExpPrecinto1 = new System.Windows.Forms.TextBox();
+            this.txtExpUbicacion = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtExpPrecinto3 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtExpPrecintoAduanero = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.cbTipoContenedor = new System.Windows.Forms.ComboBox();
+            this.cbTamanio = new System.Windows.Forms.ComboBox();
+            this.txtExpEIR = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtExpNumViaje = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtExpTara = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtExpReserva = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtExpAgenteAduanas = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtExpPesoManifiesto = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txtExpEmbarcadero = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtExpNumContenedor = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbTipoVehiculo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtNombreConductor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtNave = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtPesoAutorizacion = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.lblNroBultos = new System.Windows.Forms.Label();
+            this.nudTarja = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
+            this.btnLectura = new System.Windows.Forms.Button();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.txtCarrete = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGuiaRemision)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTarja)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox5
+            // txtEmbalaje
             // 
-            this.textBox5.Location = new System.Drawing.Point(373, 179);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(476, 22);
-            this.textBox5.TabIndex = 151;
+            this.txtEmbalaje.Location = new System.Drawing.Point(373, 179);
+            this.txtEmbalaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmbalaje.Name = "txtEmbalaje";
+            this.txtEmbalaje.ReadOnly = true;
+            this.txtEmbalaje.Size = new System.Drawing.Size(476, 22);
+            this.txtEmbalaje.TabIndex = 151;
             // 
             // label8
             // 
@@ -152,14 +152,14 @@
             this.label8.TabIndex = 150;
             this.label8.Text = "Embalaje:";
             // 
-            // textBox6
+            // txtOperacion
             // 
-            this.textBox6.Location = new System.Drawing.Point(373, 149);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(476, 22);
-            this.textBox6.TabIndex = 149;
+            this.txtOperacion.Location = new System.Drawing.Point(373, 149);
+            this.txtOperacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtOperacion.Name = "txtOperacion";
+            this.txtOperacion.ReadOnly = true;
+            this.txtOperacion.Size = new System.Drawing.Size(476, 22);
+            this.txtOperacion.TabIndex = 149;
             // 
             // label9
             // 
@@ -170,14 +170,14 @@
             this.label9.TabIndex = 148;
             this.label9.Text = "Operación:";
             // 
-            // textBox4
+            // txtTipo
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 212);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(140, 22);
-            this.textBox4.TabIndex = 141;
+            this.txtTipo.Location = new System.Drawing.Point(109, 212);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = true;
+            this.txtTipo.Size = new System.Drawing.Size(140, 22);
+            this.txtTipo.TabIndex = 141;
             // 
             // label5
             // 
@@ -188,13 +188,15 @@
             this.label5.TabIndex = 140;
             this.label5.Text = "Tipo:";
             // 
-            // textBox3
+            // txtPeso
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 182);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 22);
-            this.textBox3.TabIndex = 139;
+            this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtPeso.ForeColor = System.Drawing.Color.White;
+            this.txtPeso.Location = new System.Drawing.Point(109, 182);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(140, 22);
+            this.txtPeso.TabIndex = 139;
             // 
             // panel1
             // 
@@ -243,6 +245,7 @@
             this.btnSalir.TabIndex = 132;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -258,14 +261,15 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBuscarVehiculo
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(255, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 23);
-            this.button1.TabIndex = 178;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscarVehiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarVehiculo.Image")));
+            this.btnBuscarVehiculo.Location = new System.Drawing.Point(255, 88);
+            this.btnBuscarVehiculo.Name = "btnBuscarVehiculo";
+            this.btnBuscarVehiculo.Size = new System.Drawing.Size(26, 23);
+            this.btnBuscarVehiculo.TabIndex = 178;
+            this.btnBuscarVehiculo.UseVisualStyleBackColor = true;
+            this.btnBuscarVehiculo.Click += new System.EventHandler(this.btnBuscarVehiculo_Click);
             // 
             // label3
             // 
@@ -276,22 +280,24 @@
             this.label3.TabIndex = 176;
             this.label3.Text = "Placa:";
             // 
-            // button2
+            // btnBuscarConductor
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(255, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 23);
-            this.button2.TabIndex = 181;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscarConductor.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarConductor.Image")));
+            this.btnBuscarConductor.Location = new System.Drawing.Point(255, 118);
+            this.btnBuscarConductor.Name = "btnBuscarConductor";
+            this.btnBuscarConductor.Size = new System.Drawing.Size(26, 23);
+            this.btnBuscarConductor.TabIndex = 181;
+            this.btnBuscarConductor.UseVisualStyleBackColor = true;
+            this.btnBuscarConductor.Click += new System.EventHandler(this.btnBuscarConductor_Click);
             // 
-            // textBox1
+            // txtBrevete
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 119);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 22);
-            this.textBox1.TabIndex = 180;
+            this.txtBrevete.Location = new System.Drawing.Point(109, 119);
+            this.txtBrevete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBrevete.Name = "txtBrevete";
+            this.txtBrevete.ReadOnly = true;
+            this.txtBrevete.Size = new System.Drawing.Size(140, 22);
+            this.txtBrevete.TabIndex = 180;
             // 
             // label1
             // 
@@ -302,22 +308,24 @@
             this.label1.TabIndex = 179;
             this.label1.Text = "Brevete:";
             // 
-            // button3
+            // btnBuscarAutorizacion
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(255, 148);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 23);
-            this.button3.TabIndex = 184;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBuscarAutorizacion.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarAutorizacion.Image")));
+            this.btnBuscarAutorizacion.Location = new System.Drawing.Point(255, 148);
+            this.btnBuscarAutorizacion.Name = "btnBuscarAutorizacion";
+            this.btnBuscarAutorizacion.Size = new System.Drawing.Size(26, 23);
+            this.btnBuscarAutorizacion.TabIndex = 184;
+            this.btnBuscarAutorizacion.UseVisualStyleBackColor = true;
+            this.btnBuscarAutorizacion.Click += new System.EventHandler(this.btnBuscarAutorizacion_Click);
             // 
-            // textBox2
+            // txtCodigoAutorizacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 149);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 22);
-            this.textBox2.TabIndex = 183;
+            this.txtCodigoAutorizacion.Location = new System.Drawing.Point(109, 149);
+            this.txtCodigoAutorizacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodigoAutorizacion.Name = "txtCodigoAutorizacion";
+            this.txtCodigoAutorizacion.ReadOnly = true;
+            this.txtCodigoAutorizacion.Size = new System.Drawing.Size(140, 22);
+            this.txtCodigoAutorizacion.TabIndex = 183;
             // 
             // label2
             // 
@@ -327,14 +335,6 @@
             this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 182;
             this.label2.Text = "Autorización:";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(109, 90);
-            this.maskedTextBox1.Mask = "LLL-LLL";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(140, 22);
-            this.maskedTextBox1.TabIndex = 185;
             // 
             // tabControl1
             // 
@@ -349,10 +349,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.btnEliminarGuia);
+            this.tabPage1.Controls.Add(this.btnEditarGuia);
+            this.tabPage1.Controls.Add(this.btnRegistrarGuia);
+            this.tabPage1.Controls.Add(this.dgvGuiaRemision);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -361,59 +361,62 @@
             this.tabPage1.Text = "Guía de Remisión";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnEliminarGuia
             // 
-            this.button6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(792, 97);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(28, 37);
-            this.button6.TabIndex = 204;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnEliminarGuia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarGuia.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarGuia.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarGuia.Image")));
+            this.btnEliminarGuia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarGuia.Location = new System.Drawing.Point(792, 97);
+            this.btnEliminarGuia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEliminarGuia.Name = "btnEliminarGuia";
+            this.btnEliminarGuia.Size = new System.Drawing.Size(28, 37);
+            this.btnEliminarGuia.TabIndex = 204;
+            this.btnEliminarGuia.UseVisualStyleBackColor = true;
+            this.btnEliminarGuia.Click += new System.EventHandler(this.btnEliminarGuia_Click);
             // 
-            // button5
+            // btnEditarGuia
             // 
-            this.button5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(792, 52);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(28, 37);
-            this.button5.TabIndex = 203;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnEditarGuia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarGuia.ForeColor = System.Drawing.Color.Black;
+            this.btnEditarGuia.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarGuia.Image")));
+            this.btnEditarGuia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarGuia.Location = new System.Drawing.Point(792, 52);
+            this.btnEditarGuia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEditarGuia.Name = "btnEditarGuia";
+            this.btnEditarGuia.Size = new System.Drawing.Size(28, 37);
+            this.btnEditarGuia.TabIndex = 203;
+            this.btnEditarGuia.UseVisualStyleBackColor = true;
+            this.btnEditarGuia.Click += new System.EventHandler(this.btnEditarGuia_Click);
             // 
-            // button4
+            // btnRegistrarGuia
             // 
-            this.button4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(792, 7);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(28, 37);
-            this.button4.TabIndex = 202;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRegistrarGuia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarGuia.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarGuia.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarGuia.Image")));
+            this.btnRegistrarGuia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarGuia.Location = new System.Drawing.Point(792, 7);
+            this.btnRegistrarGuia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegistrarGuia.Name = "btnRegistrarGuia";
+            this.btnRegistrarGuia.Size = new System.Drawing.Size(28, 37);
+            this.btnRegistrarGuia.TabIndex = 202;
+            this.btnRegistrarGuia.UseVisualStyleBackColor = true;
+            this.btnRegistrarGuia.Click += new System.EventHandler(this.btnRegistrarGuia_Click);
             // 
-            // dataGridView1
+            // dgvGuiaRemision
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(774, 250);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGuiaRemision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGuiaRemision.Location = new System.Drawing.Point(12, 6);
+            this.dgvGuiaRemision.Name = "dgvGuiaRemision";
+            this.dgvGuiaRemision.Size = new System.Drawing.Size(774, 250);
+            this.dgvGuiaRemision.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox5);
+            this.tabPage2.Controls.Add(this.cbContenedor);
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.btnBuscarAutorizacion2);
+            this.tabPage2.Controls.Add(this.txtBooking);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -423,13 +426,13 @@
             this.tabPage2.Text = "Imp. Contenedor";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // comboBox5
+            // cbContenedor
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(146, 86);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(613, 24);
-            this.comboBox5.TabIndex = 207;
+            this.cbContenedor.FormattingEnabled = true;
+            this.cbContenedor.Location = new System.Drawing.Point(146, 86);
+            this.cbContenedor.Name = "cbContenedor";
+            this.cbContenedor.Size = new System.Drawing.Size(613, 24);
+            this.cbContenedor.TabIndex = 207;
             // 
             // label18
             // 
@@ -440,22 +443,25 @@
             this.label18.TabIndex = 206;
             this.label18.Text = "# Contenedor:";
             // 
-            // button8
+            // btnBuscarAutorizacion2
             // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(765, 56);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(26, 23);
-            this.button8.TabIndex = 205;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnBuscarAutorizacion2.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarAutorizacion2.Image")));
+            this.btnBuscarAutorizacion2.Location = new System.Drawing.Point(765, 56);
+            this.btnBuscarAutorizacion2.Name = "btnBuscarAutorizacion2";
+            this.btnBuscarAutorizacion2.Size = new System.Drawing.Size(26, 23);
+            this.btnBuscarAutorizacion2.TabIndex = 205;
+            this.btnBuscarAutorizacion2.UseVisualStyleBackColor = true;
+            this.btnBuscarAutorizacion2.Click += new System.EventHandler(this.btnBuscarAutorizacion2_Click);
             // 
-            // textBox11
+            // txtBooking
             // 
-            this.textBox11.Location = new System.Drawing.Point(148, 57);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(611, 22);
-            this.textBox11.TabIndex = 93;
+            this.txtBooking.Location = new System.Drawing.Point(148, 57);
+            this.txtBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBooking.Name = "txtBooking";
+            this.txtBooking.ReadOnly = true;
+            this.txtBooking.Size = new System.Drawing.Size(611, 22);
+            this.txtBooking.TabIndex = 93;
+            this.txtBooking.TextChanged += new System.EventHandler(this.txtBooking_TextChanged);
             // 
             // label17
             // 
@@ -468,48 +474,48 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.checkBox1);
+            this.tabPage3.Controls.Add(this.dtpExpMuelleHor);
+            this.tabPage3.Controls.Add(this.dtpExpBarcoHor);
+            this.tabPage3.Controls.Add(this.dtpExpIzajeHor);
+            this.tabPage3.Controls.Add(this.chkHabRegCont);
             this.tabPage3.Controls.Add(this.btnBuscarNave);
-            this.tabPage3.Controls.Add(this.textBox24);
+            this.tabPage3.Controls.Add(this.txtExpNaveContenedor);
             this.tabPage3.Controls.Add(this.label37);
-            this.tabPage3.Controls.Add(this.dateTimePicker3);
-            this.tabPage3.Controls.Add(this.comboBox7);
+            this.tabPage3.Controls.Add(this.dtpExpMuelleFec);
             this.tabPage3.Controls.Add(this.label34);
-            this.tabPage3.Controls.Add(this.dateTimePicker2);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
-            this.tabPage3.Controls.Add(this.comboBox6);
+            this.tabPage3.Controls.Add(this.dtpExpBarcoFec);
+            this.tabPage3.Controls.Add(this.dtpExpIzajeFec);
             this.tabPage3.Controls.Add(this.label35);
-            this.tabPage3.Controls.Add(this.comboBox2);
             this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.textBox12);
-            this.tabPage3.Controls.Add(this.textBox13);
-            this.tabPage3.Controls.Add(this.textBox14);
+            this.tabPage3.Controls.Add(this.txtExpPrecinto2);
+            this.tabPage3.Controls.Add(this.txtExpPrecinto1);
+            this.tabPage3.Controls.Add(this.txtExpUbicacion);
             this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.textBox15);
+            this.tabPage3.Controls.Add(this.txtExpPrecinto3);
             this.tabPage3.Controls.Add(this.label20);
             this.tabPage3.Controls.Add(this.label21);
             this.tabPage3.Controls.Add(this.label22);
-            this.tabPage3.Controls.Add(this.textBox16);
+            this.tabPage3.Controls.Add(this.txtExpPrecintoAduanero);
             this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.comboBox4);
-            this.tabPage3.Controls.Add(this.comboBox3);
-            this.tabPage3.Controls.Add(this.textBox17);
+            this.tabPage3.Controls.Add(this.cbTipoContenedor);
+            this.tabPage3.Controls.Add(this.cbTamanio);
+            this.tabPage3.Controls.Add(this.txtExpEIR);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.textBox18);
+            this.tabPage3.Controls.Add(this.txtExpNumViaje);
             this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Controls.Add(this.label26);
             this.tabPage3.Controls.Add(this.label27);
-            this.tabPage3.Controls.Add(this.textBox19);
+            this.tabPage3.Controls.Add(this.txtExpTara);
             this.tabPage3.Controls.Add(this.label28);
-            this.tabPage3.Controls.Add(this.textBox20);
+            this.tabPage3.Controls.Add(this.txtExpReserva);
             this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.textBox21);
+            this.tabPage3.Controls.Add(this.txtExpAgenteAduanas);
             this.tabPage3.Controls.Add(this.label30);
-            this.tabPage3.Controls.Add(this.textBox22);
+            this.tabPage3.Controls.Add(this.txtExpPesoManifiesto);
             this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.textBox23);
+            this.tabPage3.Controls.Add(this.txtExpEmbarcadero);
             this.tabPage3.Controls.Add(this.label32);
-            this.tabPage3.Controls.Add(this.txtNombre);
+            this.tabPage3.Controls.Add(this.txtExpNumContenedor);
             this.tabPage3.Controls.Add(this.label33);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
@@ -519,32 +525,57 @@
             this.tabPage3.Text = "Exp. Contenedor";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // dtpExpMuelleHor
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(10, 16);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(214, 20);
-            this.checkBox1.TabIndex = 162;
-            this.checkBox1.Text = "Habilitar Registro de Contenedor";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.dtpExpMuelleHor.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpExpMuelleHor.Location = new System.Drawing.Point(553, 227);
+            this.dtpExpMuelleHor.Name = "dtpExpMuelleHor";
+            this.dtpExpMuelleHor.Size = new System.Drawing.Size(115, 22);
+            this.dtpExpMuelleHor.TabIndex = 165;
+            // 
+            // dtpExpBarcoHor
+            // 
+            this.dtpExpBarcoHor.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpExpBarcoHor.Location = new System.Drawing.Point(202, 227);
+            this.dtpExpBarcoHor.Name = "dtpExpBarcoHor";
+            this.dtpExpBarcoHor.Size = new System.Drawing.Size(115, 22);
+            this.dtpExpBarcoHor.TabIndex = 164;
+            // 
+            // dtpExpIzajeHor
+            // 
+            this.dtpExpIzajeHor.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpExpIzajeHor.Location = new System.Drawing.Point(202, 196);
+            this.dtpExpIzajeHor.Name = "dtpExpIzajeHor";
+            this.dtpExpIzajeHor.Size = new System.Drawing.Size(115, 22);
+            this.dtpExpIzajeHor.TabIndex = 163;
+            // 
+            // chkHabRegCont
+            // 
+            this.chkHabRegCont.AutoSize = true;
+            this.chkHabRegCont.Location = new System.Drawing.Point(10, 16);
+            this.chkHabRegCont.Name = "chkHabRegCont";
+            this.chkHabRegCont.Size = new System.Drawing.Size(214, 20);
+            this.chkHabRegCont.TabIndex = 162;
+            this.chkHabRegCont.Text = "Habilitar Registro de Contenedor";
+            this.chkHabRegCont.UseVisualStyleBackColor = true;
+            this.chkHabRegCont.CheckedChanged += new System.EventHandler(this.chkHabRegCont_CheckedChanged);
             // 
             // btnBuscarNave
             // 
             this.btnBuscarNave.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarNave.Image")));
-            this.btnBuscarNave.Location = new System.Drawing.Point(578, 198);
+            this.btnBuscarNave.Location = new System.Drawing.Point(567, 196);
             this.btnBuscarNave.Name = "btnBuscarNave";
             this.btnBuscarNave.Size = new System.Drawing.Size(26, 23);
             this.btnBuscarNave.TabIndex = 161;
             this.btnBuscarNave.UseVisualStyleBackColor = true;
             // 
-            // textBox24
+            // txtExpNaveContenedor
             // 
-            this.textBox24.Location = new System.Drawing.Point(432, 199);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(140, 22);
-            this.textBox24.TabIndex = 160;
+            this.txtExpNaveContenedor.Location = new System.Drawing.Point(421, 197);
+            this.txtExpNaveContenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpNaveContenedor.Name = "txtExpNaveContenedor";
+            this.txtExpNaveContenedor.Size = new System.Drawing.Size(140, 22);
+            this.txtExpNaveContenedor.TabIndex = 160;
             // 
             // label37
             // 
@@ -555,21 +586,13 @@
             this.label37.TabIndex = 159;
             this.label37.Text = "Nave:";
             // 
-            // dateTimePicker3
+            // dtpExpMuelleFec
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(432, 227);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker3.TabIndex = 158;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(574, 226);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(98, 24);
-            this.comboBox7.TabIndex = 157;
+            this.dtpExpMuelleFec.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpExpMuelleFec.Location = new System.Drawing.Point(432, 227);
+            this.dtpExpMuelleFec.Name = "dtpExpMuelleFec";
+            this.dtpExpMuelleFec.Size = new System.Drawing.Size(115, 22);
+            this.dtpExpMuelleFec.TabIndex = 158;
             // 
             // label34
             // 
@@ -580,29 +603,21 @@
             this.label34.TabIndex = 156;
             this.label34.Text = "H. Muelle:";
             // 
-            // dateTimePicker2
+            // dtpExpBarcoFec
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(81, 226);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker2.TabIndex = 155;
+            this.dtpExpBarcoFec.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpExpBarcoFec.Location = new System.Drawing.Point(81, 226);
+            this.dtpExpBarcoFec.Name = "dtpExpBarcoFec";
+            this.dtpExpBarcoFec.Size = new System.Drawing.Size(115, 22);
+            this.dtpExpBarcoFec.TabIndex = 155;
             // 
-            // dateTimePicker1
+            // dtpExpIzajeFec
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(81, 196);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker1.TabIndex = 154;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(228, 226);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(98, 24);
-            this.comboBox6.TabIndex = 153;
+            this.dtpExpIzajeFec.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpExpIzajeFec.Location = new System.Drawing.Point(81, 196);
+            this.dtpExpIzajeFec.Name = "dtpExpIzajeFec";
+            this.dtpExpIzajeFec.Size = new System.Drawing.Size(115, 22);
+            this.dtpExpIzajeFec.TabIndex = 154;
             // 
             // label35
             // 
@@ -613,14 +628,6 @@
             this.label35.TabIndex = 152;
             this.label35.Text = "H. Barco:";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(228, 194);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(98, 24);
-            this.comboBox2.TabIndex = 151;
-            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -630,29 +637,29 @@
             this.label36.TabIndex = 150;
             this.label36.Text = "H. Izaje:";
             // 
-            // textBox12
+            // txtExpPrecinto2
             // 
-            this.textBox12.Location = new System.Drawing.Point(679, 107);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(140, 22);
-            this.textBox12.TabIndex = 149;
+            this.txtExpPrecinto2.Location = new System.Drawing.Point(679, 107);
+            this.txtExpPrecinto2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpPrecinto2.Name = "txtExpPrecinto2";
+            this.txtExpPrecinto2.Size = new System.Drawing.Size(140, 22);
+            this.txtExpPrecinto2.TabIndex = 149;
             // 
-            // textBox13
+            // txtExpPrecinto1
             // 
-            this.textBox13.Location = new System.Drawing.Point(679, 77);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(140, 22);
-            this.textBox13.TabIndex = 148;
+            this.txtExpPrecinto1.Location = new System.Drawing.Point(679, 77);
+            this.txtExpPrecinto1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpPrecinto1.Name = "txtExpPrecinto1";
+            this.txtExpPrecinto1.Size = new System.Drawing.Size(140, 22);
+            this.txtExpPrecinto1.TabIndex = 148;
             // 
-            // textBox14
+            // txtExpUbicacion
             // 
-            this.textBox14.Location = new System.Drawing.Point(679, 167);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(140, 22);
-            this.textBox14.TabIndex = 147;
+            this.txtExpUbicacion.Location = new System.Drawing.Point(679, 167);
+            this.txtExpUbicacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpUbicacion.Name = "txtExpUbicacion";
+            this.txtExpUbicacion.Size = new System.Drawing.Size(140, 22);
+            this.txtExpUbicacion.TabIndex = 147;
             // 
             // label19
             // 
@@ -663,13 +670,13 @@
             this.label19.TabIndex = 146;
             this.label19.Text = "Ubicación:";
             // 
-            // textBox15
+            // txtExpPrecinto3
             // 
-            this.textBox15.Location = new System.Drawing.Point(679, 137);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(140, 22);
-            this.textBox15.TabIndex = 145;
+            this.txtExpPrecinto3.Location = new System.Drawing.Point(679, 137);
+            this.txtExpPrecinto3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpPrecinto3.Name = "txtExpPrecinto3";
+            this.txtExpPrecinto3.Size = new System.Drawing.Size(140, 22);
+            this.txtExpPrecinto3.TabIndex = 145;
             // 
             // label20
             // 
@@ -698,13 +705,13 @@
             this.label22.TabIndex = 142;
             this.label22.Text = "Precinto 1:";
             // 
-            // textBox16
+            // txtExpPrecintoAduanero
             // 
-            this.textBox16.Location = new System.Drawing.Point(679, 47);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(140, 22);
-            this.textBox16.TabIndex = 141;
+            this.txtExpPrecintoAduanero.Location = new System.Drawing.Point(679, 47);
+            this.txtExpPrecintoAduanero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpPrecintoAduanero.Name = "txtExpPrecintoAduanero";
+            this.txtExpPrecintoAduanero.Size = new System.Drawing.Size(140, 22);
+            this.txtExpPrecintoAduanero.TabIndex = 141;
             // 
             // label23
             // 
@@ -715,31 +722,31 @@
             this.label23.TabIndex = 140;
             this.label23.Text = "P. Aduanero:";
             // 
-            // comboBox4
+            // cbTipoContenedor
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(421, 107);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 24);
-            this.comboBox4.TabIndex = 139;
+            this.cbTipoContenedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoContenedor.FormattingEnabled = true;
+            this.cbTipoContenedor.Location = new System.Drawing.Point(421, 107);
+            this.cbTipoContenedor.Name = "cbTipoContenedor";
+            this.cbTipoContenedor.Size = new System.Drawing.Size(140, 24);
+            this.cbTipoContenedor.TabIndex = 139;
             // 
-            // comboBox3
+            // cbTamanio
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(421, 77);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(140, 24);
-            this.comboBox3.TabIndex = 138;
+            this.cbTamanio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTamanio.FormattingEnabled = true;
+            this.cbTamanio.Location = new System.Drawing.Point(421, 77);
+            this.cbTamanio.Name = "cbTamanio";
+            this.cbTamanio.Size = new System.Drawing.Size(140, 24);
+            this.cbTamanio.TabIndex = 138;
             // 
-            // textBox17
+            // txtExpEIR
             // 
-            this.textBox17.Location = new System.Drawing.Point(421, 167);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(140, 22);
-            this.textBox17.TabIndex = 137;
+            this.txtExpEIR.Location = new System.Drawing.Point(421, 167);
+            this.txtExpEIR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpEIR.Name = "txtExpEIR";
+            this.txtExpEIR.Size = new System.Drawing.Size(140, 22);
+            this.txtExpEIR.TabIndex = 137;
             // 
             // label24
             // 
@@ -750,13 +757,13 @@
             this.label24.TabIndex = 136;
             this.label24.Text = "E.I.R.:";
             // 
-            // textBox18
+            // txtExpNumViaje
             // 
-            this.textBox18.Location = new System.Drawing.Point(421, 137);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(140, 22);
-            this.textBox18.TabIndex = 135;
+            this.txtExpNumViaje.Location = new System.Drawing.Point(421, 137);
+            this.txtExpNumViaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpNumViaje.Name = "txtExpNumViaje";
+            this.txtExpNumViaje.Size = new System.Drawing.Size(140, 22);
+            this.txtExpNumViaje.TabIndex = 135;
             // 
             // label25
             // 
@@ -785,13 +792,13 @@
             this.label27.TabIndex = 132;
             this.label27.Text = "Tamaño:";
             // 
-            // textBox19
+            // txtExpTara
             // 
-            this.textBox19.Location = new System.Drawing.Point(421, 47);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(140, 22);
-            this.textBox19.TabIndex = 131;
+            this.txtExpTara.Location = new System.Drawing.Point(421, 47);
+            this.txtExpTara.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpTara.Name = "txtExpTara";
+            this.txtExpTara.Size = new System.Drawing.Size(140, 22);
+            this.txtExpTara.TabIndex = 131;
             // 
             // label28
             // 
@@ -802,13 +809,13 @@
             this.label28.TabIndex = 130;
             this.label28.Text = "Tara:";
             // 
-            // textBox20
+            // txtExpReserva
             // 
-            this.textBox20.Location = new System.Drawing.Point(142, 167);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(140, 22);
-            this.textBox20.TabIndex = 129;
+            this.txtExpReserva.Location = new System.Drawing.Point(142, 167);
+            this.txtExpReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpReserva.Name = "txtExpReserva";
+            this.txtExpReserva.Size = new System.Drawing.Size(140, 22);
+            this.txtExpReserva.TabIndex = 129;
             // 
             // label29
             // 
@@ -819,13 +826,13 @@
             this.label29.TabIndex = 128;
             this.label29.Text = "Reserva / Booking :";
             // 
-            // textBox21
+            // txtExpAgenteAduanas
             // 
-            this.textBox21.Location = new System.Drawing.Point(142, 137);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(140, 22);
-            this.textBox21.TabIndex = 127;
+            this.txtExpAgenteAduanas.Location = new System.Drawing.Point(142, 137);
+            this.txtExpAgenteAduanas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpAgenteAduanas.Name = "txtExpAgenteAduanas";
+            this.txtExpAgenteAduanas.Size = new System.Drawing.Size(140, 22);
+            this.txtExpAgenteAduanas.TabIndex = 127;
             // 
             // label30
             // 
@@ -836,13 +843,13 @@
             this.label30.TabIndex = 126;
             this.label30.Text = "Ag. Aduanas:";
             // 
-            // textBox22
+            // txtExpPesoManifiesto
             // 
-            this.textBox22.Location = new System.Drawing.Point(142, 107);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(140, 22);
-            this.textBox22.TabIndex = 125;
+            this.txtExpPesoManifiesto.Location = new System.Drawing.Point(142, 107);
+            this.txtExpPesoManifiesto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpPesoManifiesto.Name = "txtExpPesoManifiesto";
+            this.txtExpPesoManifiesto.Size = new System.Drawing.Size(140, 22);
+            this.txtExpPesoManifiesto.TabIndex = 125;
             // 
             // label31
             // 
@@ -853,13 +860,13 @@
             this.label31.TabIndex = 124;
             this.label31.Text = "Peso Manifiesto:";
             // 
-            // textBox23
+            // txtExpEmbarcadero
             // 
-            this.textBox23.Location = new System.Drawing.Point(142, 77);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(140, 22);
-            this.textBox23.TabIndex = 123;
+            this.txtExpEmbarcadero.Location = new System.Drawing.Point(142, 77);
+            this.txtExpEmbarcadero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpEmbarcadero.Name = "txtExpEmbarcadero";
+            this.txtExpEmbarcadero.Size = new System.Drawing.Size(140, 22);
+            this.txtExpEmbarcadero.TabIndex = 123;
             // 
             // label32
             // 
@@ -870,13 +877,13 @@
             this.label32.TabIndex = 122;
             this.label32.Text = "Consig. / Embarca. :";
             // 
-            // txtNombre
+            // txtExpNumContenedor
             // 
-            this.txtNombre.Location = new System.Drawing.Point(142, 47);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(140, 22);
-            this.txtNombre.TabIndex = 121;
+            this.txtExpNumContenedor.Location = new System.Drawing.Point(142, 47);
+            this.txtExpNumContenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExpNumContenedor.Name = "txtExpNumContenedor";
+            this.txtExpNumContenedor.Size = new System.Drawing.Size(140, 22);
+            this.txtExpNumContenedor.TabIndex = 121;
             // 
             // label33
             // 
@@ -887,14 +894,6 @@
             this.label33.TabIndex = 120;
             this.label33.Text = "# Contenedor:";
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(363, 88);
-            this.maskedTextBox2.Mask = "LLL-LLL";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(140, 22);
-            this.maskedTextBox2.TabIndex = 188;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -902,16 +901,17 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 187;
-            this.label4.Text = "Carreta:";
+            this.label4.Text = "Carrete:";
             // 
-            // comboBox1
+            // cbTipoVehiculo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(638, 87);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 24);
-            this.comboBox1.TabIndex = 190;
+            this.cbTipoVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoVehiculo.Enabled = false;
+            this.cbTipoVehiculo.FormattingEnabled = true;
+            this.cbTipoVehiculo.Location = new System.Drawing.Point(638, 87);
+            this.cbTipoVehiculo.Name = "cbTipoVehiculo";
+            this.cbTipoVehiculo.Size = new System.Drawing.Size(211, 24);
+            this.cbTipoVehiculo.TabIndex = 190;
             // 
             // label6
             // 
@@ -922,14 +922,14 @@
             this.label6.TabIndex = 189;
             this.label6.Text = "Eje:";
             // 
-            // textBox7
+            // txtNombreConductor
             // 
-            this.textBox7.Location = new System.Drawing.Point(292, 119);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(557, 22);
-            this.textBox7.TabIndex = 191;
+            this.txtNombreConductor.Location = new System.Drawing.Point(292, 119);
+            this.txtNombreConductor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreConductor.Name = "txtNombreConductor";
+            this.txtNombreConductor.ReadOnly = true;
+            this.txtNombreConductor.Size = new System.Drawing.Size(557, 22);
+            this.txtNombreConductor.TabIndex = 191;
             // 
             // label7
             // 
@@ -949,14 +949,14 @@
             this.label10.TabIndex = 193;
             this.label10.Text = "Kg.";
             // 
-            // textBox8
+            // txtNave
             // 
-            this.textBox8.Location = new System.Drawing.Point(373, 212);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(211, 22);
-            this.textBox8.TabIndex = 195;
+            this.txtNave.Location = new System.Drawing.Point(373, 212);
+            this.txtNave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNave.Name = "txtNave";
+            this.txtNave.ReadOnly = true;
+            this.txtNave.Size = new System.Drawing.Size(211, 22);
+            this.txtNave.TabIndex = 195;
             // 
             // label11
             // 
@@ -967,14 +967,14 @@
             this.label11.TabIndex = 194;
             this.label11.Text = "Nave:";
             // 
-            // textBox9
+            // txtPesoAutorizacion
             // 
-            this.textBox9.Location = new System.Drawing.Point(638, 212);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(211, 22);
-            this.textBox9.TabIndex = 197;
+            this.txtPesoAutorizacion.Location = new System.Drawing.Point(638, 212);
+            this.txtPesoAutorizacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPesoAutorizacion.Name = "txtPesoAutorizacion";
+            this.txtPesoAutorizacion.ReadOnly = true;
+            this.txtPesoAutorizacion.Size = new System.Drawing.Size(211, 22);
+            this.txtPesoAutorizacion.TabIndex = 197;
             // 
             // label12
             // 
@@ -1003,21 +1003,26 @@
             this.label14.TabIndex = 199;
             this.label14.Text = "Bultos de la Autorización:";
             // 
-            // label15
+            // lblNroBultos
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(209, 245);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 16);
-            this.label15.TabIndex = 200;
-            this.label15.Text = "-";
+            this.lblNroBultos.AutoSize = true;
+            this.lblNroBultos.Location = new System.Drawing.Point(209, 245);
+            this.lblNroBultos.Name = "lblNroBultos";
+            this.lblNroBultos.Size = new System.Drawing.Size(12, 16);
+            this.lblNroBultos.TabIndex = 200;
+            this.lblNroBultos.Text = "-";
             // 
-            // numericUpDown1
+            // nudTarja
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(464, 245);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 201;
+            this.nudTarja.Location = new System.Drawing.Point(464, 245);
+            this.nudTarja.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudTarja.Name = "nudTarja";
+            this.nudTarja.Size = new System.Drawing.Size(120, 22);
+            this.nudTarja.TabIndex = 201;
             // 
             // label16
             // 
@@ -1028,28 +1033,47 @@
             this.label16.TabIndex = 203;
             this.label16.Text = "Observación:";
             // 
-            // textBox10
+            // txtObservacion
             // 
-            this.textBox10.Location = new System.Drawing.Point(109, 571);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(740, 50);
-            this.textBox10.TabIndex = 202;
+            this.txtObservacion.Location = new System.Drawing.Point(109, 571);
+            this.txtObservacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(740, 50);
+            this.txtObservacion.TabIndex = 202;
             // 
-            // button7
+            // btnLectura
             // 
-            this.button7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(171, 629);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(119, 37);
-            this.button7.TabIndex = 204;
-            this.button7.Text = "Lectura";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnLectura.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLectura.ForeColor = System.Drawing.Color.Black;
+            this.btnLectura.Image = ((System.Drawing.Image)(resources.GetObject("btnLectura.Image")));
+            this.btnLectura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLectura.Location = new System.Drawing.Point(171, 629);
+            this.btnLectura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLectura.Name = "btnLectura";
+            this.btnLectura.Size = new System.Drawing.Size(119, 37);
+            this.btnLectura.TabIndex = 204;
+            this.btnLectura.Text = "Lectura";
+            this.btnLectura.UseVisualStyleBackColor = true;
+            this.btnLectura.Click += new System.EventHandler(this.btnLectura_Click);
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Location = new System.Drawing.Point(109, 87);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.ReadOnly = true;
+            this.txtPlaca.Size = new System.Drawing.Size(140, 22);
+            this.txtPlaca.TabIndex = 205;
+            // 
+            // txtCarrete
+            // 
+            this.txtCarrete.Location = new System.Drawing.Point(363, 89);
+            this.txtCarrete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCarrete.Name = "txtCarrete";
+            this.txtCarrete.ReadOnly = true;
+            this.txtCarrete.Size = new System.Drawing.Size(140, 22);
+            this.txtCarrete.TabIndex = 206;
             // 
             // frm_RegistrarPesaje
             // 
@@ -1057,41 +1081,41 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(882, 679);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.txtCarrete);
+            this.Controls.Add(this.txtPlaca);
+            this.Controls.Add(this.btnLectura);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtObservacion);
+            this.Controls.Add(this.nudTarja);
+            this.Controls.Add(this.lblNroBultos);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtPesoAutorizacion);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtNave);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtNombreConductor);
+            this.Controls.Add(this.cbTipoVehiculo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnBuscarAutorizacion);
+            this.Controls.Add(this.txtCodigoAutorizacion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnBuscarConductor);
+            this.Controls.Add(this.txtBrevete);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscarVehiculo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtEmbalaje);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtOperacion);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistrar);
@@ -1100,17 +1124,19 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_RegistrarPesaje";
             this.Text = "TPP ERP";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_RegistrarPesaje_FormClosing);
+            this.Load += new System.EventHandler(this.frm_RegistrarPesaje_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGuiaRemision)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTarja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1118,100 +1144,100 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtEmbalaje;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtOperacion;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblContenedor;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarVehiculo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBuscarConductor;
+        private System.Windows.Forms.TextBox txtBrevete;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnBuscarAutorizacion;
+        private System.Windows.Forms.TextBox txtCodigoAutorizacion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnEliminarGuia;
+        private System.Windows.Forms.Button btnEditarGuia;
+        private System.Windows.Forms.Button btnRegistrarGuia;
+        private System.Windows.Forms.DataGridView dgvGuiaRemision;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbTipoVehiculo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNombreConductor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtNave;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtPesoAutorizacion;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label lblNroBultos;
+        private System.Windows.Forms.NumericUpDown nudTarja;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtObservacion;
+        private System.Windows.Forms.Button btnLectura;
+        private System.Windows.Forms.Button btnBuscarAutorizacion2;
+        private System.Windows.Forms.TextBox txtBooking;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.ComboBox cbContenedor;
+        private System.Windows.Forms.TextBox txtExpPrecinto2;
+        private System.Windows.Forms.TextBox txtExpPrecinto1;
+        private System.Windows.Forms.TextBox txtExpUbicacion;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtExpPrecinto3;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtExpPrecintoAduanero;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.ComboBox cbTipoContenedor;
+        private System.Windows.Forms.ComboBox cbTamanio;
+        private System.Windows.Forms.TextBox txtExpEIR;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtExpNumViaje;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtExpTara;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtExpReserva;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtExpAgenteAduanas;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txtExpPesoManifiesto;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txtExpEmbarcadero;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtExpNumContenedor;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.DateTimePicker dtpExpMuelleFec;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.DateTimePicker dtpExpBarcoFec;
+        private System.Windows.Forms.DateTimePicker dtpExpIzajeFec;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkHabRegCont;
         private System.Windows.Forms.Button btnBuscarNave;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtExpNaveContenedor;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.TextBox txtCarrete;
+        private System.Windows.Forms.DateTimePicker dtpExpMuelleHor;
+        private System.Windows.Forms.DateTimePicker dtpExpBarcoHor;
+        private System.Windows.Forms.DateTimePicker dtpExpIzajeHor;
     }
 }

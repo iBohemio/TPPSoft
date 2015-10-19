@@ -1,3 +1,4 @@
+D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe.config
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.exe
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\bin\Debug\TPP.UI.pdb
@@ -41,5 +42,4 @@ D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Usuario.resources
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.frm_Vehiculo.resources
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.Properties.Resources.resources
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.csproj.GenerateResource.Cache
-D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.exe
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.UI\obj\Debug\TPP.UI.pdb

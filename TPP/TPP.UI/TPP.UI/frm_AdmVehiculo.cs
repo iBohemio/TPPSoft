@@ -17,6 +17,10 @@ namespace TPP.UI
         {
             InitializeComponent();
         }
+        public enum TypeMode { Buscar, Normal }
+        public TypeMode Modo { get; set; }
+        public delegate void EnviarDatos(Vehiculo ObjVehiculo);
+        public EnviarDatos MiDelegado;
         public void ConfigurarControles(DataGridView dgv)
         {
             dgv.AllowDrop = false;
@@ -47,6 +51,14 @@ namespace TPP.UI
         {
             try
             {
+                if (Modo == TypeMode.Normal)
+                {
+                    lblAdmVehiculo.Text = "Administrar Vehiculo";
+                }
+                if (Modo == TypeMode.Buscar)
+                {
+                    lblAdmVehiculo.Text = "Buscar Vehiculo";
+                }
                 ConfigurarControles(dgvVehiculo);
                 RefrescarGrilla();
             }
@@ -136,12 +148,26 @@ namespace TPP.UI
                 dgvVehiculo.DataSource = objVehiculoBC.Filtro(txtFiltro.Text);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuetra fuera de servicio",
                     this.Text,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvVehiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Modo == TypeMode.Buscar)
+            {
+                Vehiculo objVehiculo = new Vehiculo();
+                objVehiculo.VehiculoId = Convert.ToInt32(dgvVehiculo.SelectedRows[0].Cells["VehiculoId"].Value.ToString());
+                objVehiculo.Placa =  dgvVehiculo.SelectedRows[0].Cells["Placa"].Value.ToString();
+                objVehiculo.Carrete = dgvVehiculo.SelectedRows[0].Cells["Carrete"].Value.ToString();
+                objVehiculo.TipoVehiculoId = Convert.ToInt32(dgvVehiculo.SelectedRows[0].Cells["TipoVehiculoId"].Value.ToString());
+                MiDelegado(objVehiculo);
+                this.Dispose();
             }
         }
     }

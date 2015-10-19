@@ -49,7 +49,7 @@ namespace TPP.BL.BC
         public List<TipoVehiculo> Filtro(String Nombre)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.TipoVehiculo.Where(X => X.Nombre.Contains(Nombre)).ToList();
+            return context.TipoVehiculo.Where(X => X.Nombre.Contains(Nombre) && X.Estado == 1).ToList();
         }
     }
 }

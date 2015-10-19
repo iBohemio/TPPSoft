@@ -27,15 +27,37 @@ namespace TPP.UI
             dgv.ReadOnly = true;
             dgv.MultiSelect = false;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         public void dgvContenedorConfigurar()
         {
             dgvContenedor.Columns["ContenedorId"].Visible = false;
+            dgvContenedor.Columns["NaveId"].Visible = false;
             dgvContenedor.Columns["Estado"].Visible = false;
-            //dgvContenedor.Columns["Contenedor"].Visible = false;
-            //dgvContenedor.Columns["Pesaje"].Visible = false;
-            //dgvContenedor.Columns["Descripcion"].HeaderText = "Descripción";
+            dgvContenedor.Columns["Codigo"].DisplayIndex = 0;
+            dgvContenedor.Columns["Fecha"].DisplayIndex = 1;
+            dgvContenedor.Columns["Ubicacion"].DisplayIndex = 2;
+            dgvContenedor.Columns["Nave"].DisplayIndex = 3;
+            dgvContenedor.Columns["Codigo"].HeaderText = "Código";
+            dgvContenedor.Columns["Ubicacion"].HeaderText = "Ubicación";
+            dgvContenedor.Columns["NumeroViaje"].HeaderText = "# Viaje";
+            dgvContenedor.Columns["PrecintoAduanero"].HeaderText = "P. Aduanero";
+            dgvContenedor.Columns["Precinto1"].HeaderText = "Pre. 1";
+            dgvContenedor.Columns["Precinto2"].HeaderText = "Pre. 2";
+            dgvContenedor.Columns["Precinto3"].HeaderText = "Pre. 3";
+            dgvContenedor.Columns["AgenteAduana"].HeaderText = "A. Aduana";
+            dgvContenedor.Columns["TipoMovimiento"].HeaderText = "T. Mov.";
+            dgvContenedor.Columns["PesoManifiesto"].HeaderText = "P. Man.";
+            dgvContenedor.Columns["TipoContenedor"].HeaderText = "T. Cont.";
+            dgvContenedor.Columns["FechaMuelle"].HeaderText = "F. Muelle";
+            dgvContenedor.Columns["FechaBarco"].HeaderText = "F. Barco";
+            dgvContenedor.Columns["FechaIzaje"].HeaderText = "F. Izaje";
+            dgvContenedor.Columns["TamanioContenedor"].HeaderText = "Tam. Cont.";
+            dgvContenedor.Columns["Autorizacion"].HeaderText = "Reserva/Book.";
+            dgvContenedor.Columns["Fecha"].Width = 150;
+            dgvContenedor.Columns["FechaMuelle"].Width = 150;
+            dgvContenedor.Columns["FechaBarco"].Width = 150;
+            dgvContenedor.Columns["FechaIzaje"].Width = 150;
+            dgvContenedor.Columns["TipoContenedor"].Width = 200;
         }
         private void RefrescarGrilla()
         {

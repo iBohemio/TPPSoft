@@ -45,7 +45,7 @@ namespace TPP.BL.BC
         public List<TamanioContenedor> Filtro(String Nombre)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.TamanioContenedor.Where(X => X.Descripcion.Contains(Nombre)).ToList();
+            return context.TamanioContenedor.Where(X => X.Descripcion.Contains(Nombre) && X.Estado == 1).ToList();
         }
     }
 }

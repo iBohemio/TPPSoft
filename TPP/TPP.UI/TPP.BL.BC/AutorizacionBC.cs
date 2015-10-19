@@ -79,5 +79,39 @@ namespace TPP.BL.BC
 
         }
 
+        public IEnumerable<Object> FiltrarContenedores(String codigo)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            Autorizacion objAutoOri = context.Autorizacion.FirstOrDefault(X => X.Codigo.Contains(codigo));
+            IEnumerable<object> Contenedores = (from obj in context.Contenedor
+                                                where obj.NaveId.Equals(objAutoOri.NaveId)
+                                                select new
+                                                {
+                                                    ContenedorId = obj.ContenedorId,
+                                                    Estado = obj.Estado,
+                                                    Embarcadero = obj.Embarcadero,
+                                                    AgenteAduana = obj.AgenteAduana,
+                                                    TipoMovimiento = obj.TipoMovimiento,
+                                                    Codigo = obj.Codigo,
+                                                    Tara = obj.Tara,
+                                                    NumeroViaje = obj.NumeroViaje,
+                                                    PesoManifiesto = obj.PesoManifiesto,
+                                                    PrecintoAduanero = obj.PrecintoAduanero,
+                                                    Precinto1 = obj.Precinto1,
+                                                    Precinto2 = obj.Precinto2,
+                                                    Precinto3 = obj.Precinto3,
+                                                    FechaIzaje = obj.FechaIzaje,
+                                                    FechaMuelle = obj.FechaMuelle,
+                                                    FechaBarco = obj.FechaBarco,
+                                                    TipoContenedor = obj.TipoContenedor.Descripcion,
+                                                    TamanioContenedor = obj.TamanioContenedor.Descripcion,
+                                                    EIR = obj.EIR,
+                                                    Ubicacion = obj.Ubicacion,
+                                                    Fecha = obj.Fecha,
+                                                    Nave = obj.Nave.Nombre
+
+                                                }).ToList();
+            return Contenedores;
+        }
     }
 }

@@ -14,7 +14,6 @@ namespace TPP.DL.DataModel
     
     public partial class Vehiculo
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Vehiculo()
         {
             this.Pesaje = new HashSet<Pesaje>();
@@ -28,7 +27,6 @@ namespace TPP.DL.DataModel
         public Nullable<int> ConductorId { get; set; }
     
         public virtual Conductor Conductor { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pesaje> Pesaje { get; set; }
         public virtual TipoVehiculo TipoVehiculo { get; set; }
     }

@@ -45,20 +45,20 @@ namespace TPP.BL.BC
                                              }).ToList();
             return LstPesaje;
         }
-        public Pesaje ObtenerPesaje(int PesajeId)
+        public Pesaje BuscarPesaje(int PesajeId)
         {
             BDParacasEntities context = new BDParacasEntities();
             return context.Pesaje.FirstOrDefault(X => X.PesajeId == PesajeId);
         }
 
-        public void RegistratPesaje(Pesaje objPesaje)
+        public void RegistrarPesaje(Pesaje objPesaje)
         {
             BDParacasEntities context = new BDParacasEntities();
             context.Pesaje.Add(objPesaje);
             context.SaveChanges();
         }
 
-        public void EliminaPesaje(int PesajeId)
+        public void EliminarPesaje(int PesajeId)
         {
             BDParacasEntities context = new BDParacasEntities();
             Pesaje objPesajeOri = context.Pesaje.FirstOrDefault(X => X.PesajeId == PesajeId);

@@ -20,6 +20,7 @@ namespace TPP.BL.BC
             return context.GuiaRemision.Where(X => X.Estado == 1).ToList();
         }
 
+       
 
         public void RegistrarGuiaRemision(GuiaRemision objGuiaRemision)
         {
@@ -42,8 +43,20 @@ namespace TPP.BL.BC
         {
             BDParacasEntities context = new BDParacasEntities();
             GuiaRemision objGuiaRemisionSel = context.GuiaRemision.FirstOrDefault(X => X.GuiaRemisionId == GuiaRemisionId);
-            objGuiaRemisionSel.Estado = 0;
+            context.GuiaRemision.Remove(objGuiaRemisionSel);
             context.SaveChanges();
+        }
+
+        public void EliminarGuiaInactiva()
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            List<GuiaRemision> LstGuia= context.GuiaRemision.Where(X => X.PesajeId == null).ToList();
+            foreach (var guia in LstGuia)
+            {
+                context.GuiaRemision.Remove(guia);
+                context.SaveChanges();
+            }
+           
         }
     }
 }

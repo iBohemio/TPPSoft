@@ -14,7 +14,6 @@ namespace TPP.DL.DataModel
     
     public partial class Embalaje
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Embalaje()
         {
             this.Autorizacion = new HashSet<Autorizacion>();
@@ -25,7 +24,6 @@ namespace TPP.DL.DataModel
         public string Descripcion { get; set; }
         public short Estado { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Autorizacion> Autorizacion { get; set; }
     }
 }

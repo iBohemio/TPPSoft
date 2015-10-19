@@ -52,7 +52,7 @@ namespace TPP.UI
                 }
                 txtBrevete.Focus();
             }
-             catch (Exception ex)
+             catch (Exception)
              {
                  MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
                                     this.Text,

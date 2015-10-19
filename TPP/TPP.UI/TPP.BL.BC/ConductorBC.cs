@@ -50,7 +50,7 @@ namespace TPP.BL.BC
         public List<Conductor> Filtro(String Nombre)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Conductor.Where(X => X.Nombres.Contains(Nombre)).ToList();
+            return context.Conductor.Where(X => X.Nombres.Contains(Nombre) && X.ApellidoPaterno.Contains(Nombre) && X.ApellidoMaterno.Contains(Nombre) && X.Estado == 1).ToList();
         }
 
     }

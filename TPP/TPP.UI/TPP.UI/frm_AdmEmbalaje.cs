@@ -148,7 +148,7 @@ namespace TPP.UI
                 dgvEmbalaje.DataSource = objEmbalajeBC.Filtro(txtFiltro.Text);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuetra fuera de servicio",
                     this.Text,

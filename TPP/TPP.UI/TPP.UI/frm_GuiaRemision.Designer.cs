@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GuiaRemision));
-            this.ndPesoMaximo = new System.Windows.Forms.NumericUpDown();
+            this.nudBultos = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGuia = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ndPesoMaximo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBultos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ndPesoMaximo
+            // nudBultos
             // 
-            this.ndPesoMaximo.Location = new System.Drawing.Point(129, 101);
-            this.ndPesoMaximo.Name = "ndPesoMaximo";
-            this.ndPesoMaximo.Size = new System.Drawing.Size(152, 22);
-            this.ndPesoMaximo.TabIndex = 33;
+            this.nudBultos.Location = new System.Drawing.Point(129, 101);
+            this.nudBultos.Name = "nudBultos";
+            this.nudBultos.Size = new System.Drawing.Size(152, 22);
+            this.nudBultos.TabIndex = 33;
             // 
             // label3
             // 
@@ -59,12 +59,12 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Bultos:";
             // 
-            // txtCodigo
+            // txtDocumento
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(129, 73);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(152, 22);
-            this.txtCodigo.TabIndex = 30;
+            this.txtDocumento.Location = new System.Drawing.Point(129, 73);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(152, 22);
+            this.txtDocumento.TabIndex = 30;
             // 
             // label1
             // 
@@ -115,12 +115,13 @@
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(160, 143);
+            this.btnSalir.Location = new System.Drawing.Point(179, 141);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(102, 30);
             this.btnSalir.TabIndex = 26;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnRegistrar
             // 
@@ -128,22 +129,23 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(24, 143);
+            this.btnRegistrar.Location = new System.Drawing.Point(16, 141);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(102, 30);
             this.btnRegistrar.TabIndex = 25;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frm_GuiaRemision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(303, 195);
-            this.Controls.Add(this.ndPesoMaximo);
+            this.ClientSize = new System.Drawing.Size(303, 187);
+            this.Controls.Add(this.nudBultos);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
@@ -153,7 +155,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_GuiaRemision";
             this.Text = "TPP ERP";
-            ((System.ComponentModel.ISupportInitialize)(this.ndPesoMaximo)).EndInit();
+            this.Load += new System.EventHandler(this.frm_GuiaRemision_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudBultos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -164,9 +167,9 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown ndPesoMaximo;
+        private System.Windows.Forms.NumericUpDown nudBultos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -140,7 +140,7 @@ namespace TPP.UI
                 dgvTipoVehiculo.DataSource = objTipoVehiculoBC.Filtro(txtFiltro.Text);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuetra fuera de servicio",
                     this.Text,

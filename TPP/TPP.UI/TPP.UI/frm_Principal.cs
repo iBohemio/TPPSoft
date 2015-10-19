@@ -78,12 +78,16 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_AdmVehiculo();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                    frm_AdmVehiculo frm1 = new frm_AdmVehiculo();
+                    frm1.Modo = frm_AdmVehiculo.TypeMode.Normal;
+                    frm1.MdiParent = this;
+                    frm1.WindowState = FormWindowState.Normal;
+                    frm1.StartPosition = FormStartPosition.Manual;
+                    frm1.Location = new Point(0, 0);
+                    frm1.Show();
+                }
             }
             catch (Exception)
             {
@@ -105,12 +109,15 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_AdmConductor();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                    frm_AdmConductor frm1 = new frm_AdmConductor();
+                    frm1.MdiParent = this;
+                    frm1.WindowState = FormWindowState.Normal;
+                    frm1.StartPosition = FormStartPosition.Manual;
+                    frm1.Location = new Point(0, 0);
+                    frm1.Show();
+                }
             }
             catch (Exception)
             {
@@ -136,6 +143,7 @@ namespace TPP.UI
                 {
                 frm_AdmAutorizacion frm1 = new frm_AdmAutorizacion();
                 frm1.UsuarioId = usuarioId;
+                frm1.Modo = frm_AdmAutorizacion.TypeMode.Normal;
                 frm1.MdiParent = this;
                 frm1.WindowState = FormWindowState.Normal;
                 frm1.StartPosition = FormStartPosition.Manual;

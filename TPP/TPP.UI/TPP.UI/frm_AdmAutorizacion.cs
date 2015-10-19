@@ -18,7 +18,10 @@ namespace TPP.UI
             InitializeComponent();
         }
         public int UsuarioId { get; set; }
-        
+        public enum TypeMode { Buscar, Normal }
+        public TypeMode Modo { get; set; }
+        public delegate void EnviarDatos(Autorizacion objAutorizacion);
+        public EnviarDatos MiDelegado;
         public void ConfigurarControles(DataGridView dgv)
         {
             dgv.AllowDrop = false;
@@ -138,6 +141,14 @@ namespace TPP.UI
         {
             try
             {
+                if (Modo == TypeMode.Normal)
+                {
+                    lblAdmAutorizacion.Text = "Administrar Autorización";
+                }
+                if (Modo == TypeMode.Buscar)
+                {
+                    lblAdmAutorizacion.Text = "Buscar Autorización";
+                }
                 ConfigurarControles(dgvAutorizacion);
                 RefrescarGrilla();
             }
@@ -148,6 +159,14 @@ namespace TPP.UI
                                      MessageBoxButtons.OK,
                                      MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvAutorizacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            AutorizacionBC objAutorizacionBC = new AutorizacionBC();
+            Autorizacion ObjAutorizacion = objAutorizacionBC.BuscarAutorizacion(Convert.ToInt32(dgvAutorizacion.SelectedRows[0].Cells["AutorizacionId"].Value.ToString()));
+            MiDelegado(ObjAutorizacion);
+            this.Dispose();
         }
     }
 }

@@ -55,8 +55,8 @@ namespace TPP.UI
                 {
                     lblAutorizacion.Text = "Registrar " + Entidad;
                     btnRegistrar.Text = "Registrar";
-                    MensajePregunta = "¿Está seguro de registrar el " + Entidad + "?";
-                    MensajeRespuesta = "Se registró el " + Entidad + " satisfactoriamente.";
+                    MensajePregunta = "¿Está seguro de registrar la " + Entidad + "?";
+                    MensajeRespuesta = "Se registró la " + Entidad + " satisfactoriamente.";
                     UsuarioBC objUsuarioBC = new UsuarioBC();
                     Usuario objUsuario = objUsuarioBC.BuscarUsuario(UsuarioId);
                     lblUsuario.Text = objUsuario.Codigo;
@@ -71,8 +71,8 @@ namespace TPP.UI
                     lblFechaNombre.Visible = true;
                     lblAutorizacion.Text = "Editar " + Entidad;
                     btnRegistrar.Text = "Editar";
-                    MensajePregunta = "¿Está seguro de editar el " + Entidad + "?";
-                    MensajeRespuesta = "Se editó el " + Entidad + " satisfactoriamente.";
+                    MensajePregunta = "¿Está seguro de editar la " + Entidad + "?";
+                    MensajeRespuesta = "Se editó la " + Entidad + " satisfactoriamente.";
                     AutorizacionBC objAutorizacionBC = new AutorizacionBC();
                     Autorizacion objAutorizacion = objAutorizacionBC.BuscarAutorizacion(AutorizacionId);
                     lblUsuario.Text = objAutorizacion.Usuario.Codigo;
@@ -167,7 +167,7 @@ namespace TPP.UI
                 MiDelegado();
                 this.Dispose();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
                                    this.Text,

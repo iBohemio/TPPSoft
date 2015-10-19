@@ -100,7 +100,7 @@ namespace TPP.UI
                 }
                 txtCodigo.Focus();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
                                    this.Text,
@@ -128,7 +128,7 @@ namespace TPP.UI
                 { 
                     objContenedor.TipoMovimiento = "IMP";
                 }
-                else if (cbTipoMovimiento.SelectedIndex == 0)
+                else if (cbTipoMovimiento.SelectedIndex == 1)
                 {
                     objContenedor.TipoMovimiento = "EXP";
                 }

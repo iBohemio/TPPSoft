@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BDParacas1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BDParacas1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="AuditoriaPesaje">
     <Key>
       <PropertyRef Name="AuditoriaPesajeId" />
@@ -94,7 +94,7 @@
     <Property Name="GuiaRemisionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Documento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Bultos" Type="Int32" Nullable="false" />
-    <Property Name="PesajeId" Type="Int32" Nullable="false" />
+    <Property Name="PesajeId" Type="Int32" />
     <Property Name="Estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Pesaje" Relationship="Self.FK_GuiaRemision_Pesaje" FromRole="GuiaRemision" ToRole="Pesaje" />
   </EntityType>
@@ -407,7 +407,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_GuiaRemision_Pesaje">
-    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="1" />
+    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="0..1" />
     <End Role="GuiaRemision" Type="Self.GuiaRemision" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Pesaje">

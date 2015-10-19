@@ -17,7 +17,7 @@ namespace TPP.BL.BC
         public Contenedor BuscarContenedor(int ContenedorId)
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.Contenedor.FirstOrDefault(X => X.ContenedorId == ContenedorId && X.Estado==1);
+            return context.Contenedor.FirstOrDefault(X => X.ContenedorId == ContenedorId);
         }
 
         public void RegistrarContenedor(Contenedor objContenedor)
@@ -77,6 +77,7 @@ namespace TPP.BL.BC
                                                      AgenteAduana = obj.AgenteAduana,
                                                      TipoMovimiento = obj.TipoMovimiento,
                                                      Codigo = obj.Codigo,
+                                                     Autorizacion = obj.Autorizacion,
                                                      Tara = obj.Tara,
                                                      NumeroViaje = obj.NumeroViaje,
                                                      PesoManifiesto = obj.PesoManifiesto,
@@ -86,11 +87,13 @@ namespace TPP.BL.BC
                                                      Precinto3 = obj.Precinto3,
                                                      FechaMuelle = obj.FechaMuelle,
                                                      FechaBarco = obj.FechaBarco,
+                                                     FechaIzaje = obj.FechaIzaje,
                                                      TipoContenedor = obj.TipoContenedor.Descripcion,
                                                      TamanioContenedor = obj.TamanioContenedor.Descripcion,
                                                      EIR = obj.EIR,
                                                      Ubicacion = obj.Ubicacion,
                                                      Fecha = obj.Fecha,
+                                                     NaveId = obj.NaveId,
                                                      Nave = obj.Nave.Nombre
 
 

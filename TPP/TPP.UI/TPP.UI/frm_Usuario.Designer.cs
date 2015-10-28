@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Usuario));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,8 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbRol = new System.Windows.Forms.ComboBox();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -160,6 +163,11 @@
             this.cbRol.Size = new System.Drawing.Size(262, 24);
             this.cbRol.TabIndex = 82;
             // 
+            // epTxt
+            // 
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
+            // 
             // frm_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -185,6 +193,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +212,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbRol;
+        private System.Windows.Forms.ErrorProvider epTxt;
     }
 }

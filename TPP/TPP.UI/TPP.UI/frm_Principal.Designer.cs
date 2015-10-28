@@ -55,6 +55,8 @@
             this.sSPrincipal = new System.Windows.Forms.StatusStrip();
             this.sslbl_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.sslbl_Rol = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.miPesaje = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.sSPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,8 @@
             this.tsEntrada,
             this.tsSalida,
             this.tsReimpresion,
-            this.tsEntidad});
+            this.tsEntidad,
+            this.tsReportes});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
             this.msPrincipal.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -98,14 +101,14 @@
             // 
             this.miTicket.Image = ((System.Drawing.Image)(resources.GetObject("miTicket.Image")));
             this.miTicket.Name = "miTicket";
-            this.miTicket.Size = new System.Drawing.Size(137, 22);
+            this.miTicket.Size = new System.Drawing.Size(152, 22);
             this.miTicket.Text = "Ticket";
             // 
             // miContedorbal
             // 
             this.miContedorbal.Image = ((System.Drawing.Image)(resources.GetObject("miContedorbal.Image")));
             this.miContedorbal.Name = "miContedorbal";
-            this.miContedorbal.Size = new System.Drawing.Size(137, 22);
+            this.miContedorbal.Size = new System.Drawing.Size(152, 22);
             this.miContedorbal.Text = "Contenedor";
             // 
             // tsEntrada
@@ -290,6 +293,23 @@
             this.sslbl_Rol.Size = new System.Drawing.Size(14, 19);
             this.sslbl_Rol.Text = ".";
             // 
+            // tsReportes
+            // 
+            this.tsReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miPesaje});
+            this.tsReportes.Image = ((System.Drawing.Image)(resources.GetObject("tsReportes.Image")));
+            this.tsReportes.Name = "tsReportes";
+            this.tsReportes.Size = new System.Drawing.Size(81, 20);
+            this.tsReportes.Text = "Reportes";
+            // 
+            // miPesaje
+            // 
+            this.miPesaje.Image = ((System.Drawing.Image)(resources.GetObject("miPesaje.Image")));
+            this.miPesaje.Name = "miPesaje";
+            this.miPesaje.Size = new System.Drawing.Size(152, 22);
+            this.miPesaje.Text = "Pesaje";
+            this.miPesaje.Click += new System.EventHandler(this.miPesaje_Click);
+            // 
             // frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -345,6 +365,8 @@
         private System.Windows.Forms.ToolStripMenuItem miTicket;
         private System.Windows.Forms.ToolStripMenuItem miContedorbal;
         private System.Windows.Forms.ToolStripMenuItem miTipoVehiculo;
+        private System.Windows.Forms.ToolStripMenuItem tsReportes;
+        private System.Windows.Forms.ToolStripMenuItem miPesaje;
     }
 }
 

@@ -470,8 +470,11 @@ namespace TPP.UI
             objPesaje.Tarja =Convert.ToInt32(nudTarja.Value.ToString());
             objPesaje.Bultos = Convert.ToInt32(lblNroBultos.Text.ToString());
             objPesaje.HoraGancho = DateTime.Now;
-            objPesaje.CodContenedor = cbContenedor.SelectedItem.ToString();
-         
+            objPesaje.CodContenedor = cbContenedor.SelectedValue.ToString();
+            if (txtTipo.Text == "EXPORTACION")
+             objPesaje.Tipo = "EXP"; 
+            else
+             objPesaje.Tipo = "IMP"; 
             objPesajeBC.RegistrarPesaje(objPesaje);
             GuiaRemisionBC objGuiaRemisionBC = new GuiaRemisionBC();
             PesajeId = objPesajeBC.BuscarUltimoIdPesaje();

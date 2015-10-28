@@ -115,11 +115,111 @@ namespace TPP.UI
                                    MessageBoxIcon.Error);
             }
         }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
 
+            if (string.IsNullOrEmpty(txtCodigo.Text) || txtCodigo.Text.Contains(" "))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtCodigo, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+
+                if (string.IsNullOrEmpty(txtProducto.Text))
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtProducto, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+
+
+                    if (string.IsNullOrEmpty(txtEmbalaje.Text))
+                    {
+                        epTxt.Icon = Properties.Resources.FAIL;
+                        epTxt.SetError(txtEmbalaje, "Dato Invalido");
+                        validar = false;
+                    }
+                    else
+                    {
+                        epTxt.Clear();
+
+
+                        if (string.IsNullOrEmpty(txtOperacion.Text))
+                        {
+                            epTxt.Icon = Properties.Resources.FAIL;
+                            epTxt.SetError(txtOperacion, "Dato Invalido");
+                            validar = false;
+                        }
+                        else
+                        {
+                            epTxt.Clear();
+
+
+                            if (nudBultos.Value == 0)
+                            {
+                                epTxt.Icon = Properties.Resources.FAIL;
+                                epTxt.SetError(nudBultos, "Dato Invalido");
+                                validar = false;
+                            }
+                            else
+                            {
+                                epTxt.Clear();
+
+
+                                if (nudPesoMaximo.Value == 0)
+                                {
+                                    epTxt.Icon = Properties.Resources.FAIL;
+                                    epTxt.SetError(nudPesoMaximo, "Dato Invalido");
+                                    validar = false;
+                                }
+                                else
+                                {
+                                    epTxt.Clear();
+
+
+                                    if (string.IsNullOrEmpty(txtNave.Text))
+                                    {
+                                        epTxt.Icon = Properties.Resources.FAIL;
+                                        epTxt.SetError(txtNave, "Dato Invalido");
+                                        validar = false;
+                                    }
+                                    else
+                                    {
+                                        epTxt.Icon = Properties.Resources.OK;
+                                        /*
+                                        epTxt.SetError(txtCodigo, "Dato Invalido");
+                                        epTxt.SetError(txtProducto, "Dato Invalido");
+                                        epTxt.SetError(txtNave, "Dato Invalido");
+                                        epTxt.SetError(txtEmbalaje, "Dato Invalido");
+                                        epTxt.SetError(txtOperacion, "Dato Invalido");
+                                        epTxt.SetError(nudBultos, "Dato Invalido");
+                                        epTxt.SetError(nudPesoMaximo, "Dato Invalido");
+                                        epTxt.SetError(txtNave, "Dato Invalido");
+                                        */
+                                        epTxt.Clear();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return validar;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;

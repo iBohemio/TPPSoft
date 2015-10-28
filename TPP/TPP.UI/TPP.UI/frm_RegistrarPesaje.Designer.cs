@@ -198,6 +198,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(140, 22);
             this.txtPeso.TabIndex = 139;
+            this.txtPeso.Text = "0";
             // 
             // panel1
             // 

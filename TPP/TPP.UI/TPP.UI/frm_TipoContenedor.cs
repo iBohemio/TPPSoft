@@ -25,10 +25,29 @@ namespace TPP.UI
         private string MensajePregunta;
         private string MensajeRespuesta;
         private string Entidad;
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
+
+            if (string.IsNullOrEmpty(txtDescripcion.Text))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtDescripcion, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+            }
+
+
+            return validar;
+        }
         private void frm_TipoContenedor_Load(object sender, EventArgs e)
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 Entidad = "Tipo de Contenedor";
                 if (Modo == TypeMode.Registrar)
                 {

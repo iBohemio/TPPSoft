@@ -60,11 +60,59 @@ namespace TPP.UI
                                     MessageBoxIcon.Error);
              }
         }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
 
+            if (txtBrevete.Text.Length != 9)
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtBrevete, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+                if (string.IsNullOrEmpty(txtNombres.Text))
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtNombres, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                
+                    if (string.IsNullOrEmpty(txtAPaterno.Text))
+                    {
+                        epTxt.Icon = Properties.Resources.FAIL;
+                        epTxt.SetError(txtAPaterno, "Dato Invalido");
+                        validar = false;
+                    }
+                    else
+                    {
+                        epTxt.Clear();
+
+                        if (string.IsNullOrEmpty(txtAMaterno.Text))
+                        {
+                            epTxt.Icon = Properties.Resources.FAIL;
+                            epTxt.SetError(txtAMaterno, "Dato Invalido");
+                            validar = false;
+                        }
+                        else
+                        {
+                            epTxt.Clear();
+                        }
+                    }
+                }
+            }
+            return validar;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;

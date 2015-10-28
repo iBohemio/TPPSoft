@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TipoVehiculo));
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -41,9 +42,11 @@
             this.nudPesoMaximo = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoMaximo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -174,6 +177,11 @@
             this.txtCodigo.Size = new System.Drawing.Size(177, 22);
             this.txtCodigo.TabIndex = 0;
             // 
+            // epTxt
+            // 
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
+            // 
             // frm_TipoVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -200,6 +208,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoMaximo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +228,6 @@
         private System.Windows.Forms.NumericUpDown nudPesoMaximo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox txtCodigo;
+        private System.Windows.Forms.ErrorProvider epTxt;
     }
 }

@@ -479,6 +479,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="Sp_ReportePesaje" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="BDParacas1ModelStoreContainer">
     <EntitySet Name="AuditoriaPesaje" EntityType="Self.AuditoriaPesaje" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Autorizacion" EntityType="Self.Autorizacion" Schema="dbo" store:Type="Tables" />

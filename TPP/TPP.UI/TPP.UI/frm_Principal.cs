@@ -27,6 +27,7 @@ namespace TPP.UI
             tsSalida.Visible = false;
             tsReimpresion.Visible = false;
             tsEntidad.Visible = false;
+            tsReportes.Visible = false;
             sslbl_Rol.Text = ".";
             sslbl_Usuario.Text = "Bienvenido:";
         }
@@ -41,7 +42,17 @@ namespace TPP.UI
             tsSalida.Visible = true;
             tsReimpresion.Visible = true;
             tsCerrarSesion.Visible = true;
-            tsEntidad.Visible =UsuarioObj.Rol.Descripcion.ToUpper()=="ADMINISTRADOR"? true:false;
+
+            if(UsuarioObj.Rol.Descripcion.ToUpper()=="ADMINISTRADOR")
+            {
+                tsEntidad.Visible =true;
+                tsReportes.Visible = true;
+            }else
+            {
+                tsEntidad.Visible = false;
+                tsReportes.Visible = false;
+            }
+
         }
         private void frm_Principal_Load(object sender, EventArgs e)
         {
@@ -492,6 +503,32 @@ namespace TPP.UI
                                     MessageBoxIcon.Error);
             }
             
+        }
+
+        private void miPesaje_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form frm = this.MdiChildren.FirstOrDefault(X => X is frm_ReportePesaje);
+                if (frm != null)
+                {
+                    frm.BringToFront();
+                    return;
+                }
+                frm = new frm_ReportePesaje();
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Normal;
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Location = new Point(0, 0);
+                frm.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                      this.Text,
+                                      MessageBoxButtons.OK,
+                                      MessageBoxIcon.Error);
+            }
         }
     }
 }

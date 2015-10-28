@@ -38,14 +38,14 @@ namespace TPP.UI
                 {
                     lblVehiculo.Text = "Registrar " + Entidad;
                     btnRegistrar.Text = "Registrar";
-                    MensajePregunta = "¿Está seguro de registrar el" +Entidad+"?";
+                    MensajePregunta = "¿Está seguro de registrar el " +Entidad+"?";
                     MensajeRespuesta = "Se registró el "+Entidad+" satisfactoriamente.";
                 }
                 else if (Modo == TypeMode.Editar)
                 {
                     lblVehiculo.Text = "Editar " + Entidad;
                     btnRegistrar.Text = "Editar";
-                    MensajePregunta = "¿Está seguro de editar el" +Entidad+"?";
+                    MensajePregunta = "¿Está seguro de editar el " +Entidad+"?";
                     MensajeRespuesta = "Se editó el "+Entidad+" satisfactoriamente.";
                     VehiculoBC objVehiculoBC = new VehiculoBC();
                     Vehiculo objVehiculo = objVehiculoBC.BuscarVehiculo(VehiculoId);
@@ -68,6 +68,7 @@ namespace TPP.UI
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;
@@ -104,6 +105,34 @@ namespace TPP.UI
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
+
+            if (txtPlaca.Text.Length != 7 || txtPlaca.Text.Contains(" "))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtPlaca, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+
+                if (txtCarrete.Text.Length != 7 || txtCarrete.Text.Contains(" "))
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtCarrete, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+                }
+            }
+            return validar;
         }
     }
 }

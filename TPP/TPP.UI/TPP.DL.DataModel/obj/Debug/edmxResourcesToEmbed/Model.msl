@@ -234,5 +234,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_ReportePesaje" FunctionName="BDParacas1Model.Store.Sp_ReportePesaje">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BDParacas1Model.Sp_ReportePesaje_Result">
+          <ScalarProperty Name="Num__de_Placa_del_vehiculo" ColumnName="Num. de Placa del vehiculo" />
+          <ScalarProperty Name="Num__de_Ejes_de_la_Unidad" ColumnName="Num. de Ejes de la Unidad" />
+          <ScalarProperty Name="Razón_de_la_Unidad" ColumnName="Razón de la Unidad" />
+          <ScalarProperty Name="FechaMuelle" ColumnName="FechaMuelle" />
+          <ScalarProperty Name="FechaBarco" ColumnName="FechaBarco" />
+          <ScalarProperty Name="Tiempo_de_Atención_del_vehiculo" ColumnName="Tiempo de Atención del vehiculo" />
+          <ScalarProperty Name="Fecha_de_Operación" ColumnName="Fecha de Operación" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

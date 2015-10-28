@@ -70,11 +70,40 @@ namespace TPP.UI
         {
             this.Dispose();
         }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
 
+            if (string.IsNullOrEmpty(txtUsuario.Text) || txtUsuario.Text.Contains(" "))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtUsuario, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+
+                if (string.IsNullOrEmpty(txtContrasenia.Text) || txtContrasenia.Text.Contains(" "))
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtContrasenia, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+                }
+            }
+
+            return validar;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;

@@ -63,11 +63,40 @@ namespace TPP.UI
         {
             this.Dispose();
         }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
 
+            if (string.IsNullOrEmpty(txtCodigo.Text) || txtDescripcion.Text.Contains(" "))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtCodigo, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+
+                if (string.IsNullOrEmpty(txtDescripcion.Text))
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtDescripcion, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+                }
+            }
+
+            return validar;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Vehiculo));
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -40,8 +41,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbTipoVehiculo = new System.Windows.Forms.ComboBox();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -157,6 +160,12 @@
             this.cbTipoVehiculo.Size = new System.Drawing.Size(192, 24);
             this.cbTipoVehiculo.TabIndex = 14;
             // 
+            // epTxt
+            // 
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
+            this.epTxt.Icon = ((System.Drawing.Icon)(resources.GetObject("epTxt.Icon")));
+            // 
             // frm_Vehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -181,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbTipoVehiculo;
+        private System.Windows.Forms.ErrorProvider epTxt;
     }
 }

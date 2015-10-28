@@ -59,12 +59,39 @@ namespace TPP.UI
                                    MessageBoxIcon.Error);
             }
         }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
+
+            if (string.IsNullOrWhiteSpace(txtDocumento.Text))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtDocumento, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+                if (nudBultos.Value == 0)
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(nudBultos, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+                }
+            }
+
+            return validar;
+        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
-
+                if (!ValidarComponentes()) return;
                 GuiaRemision objGuiaRemision = new GuiaRemision();
                 GuiaRemisionBC objGuiaRemisionBC = new GuiaRemisionBC();
                 objGuiaRemision.Documento = txtDocumento.Text;

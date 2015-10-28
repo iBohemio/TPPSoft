@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Autorizacion));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,14 +64,16 @@
             this.rdbFinalizado = new System.Windows.Forms.RadioButton();
             this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblFechaNombre = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoMaximo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBultos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -411,6 +414,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales del Registro";
             // 
+            // lblFechaNombre
+            // 
+            this.lblFechaNombre.AutoSize = true;
+            this.lblFechaNombre.Location = new System.Drawing.Point(380, 29);
+            this.lblFechaNombre.Name = "lblFechaNombre";
+            this.lblFechaNombre.Size = new System.Drawing.Size(48, 16);
+            this.lblFechaNombre.TabIndex = 67;
+            this.lblFechaNombre.Text = "Fecha:";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtProducto);
@@ -445,14 +457,10 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la Autorización";
             // 
-            // lblFechaNombre
+            // epTxt
             // 
-            this.lblFechaNombre.AutoSize = true;
-            this.lblFechaNombre.Location = new System.Drawing.Point(380, 29);
-            this.lblFechaNombre.Name = "lblFechaNombre";
-            this.lblFechaNombre.Size = new System.Drawing.Size(48, 16);
-            this.lblFechaNombre.TabIndex = 67;
-            this.lblFechaNombre.Text = "Fecha:";
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
             // 
             // frm_Autorizacion
             // 
@@ -480,6 +488,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +531,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblFechaNombre;
+        private System.Windows.Forms.ErrorProvider epTxt;
     }
 }

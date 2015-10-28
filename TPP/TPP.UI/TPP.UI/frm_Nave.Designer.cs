@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Nave));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,9 +40,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.nudPesoTotal = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -155,6 +158,11 @@
             this.label2.TabIndex = 75;
             this.label2.Text = "Peso Total:";
             // 
+            // epTxt
+            // 
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
+            // 
             // frm_Nave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -179,6 +187,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +205,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudPesoTotal;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider epTxt;
     }
 }

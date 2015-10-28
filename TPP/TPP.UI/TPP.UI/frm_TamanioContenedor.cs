@@ -25,6 +25,22 @@ namespace TPP.UI
         private string MensajePregunta;
         private string MensajeRespuesta;
         private string Entidad;
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
+
+            if (string.IsNullOrEmpty(txtCodigo.Text))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtCodigo, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+            }
+            return validar;
+        }
         private void frm_TamanioContenedor_Load(object sender, EventArgs e)
         {
             try
@@ -67,6 +83,7 @@ namespace TPP.UI
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;

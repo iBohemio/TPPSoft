@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAsQAAALEAGtI711AAAOZUlEQVR4Xu2de3BcVR3Hizx8
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAsPAAALDwGS+QOlAAAOZUlEQVR4Xu2de3BcVR3Hizx8
         zCCKo6KIIqLj/74GpCIgoIiKBQTl0QJVZxxnHBHHcWCABigUsRTKG0GYqcAUKK+WUkjbpLQkpfSVpKRJ
         Ntk0NMnefW9KWmU0x+/v5tzN5uxvk32ccx+79zfz6aZ77z17zu/7veec+9i9c+oxcrncp1Kp1KnJZPIq
         cAf+XgleB22JRKILDIIU+AD8D+8fwmsWryN47cQ2LbQNXu8Cv8ff52UymRNl8WH4KdLp9DHgJxDpboi3
@@ -219,6 +219,9 @@
         6m0JgP0G6eEvU19cZSYAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="epTxt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAEAIAAoCAEAJgAAAAAAAAABACAAxjMBAE4IAQAoAAAAgAAAAAABAAABACAAAAAAAAAA

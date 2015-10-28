@@ -12,6 +12,8 @@ namespace TPP.DL.DataModel
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class BDParacasEntities : DbContext
     {
@@ -43,5 +45,10 @@ namespace TPP.DL.DataModel
         public virtual DbSet<Turno> Turno { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Vehiculo> Vehiculo { get; set; }
+    
+        public virtual ObjectResult<Sp_ReportePesaje_Result> Sp_ReportePesaje()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_ReportePesaje_Result>("Sp_ReportePesaje");
+        }
     }
 }

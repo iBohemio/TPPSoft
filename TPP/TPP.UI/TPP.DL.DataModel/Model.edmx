@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BDParacas1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BDParacas1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AuditoriaPesaje">
           <Key>
             <PropertyRef Name="AuditoriaPesajeId" />
@@ -484,6 +484,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Sp_ReportePesaje" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BDParacas1ModelStoreContainer">
           <EntitySet Name="AuditoriaPesaje" EntityType="Self.AuditoriaPesaje" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Autorizacion" EntityType="Self.Autorizacion" Schema="dbo" store:Type="Tables" />
@@ -592,8 +593,7 @@
             <End Role="Vehiculo" EntitySet="Vehiculo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDParacas1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1227,7 +1227,17 @@
             <End Role="TipoVehiculo" EntitySet="TipoVehiculo" />
             <End Role="Vehiculo" EntitySet="Vehiculo" />
           </AssociationSet>
+          <FunctionImport Name="Sp_ReportePesaje" ReturnType="Collection(BDParacas1Model.Sp_ReportePesaje_Result)" />
         </EntityContainer>
+        <ComplexType Name="Sp_ReportePesaje_Result">
+          <Property Type="String" Name="Num__de_Placa_del_vehiculo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Num__de_Ejes_de_la_Unidad" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Razón_de_la_Unidad" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="FechaMuelle" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaBarco" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Tiempo_de_Atención_del_vehiculo" Nullable="true" />
+          <Property Type="String" Name="Fecha_de_Operación" Nullable="true" MaxLength="10" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1467,6 +1477,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Sp_ReportePesaje" FunctionName="BDParacas1Model.Store.Sp_ReportePesaje">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BDParacas1Model.Sp_ReportePesaje_Result">
+                <ScalarProperty Name="Num__de_Placa_del_vehiculo" ColumnName="Num. de Placa del vehiculo" />
+                <ScalarProperty Name="Num__de_Ejes_de_la_Unidad" ColumnName="Num. de Ejes de la Unidad" />
+                <ScalarProperty Name="Razón_de_la_Unidad" ColumnName="Razón de la Unidad" />
+                <ScalarProperty Name="FechaMuelle" ColumnName="FechaMuelle" />
+                <ScalarProperty Name="FechaBarco" ColumnName="FechaBarco" />
+                <ScalarProperty Name="Tiempo_de_Atención_del_vehiculo" ColumnName="Tiempo de Atención del vehiculo" />
+                <ScalarProperty Name="Fecha_de_Operación" ColumnName="Fecha de Operación" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

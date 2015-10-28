@@ -58,11 +58,40 @@ namespace TPP.UI
                                    MessageBoxIcon.Error);
             }
         }
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
 
+            if (string.IsNullOrEmpty(txtCodigo.Text) || txtCodigo.Text.Contains(" "))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtCodigo, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+
+                if (txtDescripcion.Text.Length <= 5)
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtDescripcion, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+                }
+            }
+
+            return validar;
+        }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;

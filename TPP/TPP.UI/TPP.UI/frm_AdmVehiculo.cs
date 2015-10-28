@@ -98,9 +98,9 @@ namespace TPP.UI
         {
             try
             {
-                frm_TipoVehiculo frm = new frm_TipoVehiculo();
-                frm.Modo = frm_TipoVehiculo.TypeMode.Editar;
-                frm.TipoVehiculoId = Convert.ToInt32(dgvVehiculo.SelectedRows[0].Cells["VehiculoId"].Value);
+                frm_Vehiculo frm = new frm_Vehiculo();
+                frm.Modo = frm_Vehiculo.TypeMode.Editar;
+                frm.VehiculoId = Convert.ToInt32(dgvVehiculo.SelectedRows[0].Cells["VehiculoId"].Value);
                 frm.MiDelegado += RefrescarGrilla;
                 frm.ShowDialog();
             }

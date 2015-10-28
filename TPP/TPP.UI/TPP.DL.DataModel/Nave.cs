@@ -14,6 +14,7 @@ namespace TPP.DL.DataModel
     
     public partial class Nave
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Nave()
         {
             this.Autorizacion = new HashSet<Autorizacion>();
@@ -26,8 +27,11 @@ namespace TPP.DL.DataModel
         public decimal PesoTotal { get; set; }
         public short Estado { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Autorizacion> Autorizacion { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contenedor> Contenedor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pesaje> Pesaje { get; set; }
     }
 }

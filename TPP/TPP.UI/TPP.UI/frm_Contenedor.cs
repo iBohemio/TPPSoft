@@ -113,6 +113,7 @@ namespace TPP.UI
         {
             try
             {
+                if (!ValidarComponentes()) return;
                 if (MessageBox.Show(MensajePregunta, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     return;
@@ -193,6 +194,153 @@ namespace TPP.UI
                                   MessageBoxButtons.OK,
                                   MessageBoxIcon.Error);
             }
+        }
+
+        public bool ValidarComponentes()
+        {
+            bool valido=true;
+
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text))
+            {
+                epTxt.SetError(txtCodigo, "Dato Invalido");
+                valido = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+                if (string.IsNullOrWhiteSpace(txtEmbarcadero.Text))
+                {
+                    epTxt.SetError(txtEmbarcadero, "Dato Invalido");
+                    valido = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+
+                    if (string.IsNullOrWhiteSpace(txtPesoManifiesto.Text))
+                    {
+                        epTxt.SetError(txtPesoManifiesto, "Dato Invalido");
+                        valido = false;
+                    }
+                    else
+                    {
+                        epTxt.Clear();
+
+                        if (string.IsNullOrWhiteSpace(txtAgenteAduanas.Text))
+                        {
+                            epTxt.SetError(txtAgenteAduanas, "Dato Invalido");
+                            valido = false;
+                        }
+                        else
+                        {
+                            epTxt.Clear();
+
+                            if (string.IsNullOrWhiteSpace(txtReserva.Text))
+                            {
+                                epTxt.SetError(txtReserva, "Dato Invalido");
+                                valido = false;
+                            }
+                            else
+                            {
+                                epTxt.Clear();
+
+
+                                if (string.IsNullOrWhiteSpace(txtTara.Text))
+                                {
+                                    epTxt.SetError(txtTara, "Dato Invalido");
+                                    valido = false;
+                                }
+                                else
+                                {
+                                    epTxt.Clear();
+
+                                    if (string.IsNullOrWhiteSpace(txtNumViaje.Text))
+                                {
+                                    epTxt.SetError(txtNumViaje, "Dato Invalido");
+                                    valido = false;
+                                }
+                                else
+                                {
+                                    epTxt.Clear();
+
+                                        if (string.IsNullOrWhiteSpace(txtEIR.Text))
+                                        {
+                                            epTxt.SetError(txtEIR, "Dato Invalido");
+                                            valido = false;
+                                        }
+                                        else
+                                        {
+                                            epTxt.Clear();
+
+                                            if (string.IsNullOrWhiteSpace(txtPrecintoAduanero.Text))
+                                            {
+                                                epTxt.SetError(txtPrecintoAduanero, "Dato Invalido");
+                                                valido = false;
+                                            }
+                                            else
+                                            {
+                                                epTxt.Clear();
+
+                                                if (string.IsNullOrWhiteSpace(txtPrecinto1.Text))
+                                                {
+                                                    epTxt.SetError(txtPrecinto1, "Dato Invalido");
+                                                    valido = false;
+                                                }
+                                                else
+                                                {
+                                                    epTxt.Clear();
+
+                                                    if (string.IsNullOrWhiteSpace(txtPrecinto2.Text))
+                                                    {
+                                                        epTxt.SetError(txtPrecinto2, "Dato Invalido");
+                                                        valido = false;
+                                                    }
+                                                    else
+                                                    {
+                                                        epTxt.Clear();
+
+                                                        if (string.IsNullOrWhiteSpace(txtPrecinto3.Text))
+                                                        {
+                                                            epTxt.SetError(txtPrecinto3, "Dato Invalido");
+                                                            valido = false;
+                                                        }
+                                                        else
+                                                        {
+                                                            epTxt.Clear();
+
+                                                            if (string.IsNullOrWhiteSpace(txtUbicacion.Text))
+                                                            {
+                                                                epTxt.SetError(txtUbicacion, "Dato Invalido");
+                                                                valido = false;
+                                                            }
+                                                            else
+                                                            {
+                                                                epTxt.Clear();
+
+                                                                if (string.IsNullOrWhiteSpace(txtNave.Text))
+                                                                {
+                                                                    epTxt.SetError(txtNave, "Dato Invalido");
+                                                                    valido = false;
+                                                                }
+                                                                else
+                                                                {
+                                                                    epTxt.Clear();
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return valido;
         }
     }
 }

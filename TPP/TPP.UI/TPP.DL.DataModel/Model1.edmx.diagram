@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ffdaa383fc264d8cbe3f406dc0965eaa" Name="Diagram1">
+        <EntityTypeShape EntityType="BDParacas1Model.AuditoriaPesaje" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Autorizacion" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Conductor" Width="1.5" PointX="6" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Contenedor" Width="1.5" PointX="6" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Embalaje" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.GuiaRemision" Width="1.5" PointX="10.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.MovimientoPesaje" Width="1.5" PointX="13.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Nave" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Operacion" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Pesaje" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Reporte" Width="1.5" PointX="6" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Rol" Width="1.5" PointX="1.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.TamanioContenedor" Width="1.5" PointX="3.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.TipoContenedor" Width="1.5" PointX="3.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.TipoVehiculo" Width="1.5" PointX="3.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Turno" Width="1.5" PointX="3.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Usuario" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDParacas1Model.Vehiculo" Width="1.5" PointX="6" PointY="13.625" IsExpanded="true" />
+        <AssociationConnector Association="BDParacas1Model.FK_AuditoriaPesaje_Pesaje" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_AuditoriaPesaje_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Autorizacion_Embalaje" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Autorizacion_Nave" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Autorizacion_Operacion" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Autorizacion_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Pesaje_Autorizacion" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Pesaje_Conductor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Vehiculo_Conductor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Contenedor_Nave" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Contenedor_TamanioContenedor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Contenedor_TipoContenedor" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_GuiaRemision_Pesaje" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_MovimientoPesaje_Pesaje" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_MovimientoPesaje_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Pesaje_Nave" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Pesaje_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Pesaje_Vehiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Reporte_Turno" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Reporte_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Usuario_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="BDParacas1Model.FK_Vehiculo_TipoVehiculo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

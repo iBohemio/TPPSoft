@@ -14,6 +14,7 @@ namespace TPP.DL.DataModel
     
     public partial class Autorizacion
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Autorizacion()
         {
             this.Pesaje = new HashSet<Pesaje>();
@@ -36,6 +37,7 @@ namespace TPP.DL.DataModel
         public virtual Nave Nave { get; set; }
         public virtual Operacion Operacion { get; set; }
         public virtual Usuario Usuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pesaje> Pesaje { get; set; }
     }
 }

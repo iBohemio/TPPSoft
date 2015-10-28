@@ -14,6 +14,7 @@ namespace TPP.DL.DataModel
     
     public partial class Pesaje
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Pesaje()
         {
             this.AuditoriaPesaje = new HashSet<AuditoriaPesaje>();
@@ -41,10 +42,13 @@ namespace TPP.DL.DataModel
         public Nullable<int> Tarja { get; set; }
         public Nullable<System.DateTime> HoraGancho { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AuditoriaPesaje> AuditoriaPesaje { get; set; }
         public virtual Autorizacion Autorizacion { get; set; }
         public virtual Conductor Conductor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GuiaRemision> GuiaRemision { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MovimientoPesaje> MovimientoPesaje { get; set; }
         public virtual Nave Nave { get; set; }
         public virtual Usuario Usuario { get; set; }

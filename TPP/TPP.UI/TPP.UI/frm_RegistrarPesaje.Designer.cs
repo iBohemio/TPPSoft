@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_RegistrarPesaje));
             this.txtEmbalaje = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPeso = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblContenedor = new System.Windows.Forms.Label();
@@ -124,6 +124,8 @@
             this.btnLectura = new System.Windows.Forms.Button();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtCarrete = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -132,6 +134,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTarja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmbalaje
@@ -187,18 +190,6 @@
             this.label5.Size = new System.Drawing.Size(36, 16);
             this.label5.TabIndex = 140;
             this.label5.Text = "Tipo:";
-            // 
-            // txtPeso
-            // 
-            this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtPeso.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeso.ForeColor = System.Drawing.Color.White;
-            this.txtPeso.Location = new System.Drawing.Point(109, 182);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(140, 22);
-            this.txtPeso.TabIndex = 139;
-            this.txtPeso.Text = "0";
             // 
             // panel1
             // 
@@ -1079,6 +1070,25 @@
             this.txtCarrete.Size = new System.Drawing.Size(140, 22);
             this.txtCarrete.TabIndex = 206;
             // 
+            // txtPeso
+            // 
+            this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtPeso.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeso.ForeColor = System.Drawing.Color.White;
+            this.txtPeso.Location = new System.Drawing.Point(109, 182);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.ReadOnly = true;
+            this.txtPeso.Size = new System.Drawing.Size(140, 22);
+            this.txtPeso.TabIndex = 139;
+            this.txtPeso.Text = "0";
+            // 
+            // epTxt
+            // 
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
+            this.epTxt.Icon = ((System.Drawing.Icon)(resources.GetObject("epTxt.Icon")));
+            // 
             // frm_RegistrarPesaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1141,6 +1151,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTarja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1154,7 +1165,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblContenedor;
@@ -1243,5 +1253,7 @@
         private System.Windows.Forms.DateTimePicker dtpExpMuelleHor;
         private System.Windows.Forms.DateTimePicker dtpExpBarcoHor;
         private System.Windows.Forms.DateTimePicker dtpExpIzajeHor;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.ErrorProvider epTxt;
     }
 }

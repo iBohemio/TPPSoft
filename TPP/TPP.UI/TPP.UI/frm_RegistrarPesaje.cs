@@ -180,7 +180,7 @@ namespace TPP.UI
         {
             try
             {
-               
+
                 
                 ConfigurarControles(dgvGuiaRemision);
                 RefrescarGrilla();
@@ -333,7 +333,8 @@ namespace TPP.UI
         {
             try
             {
-                if(dgvGuiaRemision.RowCount>0)
+                
+                if (dgvGuiaRemision.RowCount>0)
                 { 
                     if (MessageBox.Show("Perderá los datos si sale del formulario. ¿Desea Continuar?",
                                       this.Text,
@@ -422,6 +423,7 @@ namespace TPP.UI
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (!ValidarComponentes()) return;
             if (MessageBox.Show("¿Está seguro de registrar un Pesaje?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
             {
                 return;
@@ -499,6 +501,61 @@ namespace TPP.UI
                                   MessageBoxButtons.OK,
                                   MessageBoxIcon.Error);
             }
+        }
+
+
+
+        private bool ValidarComponentes()
+        {
+            bool validar = true;
+
+            if (string.IsNullOrWhiteSpace(txtPlaca.Text) || txtPlaca.Text.Contains(" "))
+            {
+                epTxt.Icon = Properties.Resources.FAIL;
+                epTxt.SetError(txtPlaca, "Dato Invalido");
+                validar = false;
+            }
+            else
+            {
+                epTxt.Clear();
+
+
+                if (string.IsNullOrWhiteSpace(txtBrevete.Text) || txtBrevete.Text.Contains(" "))
+                {
+                    epTxt.Icon = Properties.Resources.FAIL;
+                    epTxt.SetError(txtBrevete, "Dato Invalido");
+                    validar = false;
+                }
+                else
+                {
+                    epTxt.Clear();
+
+                    if (string.IsNullOrWhiteSpace(txtCodigoAutorizacion.Text) || txtCodigoAutorizacion.Text.Contains(" "))
+                    {
+                        epTxt.Icon = Properties.Resources.FAIL;
+                        epTxt.SetError(txtCodigoAutorizacion, "Dato Invalido");
+                        validar = false;
+                    }
+                    else
+                    {
+                        epTxt.Clear();
+
+                        if (string.IsNullOrWhiteSpace(txtPeso.Text) || txtPeso.Text.Contains(" ") || txtPeso.Text=="0")
+                        {
+                            epTxt.Icon = Properties.Resources.FAIL;
+                            epTxt.SetError(txtPeso, "Dato Invalido");
+                            validar = false;
+                        }
+                        else
+                        {
+                            epTxt.Clear();
+                        }
+                    }
+                }
+            }
+
+            return validar;
+          
         }
     }
 }

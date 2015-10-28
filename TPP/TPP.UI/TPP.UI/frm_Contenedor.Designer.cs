@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Contenedor));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtEmbarcadero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPesoManifiesto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtAgenteAduanas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,8 +80,11 @@
             this.dtpHoraIzaje = new System.Windows.Forms.DateTimePicker();
             this.dtpHoraBarco = new System.Windows.Forms.DateTimePicker();
             this.dtpHoraMuelle = new System.Windows.Forms.DateTimePicker();
+            this.epTxt = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtPesoManifiesto = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -181,14 +184,6 @@
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 84;
             this.label1.Text = "Consig. / Embarca. :";
-            // 
-            // txtPesoManifiesto
-            // 
-            this.txtPesoManifiesto.Location = new System.Drawing.Point(157, 144);
-            this.txtPesoManifiesto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPesoManifiesto.Name = "txtPesoManifiesto";
-            this.txtPesoManifiesto.Size = new System.Drawing.Size(140, 22);
-            this.txtPesoManifiesto.TabIndex = 87;
             // 
             // label2
             // 
@@ -549,12 +544,27 @@
             this.dtpHoraMuelle.Size = new System.Drawing.Size(115, 22);
             this.dtpHoraMuelle.TabIndex = 133;
             // 
+            // epTxt
+            // 
+            this.epTxt.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epTxt.ContainerControl = this;
+            this.epTxt.Icon = ((System.Drawing.Icon)(resources.GetObject("epTxt.Icon")));
+            // 
+            // txtPesoManifiesto
+            // 
+            this.txtPesoManifiesto.Location = new System.Drawing.Point(157, 142);
+            this.txtPesoManifiesto.Mask = "9999999";
+            this.txtPesoManifiesto.Name = "txtPesoManifiesto";
+            this.txtPesoManifiesto.Size = new System.Drawing.Size(140, 22);
+            this.txtPesoManifiesto.TabIndex = 134;
+            // 
             // frm_Contenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 433);
+            this.Controls.Add(this.txtPesoManifiesto);
             this.Controls.Add(this.dtpHoraMuelle);
             this.Controls.Add(this.dtpHoraBarco);
             this.Controls.Add(this.dtpHoraIzaje);
@@ -595,7 +605,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAgenteAduanas);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPesoManifiesto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmbarcadero);
             this.Controls.Add(this.label1);
@@ -613,6 +622,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,7 +639,6 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtEmbarcadero;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPesoManifiesto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAgenteAduanas;
         private System.Windows.Forms.Label label3;
@@ -671,5 +680,7 @@
         private System.Windows.Forms.DateTimePicker dtpHoraIzaje;
         private System.Windows.Forms.DateTimePicker dtpHoraBarco;
         private System.Windows.Forms.DateTimePicker dtpHoraMuelle;
+        private System.Windows.Forms.ErrorProvider epTxt;
+        private System.Windows.Forms.MaskedTextBox txtPesoManifiesto;
     }
 }

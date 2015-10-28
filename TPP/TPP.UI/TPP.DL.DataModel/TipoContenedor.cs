@@ -17,7 +17,6 @@ namespace TPP.DL.DataModel
         public TipoContenedor()
         {
             this.Contenedor = new HashSet<Contenedor>();
-            this.Pesaje = new HashSet<Pesaje>();
         }
     
         public int TipoContenedorId { get; set; }
@@ -25,6 +24,5 @@ namespace TPP.DL.DataModel
         public short Estado { get; set; }
     
         public virtual ICollection<Contenedor> Contenedor { get; set; }
-        public virtual ICollection<Pesaje> Pesaje { get; set; }
     }
 }

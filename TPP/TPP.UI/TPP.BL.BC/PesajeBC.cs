@@ -32,7 +32,6 @@ namespace TPP.BL.BC
                                                  Tara = obj.Tara,
                                                  Neto = obj.Neto,
                                                  Nave = obj.Nave.Nombre,
-                                                 TipoContenedor = obj.TipoContenedor.Descripcion,
                                                  TipoMercancia = obj.TipoMercancia,
                                                  CodSeguridad = obj.CodSeguridad,
                                                  CodContenedor = obj.CodContenedor,
@@ -44,6 +43,16 @@ namespace TPP.BL.BC
 
                                              }).ToList();
             return LstPesaje;
+        }
+        
+        public int BuscarUltimoIdPesaje()
+        {
+              using (var ctx = new BDParacasEntities())
+            {
+                int IdPesaje = ctx.Database.SqlQuery<int>("select top 1 PesajeId from Pesaje order by PesajeId desc").FirstOrDefault<int>();
+                return IdPesaje;
+              }
+            
         }
         public Pesaje BuscarPesaje(int PesajeId)
         {

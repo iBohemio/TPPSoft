@@ -140,7 +140,6 @@
           <ScalarProperty Name="Tara" ColumnName="Tara" />
           <ScalarProperty Name="Neto" ColumnName="Neto" />
           <ScalarProperty Name="NaveId" ColumnName="NaveId" />
-          <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
           <ScalarProperty Name="TipoMercancia" ColumnName="TipoMercancia" />
           <ScalarProperty Name="CodSeguridad" ColumnName="CodSeguridad" />
           <ScalarProperty Name="CodContenedor" ColumnName="CodContenedor" />

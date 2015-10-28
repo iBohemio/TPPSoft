@@ -33,7 +33,6 @@ namespace TPP.DL.DataModel
         public Nullable<decimal> Tara { get; set; }
         public Nullable<decimal> Neto { get; set; }
         public Nullable<int> NaveId { get; set; }
-        public int TipoContenedorId { get; set; }
         public string TipoMercancia { get; set; }
         public string CodSeguridad { get; set; }
         public string CodContenedor { get; set; }
@@ -48,7 +47,6 @@ namespace TPP.DL.DataModel
         public virtual ICollection<GuiaRemision> GuiaRemision { get; set; }
         public virtual ICollection<MovimientoPesaje> MovimientoPesaje { get; set; }
         public virtual Nave Nave { get; set; }
-        public virtual TipoContenedor TipoContenedor { get; set; }
         public virtual Usuario Usuario { get; set; }
         public virtual Vehiculo Vehiculo { get; set; }
     }

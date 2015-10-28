@@ -399,12 +399,17 @@ namespace TPP.UI
                     frm.BringToFront();
                     return;
                 }
-                frm = new frm_RegistrarPesaje();
-                frm.MdiParent = this;
-                frm.WindowState = FormWindowState.Normal;
-                frm.StartPosition = FormStartPosition.Manual;
-                frm.Location = new Point(0, 0);
-                frm.Show();
+                else
+                {
+                    frm_RegistrarPesaje frm1 = new frm_RegistrarPesaje();
+                    frm1.MdiParent = this;
+                    frm1.UsuarioId = usuarioId;
+                    frm1.WindowState = FormWindowState.Normal;
+                    frm1.StartPosition = FormStartPosition.Manual;
+                    frm1.Location = new Point(0, 0);
+                    frm1.Show();
+                }
+                
             }
             catch (Exception)
             {

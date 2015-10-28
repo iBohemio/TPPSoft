@@ -20,7 +20,16 @@ namespace TPP.UI
         public int VehiculoId { get; set; }
         public int ConductorId { get; set; }
         public int AutorizacionId { get; set; }
-   
+        public int UsuarioId { get; set; }
+        public int NaveId { get; set; }
+        public int ContenedorNaveId { get; set; }
+        public int PesajeId { get; set; }
+        private void RecibirDatosNave(int naveId, string nombre)
+        {
+            txtExpNaveContenedor.Text = nombre;
+            ContenedorNaveId = naveId;
+        }
+
         private void RecibirDatosVehiculo(Vehiculo oVehiculo)
         {
             VehiculoId = oVehiculo.VehiculoId;
@@ -35,6 +44,7 @@ namespace TPP.UI
             txtOperacion.Text = oAutorizacion.Operacion.Codigo + " - " + oAutorizacion.Operacion.Descripcion;
             txtEmbalaje.Text = oAutorizacion.Embalaje.Codigo + " - " + oAutorizacion.Embalaje.Descripcion;
             txtNave.Text = oAutorizacion.Nave.Nombre;
+            NaveId = oAutorizacion.NaveId;
             txtPesoAutorizacion.Text = oAutorizacion.Peso.ToString();
             if(oAutorizacion.Tipo == "IMP")
             {
@@ -91,6 +101,8 @@ namespace TPP.UI
 
         private void ControlarControlesContenedor(bool estado)
         {
+            if (estado)
+            { 
             txtExpNumContenedor.Enabled = estado;
             txtExpEmbarcadero.Enabled = estado;
             txtExpPesoManifiesto.Enabled = estado;
@@ -114,11 +126,62 @@ namespace TPP.UI
             dtpExpMuelleHor.Enabled = estado;
             dtpExpBarcoFec.Enabled = estado;
             dtpExpBarcoHor.Enabled = estado;
+            }
+            else
+            {
+                txtExpNumContenedor.Enabled = estado;
+                txtExpEmbarcadero.Enabled = estado;
+                txtExpPesoManifiesto.Enabled = estado;
+                txtExpAgenteAduanas.Enabled = estado;
+                txtExpReserva.Enabled = estado;
+                txtExpTara.Enabled = estado;
+                cbTamanio.Enabled = estado;
+                cbTipoContenedor.Enabled = estado;
+                txtExpNumViaje.Enabled = estado;
+                txtExpEIR.Enabled = estado;
+                txtExpNaveContenedor.Enabled = estado;
+                btnBuscarNave.Enabled = estado;
+                txtExpPrecintoAduanero.Enabled = estado;
+                txtExpPrecinto1.Enabled = estado;
+                txtExpPrecinto2.Enabled = estado;
+                txtExpPrecinto3.Enabled = estado;
+                txtExpUbicacion.Enabled = estado;
+                dtpExpIzajeFec.Enabled = estado;
+                dtpExpIzajeHor.Enabled = estado;
+                dtpExpMuelleFec.Enabled = estado;
+                dtpExpMuelleHor.Enabled = estado;
+                dtpExpBarcoFec.Enabled = estado;
+                dtpExpBarcoHor.Enabled = estado;
+                txtExpNumContenedor.Clear();
+                txtExpEmbarcadero.Clear();
+                txtExpPesoManifiesto.Clear();
+                txtExpAgenteAduanas.Clear();
+                txtExpReserva.Clear();
+                txtExpTara.Clear();
+                cbTamanio.SelectedIndex = 0;
+                cbTipoContenedor.SelectedIndex = 0;
+                txtExpNumViaje.Clear();
+                txtExpEIR.Clear();
+                txtExpNaveContenedor.Clear();
+                txtExpPrecintoAduanero.Clear();
+                txtExpPrecinto1.Clear();
+                txtExpPrecinto2.Clear();
+                txtExpPrecinto3.Clear();
+                txtExpUbicacion.Clear();
+                dtpExpIzajeFec.Value = DateTime.Now;
+                dtpExpIzajeHor.Value = DateTime.Now;
+                dtpExpMuelleFec.Value = DateTime.Now;
+                dtpExpMuelleHor.Value = DateTime.Now;
+                dtpExpBarcoFec.Value = DateTime.Now;
+                dtpExpBarcoHor.Value = DateTime.Now;
+            }
         }
         private void frm_RegistrarPesaje_Load(object sender, EventArgs e)
         {
             try
             {
+               
+                
                 ConfigurarControles(dgvGuiaRemision);
                 RefrescarGrilla();
                 TipoContenedorBC objTipoContenedorBC = new TipoContenedorBC();
@@ -135,10 +198,10 @@ namespace TPP.UI
                 cbTipoVehiculo.ValueMember = "TipoVehiculoId";
                 ControlarControlesContenedor(false);
             }
-            catch (Exception)
+            catch (Exception ex )
             {
                 
-              MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+              MessageBox.Show(ex.ToString(),
                                    this.Text,
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Error);
@@ -355,6 +418,84 @@ namespace TPP.UI
         {
             Random rnd = new Random();
             txtPeso.Text = rnd.Next(10000, 20000).ToString();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de registrar un Pesaje?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+
+            if (chkHabRegCont.Checked)
+            {
+                ContenedorBC objContenedorBC = new ContenedorBC();
+                Contenedor objContenedor = new Contenedor();
+                objContenedor.Codigo = txtExpNumContenedor.Text.ToUpper();
+                objContenedor.Embarcadero = txtExpEmbarcadero.Text.ToUpper();
+                objContenedor.PesoManifiesto = Convert.ToDecimal(txtExpPesoManifiesto.Text.ToString());
+                objContenedor.AgenteAduana = txtExpAgenteAduanas.Text;
+                objContenedor.Autorizacion = Convert.ToInt32(txtExpReserva.Text.ToString());
+                objContenedor.TipoMovimiento = "EXP";
+                objContenedor.Tara = Convert.ToDecimal(txtExpTara.Text.ToString());
+                objContenedor.TamanoContenedorId = Convert.ToInt32(cbTamanio.SelectedValue.ToString());
+                objContenedor.TipoContenedorId = Convert.ToInt32(cbTipoContenedor.SelectedValue.ToString());
+                objContenedor.NumeroViaje = txtExpNumViaje.Text;
+                objContenedor.EIR = txtExpEIR.Text;
+                objContenedor.Estado = 1;
+                objContenedor.PrecintoAduanero = txtExpPrecintoAduanero.Text;
+                objContenedor.Precinto1 = txtExpPrecinto1.Text;
+                objContenedor.Precinto2 = txtExpPrecinto2.Text;
+                objContenedor.Precinto3 = txtExpPrecinto3.Text;
+                objContenedor.Ubicacion = txtExpUbicacion.Text.ToUpper();
+                objContenedor.NaveId = NaveId;
+                objContenedor.Fecha = DateTime.Now;
+                objContenedor.FechaIzaje = dtpExpIzajeFec.Value.Date + dtpExpIzajeHor.Value.TimeOfDay;
+                objContenedor.FechaBarco = dtpExpBarcoFec.Value.Date + dtpExpBarcoHor.Value.TimeOfDay;
+                objContenedor.FechaMuelle = dtpExpMuelleFec.Value.Date + dtpExpMuelleHor.Value.TimeOfDay;
+                objContenedorBC.RegistrarContenedor(objContenedor);
+            }
+            PesajeBC objPesajeBC = new PesajeBC();
+            Pesaje objPesaje = new Pesaje();
+            objPesaje.UsuarioId = UsuarioId;
+            objPesaje.ConductorId = ConductorId;
+            objPesaje.VehiculoId = VehiculoId;
+            objPesaje.AutorizacionId = AutorizacionId;
+            objPesaje.Observacion = txtObservacion.Text.Trim().ToUpper();
+            objPesaje.Fecha = DateTime.Today;
+            objPesaje.Estado = 1;
+            objPesaje.Bruto = Convert.ToDecimal(txtPeso.Text.ToString());
+            objPesaje.Neto = Convert.ToDecimal(txtPesoAutorizacion.Text.ToString());
+            objPesaje.NaveId = NaveId;
+            objPesaje.Tarja =Convert.ToInt32(nudTarja.Value.ToString());
+            objPesaje.Bultos = Convert.ToInt32(lblNroBultos.Text.ToString());
+            objPesaje.HoraGancho = DateTime.Now;
+            objPesaje.CodContenedor = cbContenedor.SelectedItem.ToString();
+         
+            objPesajeBC.RegistrarPesaje(objPesaje);
+            GuiaRemisionBC objGuiaRemisionBC = new GuiaRemisionBC();
+            PesajeId = objPesajeBC.BuscarUltimoIdPesaje();
+            objGuiaRemisionBC.ActualizarIdGuiaRemision(PesajeId);
+            MessageBox.Show("Se registró satisfactoriamente el Pesaje", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Dispose();
+        }
+
+        private void btnBuscarNave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frm_AdmNave frm = new frm_AdmNave();
+                frm.Modo = frm_AdmNave.TypeMode.Buscar;
+                frm.MiDelegado += RecibirDatosNave;
+                frm.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Disculpe, el sistema se encuentra fuera de servicio!",
+                                  this.Text,
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Error);
+            }
         }
     }
 }

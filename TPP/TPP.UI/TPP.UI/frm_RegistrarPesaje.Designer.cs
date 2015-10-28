@@ -191,6 +191,7 @@
             // txtPeso
             // 
             this.txtPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtPeso.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPeso.ForeColor = System.Drawing.Color.White;
             this.txtPeso.Location = new System.Drawing.Point(109, 182);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -260,6 +261,7 @@
             this.btnRegistrar.TabIndex = 131;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnBuscarVehiculo
             // 
@@ -568,6 +570,7 @@
             this.btnBuscarNave.Size = new System.Drawing.Size(26, 23);
             this.btnBuscarNave.TabIndex = 161;
             this.btnBuscarNave.UseVisualStyleBackColor = true;
+            this.btnBuscarNave.Click += new System.EventHandler(this.btnBuscarNave_Click);
             // 
             // txtExpNaveContenedor
             // 
@@ -879,7 +882,7 @@
             // 
             // txtExpNumContenedor
             // 
-            this.txtExpNumContenedor.Location = new System.Drawing.Point(142, 47);
+            this.txtExpNumContenedor.Location = new System.Drawing.Point(142, 44);
             this.txtExpNumContenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExpNumContenedor.Name = "txtExpNumContenedor";
             this.txtExpNumContenedor.Size = new System.Drawing.Size(140, 22);

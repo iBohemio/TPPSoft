@@ -136,7 +136,6 @@
           <Property Name="Tara" Type="decimal" Precision="9" Scale="2" />
           <Property Name="Neto" Type="decimal" Precision="9" Scale="2" />
           <Property Name="NaveId" Type="int" />
-          <Property Name="TipoContenedorId" Type="int" Nullable="false" />
           <Property Name="TipoMercancia" Type="varchar" MaxLength="5000" />
           <Property Name="CodSeguridad" Type="varchar" MaxLength="5000" />
           <Property Name="CodContenedor" Type="varchar" MaxLength="5000" />
@@ -401,18 +400,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Pesaje_TipoContenedor">
-          <End Role="TipoContenedor" Type="Self.TipoContenedor" Multiplicity="1" />
-          <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TipoContenedor">
-              <PropertyRef Name="TipoContenedorId" />
-            </Principal>
-            <Dependent Role="Pesaje">
-              <PropertyRef Name="TipoContenedorId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Pesaje_Usuario">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
           <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
@@ -574,10 +561,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_Pesaje_Nave" Association="Self.FK_Pesaje_Nave">
             <End Role="Nave" EntitySet="Nave" />
-            <End Role="Pesaje" EntitySet="Pesaje" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pesaje_TipoContenedor" Association="Self.FK_Pesaje_TipoContenedor">
-            <End Role="TipoContenedor" EntitySet="TipoContenedor" />
             <End Role="Pesaje" EntitySet="Pesaje" />
           </AssociationSet>
           <AssociationSet Name="FK_Pesaje_Usuario" Association="Self.FK_Pesaje_Usuario">
@@ -765,7 +748,6 @@
           <Property Name="Tara" Type="Decimal" Precision="9" Scale="2" />
           <Property Name="Neto" Type="Decimal" Precision="9" Scale="2" />
           <Property Name="NaveId" Type="Int32" />
-          <Property Name="TipoContenedorId" Type="Int32" Nullable="false" />
           <Property Name="TipoMercancia" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
           <Property Name="CodSeguridad" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
           <Property Name="CodContenedor" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
@@ -779,7 +761,6 @@
           <NavigationProperty Name="GuiaRemision" Relationship="Self.FK_GuiaRemision_Pesaje" FromRole="Pesaje" ToRole="GuiaRemision" />
           <NavigationProperty Name="MovimientoPesaje" Relationship="Self.FK_MovimientoPesaje_Pesaje" FromRole="Pesaje" ToRole="MovimientoPesaje" />
           <NavigationProperty Name="Nave" Relationship="Self.FK_Pesaje_Nave" FromRole="Pesaje" ToRole="Nave" />
-          <NavigationProperty Name="TipoContenedor" Relationship="Self.FK_Pesaje_TipoContenedor" FromRole="Pesaje" ToRole="TipoContenedor" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Pesaje_Usuario" FromRole="Pesaje" ToRole="Usuario" />
           <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Pesaje_Vehiculo" FromRole="Pesaje" ToRole="Vehiculo" />
         </EntityType>
@@ -820,7 +801,6 @@
           <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Contenedor" Relationship="Self.FK_Contenedor_TipoContenedor" FromRole="TipoContenedor" ToRole="Contenedor" />
-          <NavigationProperty Name="Pesaje" Relationship="Self.FK_Pesaje_TipoContenedor" FromRole="TipoContenedor" ToRole="Pesaje" />
         </EntityType>
         <EntityType Name="TipoVehiculo">
           <Key>
@@ -1068,18 +1048,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Pesaje_TipoContenedor">
-          <End Role="TipoContenedor" Type="Self.TipoContenedor" Multiplicity="1" />
-          <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TipoContenedor">
-              <PropertyRef Name="TipoContenedorId" />
-            </Principal>
-            <Dependent Role="Pesaje">
-              <PropertyRef Name="TipoContenedorId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Pesaje_Usuario">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
           <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
@@ -1233,10 +1201,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_Pesaje_Nave" Association="Self.FK_Pesaje_Nave">
             <End Role="Nave" EntitySet="Nave" />
-            <End Role="Pesaje" EntitySet="Pesaje" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pesaje_TipoContenedor" Association="Self.FK_Pesaje_TipoContenedor">
-            <End Role="TipoContenedor" EntitySet="TipoContenedor" />
             <End Role="Pesaje" EntitySet="Pesaje" />
           </AssociationSet>
           <AssociationSet Name="FK_Pesaje_Usuario" Association="Self.FK_Pesaje_Usuario">
@@ -1409,7 +1373,6 @@
                 <ScalarProperty Name="Tara" ColumnName="Tara" />
                 <ScalarProperty Name="Neto" ColumnName="Neto" />
                 <ScalarProperty Name="NaveId" ColumnName="NaveId" />
-                <ScalarProperty Name="TipoContenedorId" ColumnName="TipoContenedorId" />
                 <ScalarProperty Name="TipoMercancia" ColumnName="TipoMercancia" />
                 <ScalarProperty Name="CodSeguridad" ColumnName="CodSeguridad" />
                 <ScalarProperty Name="CodContenedor" ColumnName="CodContenedor" />

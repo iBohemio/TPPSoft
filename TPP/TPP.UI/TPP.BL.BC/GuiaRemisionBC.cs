@@ -17,10 +17,19 @@ namespace TPP.BL.BC
         public List<GuiaRemision> ListarGuiaRemision()
         {
             BDParacasEntities context = new BDParacasEntities();
-            return context.GuiaRemision.Where(X => X.Estado == 1).ToList();
+            return context.GuiaRemision.Where(X => X.Estado == 1 && X.PesajeId==null).ToList();
         }
 
-       
+        public void ActualizarIdGuiaRemision(int PesajeId)
+        {
+            BDParacasEntities context = new BDParacasEntities();
+            List<GuiaRemision> ListGuias = context.GuiaRemision.Where(X => X.PesajeId == null).ToList();
+            foreach (GuiaRemision guia in ListGuias)
+            {
+                guia.PesajeId = PesajeId;
+            }
+            context.SaveChanges();
+        }
 
         public void RegistrarGuiaRemision(GuiaRemision objGuiaRemision)
         {

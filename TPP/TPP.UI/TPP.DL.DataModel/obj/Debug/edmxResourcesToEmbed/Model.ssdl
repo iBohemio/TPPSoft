@@ -131,7 +131,6 @@
     <Property Name="Tara" Type="decimal" Precision="9" Scale="2" />
     <Property Name="Neto" Type="decimal" Precision="9" Scale="2" />
     <Property Name="NaveId" Type="int" />
-    <Property Name="TipoContenedorId" Type="int" Nullable="false" />
     <Property Name="TipoMercancia" Type="varchar" MaxLength="5000" />
     <Property Name="CodSeguridad" Type="varchar" MaxLength="5000" />
     <Property Name="CodContenedor" Type="varchar" MaxLength="5000" />
@@ -396,18 +395,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Pesaje_TipoContenedor">
-    <End Role="TipoContenedor" Type="Self.TipoContenedor" Multiplicity="1" />
-    <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TipoContenedor">
-        <PropertyRef Name="TipoContenedorId" />
-      </Principal>
-      <Dependent Role="Pesaje">
-        <PropertyRef Name="TipoContenedorId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Pesaje_Usuario">
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
     <End Role="Pesaje" Type="Self.Pesaje" Multiplicity="*" />
@@ -569,10 +556,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_Pesaje_Nave" Association="Self.FK_Pesaje_Nave">
       <End Role="Nave" EntitySet="Nave" />
-      <End Role="Pesaje" EntitySet="Pesaje" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Pesaje_TipoContenedor" Association="Self.FK_Pesaje_TipoContenedor">
-      <End Role="TipoContenedor" EntitySet="TipoContenedor" />
       <End Role="Pesaje" EntitySet="Pesaje" />
     </AssociationSet>
     <AssociationSet Name="FK_Pesaje_Usuario" Association="Self.FK_Pesaje_Usuario">

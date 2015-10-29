@@ -7,16 +7,6 @@ D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramew
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.SqlServer.xml
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.dll
 D:\Programacion Web\Proyectos\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.pdb
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.dll.config
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.pdb
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.SqlServer.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.xml
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.SqlServer.xml
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.csprojResolveAssemblyReference.cache
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.dll
-D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.pdb
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.dll.config
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.pdb
@@ -27,3 +17,12 @@ D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.SqlServer.x
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.csprojResolveAssemblyReference.cache
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.dll
 D:\Git\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.pdb
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.dll.config
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\TPP.DL.DataModel.pdb
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.xml
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.dll
+D:\Documents\GitHubRepository\TPPSoft\TPP\TPP.UI\TPP.DL.DataModel\obj\Debug\TPP.DL.DataModel.pdb

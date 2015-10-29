@@ -569,6 +569,7 @@
             this.txtExpNaveContenedor.Location = new System.Drawing.Point(421, 197);
             this.txtExpNaveContenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExpNaveContenedor.Name = "txtExpNaveContenedor";
+            this.txtExpNaveContenedor.ReadOnly = true;
             this.txtExpNaveContenedor.Size = new System.Drawing.Size(140, 22);
             this.txtExpNaveContenedor.TabIndex = 160;
             // 

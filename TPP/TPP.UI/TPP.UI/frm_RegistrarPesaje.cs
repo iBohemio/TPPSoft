@@ -540,7 +540,7 @@ namespace TPP.UI
                     {
                         epTxt.Clear();
 
-                        if (string.IsNullOrWhiteSpace(txtPeso.Text) || txtPeso.Text.Contains(" ") || txtPeso.Text=="0")
+                        if (string.IsNullOrWhiteSpace(txtPeso.Text) || txtPeso.Text.Contains(" ") || txtPeso.Text == "0")
                         {
                             epTxt.Icon = Properties.Resources.FAIL;
                             epTxt.SetError(txtPeso, "Dato Invalido");
@@ -549,13 +549,247 @@ namespace TPP.UI
                         else
                         {
                             epTxt.Clear();
+
+                            if (string.IsNullOrWhiteSpace(txtBooking.Text) || txtBooking.Text.Contains(" "))
+                            {
+
+                                epTxt.Icon = Properties.Resources.FAIL;
+                                epTxt.SetError(txtBooking, "Dato Invalido");
+                                validar = false;
+                            }
+                            else
+                            {
+                                epTxt.Clear();
+
+
+                                if (string.IsNullOrWhiteSpace(cbContenedor.Text) || cbContenedor.Text.Contains(" "))
+                                {
+                                    epTxt.Icon = Properties.Resources.FAIL;
+                                    epTxt.SetError(cbContenedor, "Dato Invalido");
+                                    validar = false;
+                                }
+                                else
+                                {
+                                    epTxt.Clear();
+
+
+                                    if (chkHabRegCont.Checked == true)
+                                    {
+                                        //--------------------------------------------------///
+                                        if (string.IsNullOrWhiteSpace(txtExpNumContenedor.Text) || txtExpNumContenedor.Text.Contains(" "))
+                                        {
+                                            epTxt.Icon = Properties.Resources.FAIL;
+                                            epTxt.SetError(txtExpNumContenedor, "Dato Invalido");
+                                            validar = false;
+                                        }
+                                        else
+                                        {
+                                            epTxt.Clear();
+
+
+                                            if (string.IsNullOrWhiteSpace(txtExpEmbarcadero.Text))
+                                            {
+                                                epTxt.Icon = Properties.Resources.FAIL;
+                                                epTxt.SetError(txtExpEmbarcadero, "Dato Invalido");
+                                                validar = false;
+                                            }
+                                            else
+                                            {
+                                                epTxt.Clear();
+
+
+                                                if (string.IsNullOrWhiteSpace(txtExpPesoManifiesto.Text))
+                                                {
+                                                    epTxt.Icon = Properties.Resources.FAIL;
+                                                    epTxt.SetError(txtExpPesoManifiesto, "Dato Invalido");
+                                                    validar = false;
+                                                }
+                                                else
+                                                {
+                                                    epTxt.Clear();
+
+
+
+                                                    if (string.IsNullOrWhiteSpace(txtExpAgenteAduanas.Text))
+                                                    {
+                                                        epTxt.Icon = Properties.Resources.FAIL;
+                                                        epTxt.SetError(txtExpAgenteAduanas, "Dato Invalido");
+                                                        validar = false;
+                                                    }
+                                                    else
+                                                    {
+                                                        epTxt.Clear();
+
+                                                        if (string.IsNullOrWhiteSpace(txtExpReserva.Text))
+                                                        {
+                                                            epTxt.Icon = Properties.Resources.FAIL;
+                                                            epTxt.SetError(txtExpReserva, "Dato Invalido");
+                                                            validar = false;
+                                                        }
+                                                        else
+                                                        {
+                                                            epTxt.Clear();
+
+
+
+                                                            if (string.IsNullOrWhiteSpace(txtExpTara.Text))
+                                                            {
+                                                                epTxt.Icon = Properties.Resources.FAIL;
+                                                                epTxt.SetError(txtExpTara, "Dato Invalido");
+                                                                validar = false;
+                                                            }
+                                                            else
+                                                            {
+                                                                epTxt.Clear();
+
+
+                                                                if (string.IsNullOrWhiteSpace(cbTamanio.Text))
+                                                                {
+                                                                    epTxt.Icon = Properties.Resources.FAIL;
+                                                                    epTxt.SetError(cbTamanio, "Dato Invalido");
+                                                                    validar = false;
+                                                                }
+                                                                else
+                                                                {
+                                                                    epTxt.Clear();
+
+
+                                                                    if (string.IsNullOrWhiteSpace(cbTipoContenedor.Text))
+                                                                    {
+                                                                        epTxt.Icon = Properties.Resources.FAIL;
+                                                                        epTxt.SetError(cbTipoContenedor, "Dato Invalido");
+                                                                        validar = false;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        epTxt.Clear();
+
+
+                                                                        if (string.IsNullOrWhiteSpace(txtExpNumViaje.Text))
+                                                                        {
+                                                                            epTxt.Icon = Properties.Resources.FAIL;
+                                                                            epTxt.SetError(txtExpNumViaje, "Dato Invalido");
+                                                                            validar = false;
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            epTxt.Clear();
+
+
+                                                                            if (string.IsNullOrWhiteSpace(txtExpEIR.Text))
+                                                                            {
+                                                                                epTxt.Icon = Properties.Resources.FAIL;
+                                                                                epTxt.SetError(txtExpEIR, "Dato Invalido");
+                                                                                validar = false;
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                epTxt.Clear();
+
+
+                                                                                if (string.IsNullOrWhiteSpace(txtExpEIR.Text))
+                                                                                {
+                                                                                    epTxt.Icon = Properties.Resources.FAIL;
+                                                                                    epTxt.SetError(txtExpEIR, "Dato Invalido");
+                                                                                    validar = false;
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    epTxt.Clear();
+
+
+                                                                                    if (string.IsNullOrWhiteSpace(txtExpNaveContenedor.Text))
+                                                                                    {
+                                                                                        epTxt.Icon = Properties.Resources.FAIL;
+                                                                                        epTxt.SetError(txtExpNaveContenedor, "Dato Invalido");
+                                                                                        validar = false;
+                                                                                    }
+                                                                                    else
+                                                                                    {
+                                                                                        epTxt.Clear();
+
+
+                                                                                        if (string.IsNullOrWhiteSpace(txtExpPrecintoAduanero.Text))
+                                                                                        {
+                                                                                            epTxt.Icon = Properties.Resources.FAIL;
+                                                                                            epTxt.SetError(txtExpPrecintoAduanero, "Dato Invalido");
+                                                                                            validar = false;
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            epTxt.Clear();
+
+
+                                                                                            if (string.IsNullOrWhiteSpace(txtExpPrecinto1.Text))
+                                                                                            {
+                                                                                                epTxt.Icon = Properties.Resources.FAIL;
+                                                                                                epTxt.SetError(txtExpPrecinto1, "Dato Invalido");
+                                                                                                validar = false;
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                epTxt.Clear();
+
+
+                                                                                                if (string.IsNullOrWhiteSpace(txtExpPrecinto2.Text))
+                                                                                                {
+                                                                                                    epTxt.Icon = Properties.Resources.FAIL;
+                                                                                                    epTxt.SetError(txtExpPrecinto2, "Dato Invalido");
+                                                                                                    validar = false;
+                                                                                                }
+                                                                                                else
+                                                                                                {
+                                                                                                    epTxt.Clear();
+
+
+                                                                                                    if (string.IsNullOrWhiteSpace(txtExpPrecinto3.Text))
+                                                                                                    {
+                                                                                                        epTxt.Icon = Properties.Resources.FAIL;
+                                                                                                        epTxt.SetError(txtExpPrecinto3, "Dato Invalido");
+                                                                                                        validar = false;
+                                                                                                    }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        epTxt.Clear();
+
+
+                                                                                                        if (string.IsNullOrWhiteSpace(txtExpUbicacion.Text))
+                                                                                                        {
+                                                                                                            epTxt.Icon = Properties.Resources.FAIL;
+                                                                                                            epTxt.SetError(txtExpUbicacion, "Dato Invalido");
+                                                                                                            validar = false;
+                                                                                                        }
+                                                                                                        else
+                                                                                                        {
+                                                                                                            epTxt.Clear();
+                                                                                                        }
+
+
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-            }
+            }          
 
-            return validar;
-          
+            return validar;          
         }
     }
 }
